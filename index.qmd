@@ -1,0 +1,254 @@
+---
+title: "Phenology Observations at the University at Buffalo"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    theme: cosmo
+editor: visual
+execute:
+  echo: false
+  warning: false
+  message: false
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+```{r echo=F, results='hide'}
+# Global options and libraries
+library(tidyverse)
+library(lubridate)
+library(zoo)
+library(sf)
+library(leaflet)
+library(DT)
+library(arrow)
+library(cowplot)
+
+# Load  datasets (Parquet via Arrow)
+
+data_dir <- "data/processed"
+
+trees <- read_parquet(file.path(data_dir, "trees.parquet"))
+
+d <- read_parquet(
+file.path(data_dir, "full_data.parquet")
+)
+
+
+d_obs_weekly <- read_parquet(
+file.path(data_dir, "weekly_observer_stats.parquet")
+)
+
+d_obs <- read_parquet(
+file.path(data_dir, "semester_observer_stats.parquet")
+)
+```
+
+# Overview
+
+Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.
+
+Throughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.
+
+These data were last updated on `r Sys.time()`.
+
+# Trees at the University at Buffalo
+
+The map below shows the locations of monitored trees on UB's North Campus.
+
+```{r}
+icons <- awesomeIcons(
+icon = "ios-close",
+iconColor = "white",
+library = "ion",
+markerColor = trees$color
+)
+
+leaflet(trees) |>
+addTiles() |>
+addAwesomeMarkers(
+~lon, ~lat,
+icon = icons,
+label = paste(
+"Tag:", trees$tag, "|",
+"Species:", trees$common_name
+)
+)
+```
+
+# Current Observation Status
+
+To date, the program has collected
+`r format(nrow(d), big.mark = ",")` individual phenological observations.
+
+## Observations by Species
+
+```{r}
+d |>
+count(common_name, genus, species, name = "Observations") |>
+mutate(
+Species = paste(common_name, "(", genus, species, ")")
+) |>
+arrange(desc(Observations)) |>
+select(Species, Observations) |>
+collect() |>
+datatable()
+
+```
+
+
+# Observations Over Time
+
+```{r echo=F}
+
+# cumulative sum of observations ggplot
+p1 <- d |>
+count(observation_date) |>
+collect() |>
+arrange(observation_date) |>
+mutate(cumulative_observations = cumsum(n)) |>
+ggplot(aes(x = observation_date, y = cumulative_observations)) +
+geom_line(linewidth = 1) +
+labs(
+x = "Date",
+y = "Cumulative Observations",
+) +
+scale_y_continuous(labels = scales::comma)
+
+p2 <- d |>
+count(observation_date) |>
+  collect() |>
+ggplot(aes(observation_date, n)) +
+geom_col() +
+labs(
+x = "Date",
+y = "Daily Observations")
+
+plot_grid(p1,p2, ncol=1, align="hv",rel_heights = c(0.7,0.3))
+
+```
+
+
+
+```{r echo=F, eval=F}
+# Observers and Participation
+## Unique Observers per Semester
+d |>
+distinct(semester, observedby_person_id) |>
+count(semester) |>
+  collect() |>
+ggplot(aes(semester, n, group = 1)) +
+geom_line() +
+geom_point() +
+  annotate(
+    "text",
+    x = 2020.7,
+    y = 80,
+    label = paste("COVID-19"),
+    vjust = -1,
+    size=3
+  ) +
+labs(
+x = "Semester",
+y = "Unique Observers",
+title = "Student Participation Over Time"
+)
+```
+
+
+```{r echo=F, eval=F}
+## Observations per Student
+d |>
+count(observedby_person_id, semester) |>
+  collect() |>
+ggplot(aes(semester, n, group=semester)) +
+  geom_boxplot() +
+  labs(
+    x = "Semester",
+    y = "Observations per Student"
+    ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
+
+
+# Species-Level Sampling Effort
+
+```{r echo=F}
+d |>
+filter(phenophase_description == "Leaves") |>
+count(semester, common_name) |>
+  collect() |>
+ggplot(aes(semester, n,group=semester)) +
+geom_boxplot() +
+facet_wrap(~common_name, nrow = 2) +
+labs(
+x = "Semester",
+y = "Observations per Species"
+) +
+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
+
+# Seasonal Phenology Patterns
+
+```{r, eval=F, echo=F}
+d |>
+filter(
+  phenophase_description == "Leaves",
+  day_of_year > 180
+  ) |>
+collect() |>
+ggplot( aes(
+            x = observation_date,
+            y = intensity_category_id,
+            group = common_name
+          )
+      ) +
+geom_jitter(height = 5, alpha = 0.4) +
+geom_smooth(method = "loess", span = 1, se = FALSE) +
+facet_grid(common_name ~ year(observation_date)) +
+labs(
+    x = "Day of Year (Standardized)",
+    y = "Percent Green Leaves",
+    title = "Fall Leaf Senescence Across Years"
+    ) +
+theme(strip.text.y.right = element_text(angle = 0))
+```
+
+
+```{r echo=F}
+
+
+d %>%
+  collect() |>
+  filter(phenophase_description == "Leaves",
+         day_of_year > 180) %>% # Fall
+  ggplot(aes(x = day_of_year, y = intensity)) +
+  # Raw observations (all students)
+  geom_jitter(#aes(color = as.factor(observedby_person_id)), 
+              col="black",size=.1,
+              width = 0, height = 5, alpha = 0.1, show.legend = FALSE) +
+  # Individual tree trends
+  geom_smooth(aes(group = individual_id), alpha = 0.1, size=.1,color = "blue",se=F) +
+#  geom_smooth(aes(group = 1), alpha = 0.3, color = "red",se=T) +
+    geom_smooth(
+    method = "nls",
+    formula = y ~ 100 + (B - 100) / (1 + exp((xmid - x)/scal)),
+    method.args = list(start = list(B = 50, xmid = 300, scal = 1)),
+    se = FALSE,
+    col = "red"
+  )+
+  facet_grid(year(observation_date)~common_name) +
+  labs(x = "Day of Year", y = "Percent Green Leaves",
+       title = "Fall Leaf Cover Trends by Species") +
+  theme_minimal()+
+  coord_cartesian(ylim=c(0,100),xlim=c(255,330))
+
+```
+
+
