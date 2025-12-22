@@ -15,8 +15,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-
-
 ```{r echo=F, results='hide'}
 # Global options and libraries
 library(tidyverse)
@@ -82,8 +80,7 @@ label = paste(
 
 # Current Observation Status
 
-To date, the program has collected
-`r format(nrow(d), big.mark = ",")` individual phenological observations.
+To date, the program has collected `r format(nrow(d), big.mark = ",")` individual phenological observations.
 
 ## Observations by Species
 
@@ -99,7 +96,6 @@ collect() |>
 datatable()
 
 ```
-
 
 # Observations Over Time
 
@@ -132,8 +128,6 @@ plot_grid(p1,p2, ncol=1, align="hv",rel_heights = c(0.7,0.3))
 
 ```
 
-
-
 ```{r echo=F, eval=F}
 # Observers and Participation
 ## Unique Observers per Semester
@@ -159,7 +153,6 @@ title = "Student Participation Over Time"
 )
 ```
 
-
 ```{r echo=F, eval=F}
 ## Observations per Student
 d |>
@@ -174,7 +167,6 @@ ggplot(aes(semester, n, group=semester)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 ```
-
 
 # Species-Level Sampling Effort
 
@@ -220,7 +212,6 @@ labs(
 theme(strip.text.y.right = element_text(angle = 0))
 ```
 
-
 ```{r echo=F}
 
 
@@ -250,5 +241,3 @@ d %>%
   coord_cartesian(ylim=c(0,100),xlim=c(255,330))
 
 ```
-
-

@@ -1,0 +1,13 @@
+---
+title: "Find your Nature's Notebook ID"
+---
+
+To maintain the privacy of contributions to this project, all observations are linked only to the Nature's Notebook ID.  These numbers can be found by following these instructions:
+
+1) Log into [Nature's Notebook](https://www.usanpn.org//user/login?destination=MyNPN)
+2) Click on "Visualize my data" in the "Enter Observations" box
+    ![](img/NNid_1.png)
+3) Get your Nature's Notebook ID from the URL (look in the address bar of your browser)
+    ![](img/NNid_2.png)
+
+

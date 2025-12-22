@@ -1,0 +1,53 @@
+---
+title: "Student Observations - {{nnid}} ({{semester}})"
+format:
+  html:
+    toc: true
+    number-sections: true
+params:
+  semester: null
+  nnid: null
+  ds: null
+  required_weeks: 9
+  require_obs_per_week: 4
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+## Student Overview
+
+**NNID:** `r params$nnid`  
+**Semester:** `r params$semester`  
+**Total observations:** `r nrow(params$ds)`  
+**Weeks with observations:** `r sum(tapply(params$ds$n_observations, params$ds$observation_week, length) > 0)`
+
+---
+
+## Weekly Observations
+
+```{r}
+params$ds %>%
+  group_by(observation_week) %>%
+  summarize(n_obs = n()) %>%
+  ggplot(aes(x = observation_week, y = n_obs)) +
+  geom_col(fill = "steelblue") +
+  xlab("Week of Semester") +
+  ylab("Observations")
+```
+
+---
+
+## Observations by Plant
+
+```{r}
+params$ds %>%
+  group_by(plant_nickname) %>%
+  summarize(n_obs = n()) %>%
+  ggplot(aes(x = reorder(plant_nickname, n_obs), y = n_obs)) +
+  geom_col(fill = "darkgreen") +
+  coord_flip() +
+  ylab("Observations") +
+  xlab("Plant Nickname")

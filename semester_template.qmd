@@ -1,0 +1,76 @@
+---
+title: "Semester Data - {{semester}}"
+format:
+  html:
+    toc: true
+    number-sections: true
+params:
+  semester: null
+  ds: null
+  ds_obs: null
+  ds_obs_weekly: null
+  required_weeks: 9
+  require_obs_per_week: 4
+---
+
+```{r}
+library(tidyverse)
+library(DT)
+library(ggplot2)
+```
+
+## Semester Overview: `r params$semester`
+
+There are `r nrow(params$ds)` total observations this semester.
+
+**Number of observers:** `r n_distinct(params$ds$observedby_person_id)`  
+**Total observations:** `r nrow(params$ds)`
+
+[Download CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-{{params$semester}}.csv)
+
+---
+
+## Student Overview
+
+```{r}
+params$ds %>%
+  group_by(observedby_person_id) %>%
+  summarize(total_obs = n()) %>%
+  mutate(link = paste0("<a href='student_", params$semester, "_", observedby_person_id, ".html'>See details</a>")) %>%
+  select(NNID = observedby_person_id, total_obs, link) %>%
+  datatable(escape = FALSE)
+```
+
+---
+
+## Weekly Observations Heatmap
+
+```{r}
+if(nrow(params$ds) > 0) {
+  params$ds %>%
+    group_by(observedby_person_id, observation_week) %>%
+    summarize(total_obs = n(), .groups = "drop") %>%
+    ggplot(aes(x = observation_week, y = as.factor(observedby_person_id), fill = total_obs)) +
+    geom_tile() +
+    scale_fill_viridis_c(trans = "log1p") +
+    xlab("Week of Semester") +
+    ylab("Observer") +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))
+}
+```
+
+---
+
+## Phenology Observations by Species
+
+```{r}
+if(nrow(params$ds) > 0) {
+  params$ds %>%
+    group_by(common_name) %>%
+    summarize(n_obs = n()) %>%
+    ggplot(aes(x = reorder(common_name, n_obs), y = n_obs)) +
+    geom_col() +
+    coord_flip() +
+    ylab("Number of Observations") +
+    xlab("Species")
+}

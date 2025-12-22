@@ -202,9 +202,13 @@ if (length(missing_semesters) > 0) {
   ) %>%
     as_tibble() %>%
     mutate(
-      observation_date = ymd(observation_date),
-      semester = semester(observation_date, with_year = TRUE)
-    ) %>%
+        observation_date = ymd(observation_date),
+        semester = sprintf(
+          "%d.%d",
+          year(observation_date),
+          semester(observation_date)
+        )
+      ) %>%
     filter(semester %in% missing_semesters)
 
   # Split by semester and persist each as its own Parquet asset
@@ -252,36 +256,36 @@ d <- obs_ds %>%
     observation_week  = isoweek(observation_date),
     observation_doy   = yday(observation_date),
     observation_year  = year(observation_date),
-
+    semester=as.character(semester),
     # Re-map all observations to a common plotting year
     observation_datey = make_date(
       2020, month(observation_date), day(observation_date)
     ),
 
     # Clean sentinel missing values
-#    abundance_value = na_if(abundance_value, -9999),
-#    intensity_value = na_if(intensity_value, "-9999"),
+    #    abundance_value = na_if(abundance_value, -9999),
+    #    intensity_value = na_if(intensity_value, "-9999"),
 
     # Factor for grouping efficiency
     observedby_person_id = factor(observedby_person_id)) %>%
-    rename(intensity_raw = intensity_value) %>%
-      mutate(
-        intensity = case_match(
-          intensity_raw,
-            "Less than 5%"        ~ 2.5,
-            "Less than 25%"       ~ 20,
-            "5-24%"               ~ 14.5,
-            "25-49%"              ~ 37,
-            "50-74%"              ~ 62,
-           "75-94%"              ~ 84.5,
-           "95% or more"         ~ 97.5,
-            "Less than 3"         ~ 2,
-          "3 to 10"             ~ 6.5,
-          "11 to 100"           ~ 50,
-          "101 to 1,000"        ~ 500,
-          "1,001 to 10,000"     ~ 5000,
-          "Little"              ~ 5,
-          "Some"                ~ 3,
+  rename(intensity_raw = intensity_value) %>%
+  mutate(
+    intensity = case_match(
+      intensity_raw,
+      "Less than 5%"        ~ 2.5,
+      "Less than 25%"       ~ 20,
+      "5-24%"               ~ 14.5,
+      "25-49%"              ~ 37,
+      "50-74%"              ~ 62,
+      "75-94%"              ~ 84.5,
+      "95% or more"         ~ 97.5,
+      "Less than 3"         ~ 2,
+      "3 to 10"             ~ 6.5,
+      "11 to 100"           ~ 50,
+      "101 to 1,000"        ~ 500,
+      "1,001 to 10,000"     ~ 5000,
+      "Little"              ~ 5,
+      "Some"                ~ 3,
       .default              = NA_real_
     )
   ) %>%
@@ -348,3 +352,125 @@ write_parquet(d,            file.path(base_dir, "full_data.parquet"))
 write_parquet(trees,        file.path(base_dir, "trees.parquet"))
 write_parquet(d_obs_weekly, file.path(base_dir, "weekly_observer_stats.parquet"))
 write_parquet(d_obs,        file.path(base_dir, "semester_observer_stats.parquet"))
+
+#############################
+## Semester Specific Data
+
+###############################################################################
+# SEMESTER CSV EXPORTS + GITHUB RELEASE UPLOAD
+###############################################################################
+
+library(glue)
+
+# --------------------------------------------------
+# Semester-level metrics
+# --------------------------------------------------
+semester_stats <- d %>%
+  group_by(semester) %>%
+  summarize(
+    n_observers    = n_distinct(observedby_person_id),
+    n_observations = n(),
+    semester_start = min(observation_date, na.rm = TRUE),
+    semester_stop  = max(observation_date, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(semester)) %>%
+  mutate(
+    is_current = semester == current_semester
+  )
+
+# --------------------------------------------------
+# Write per-semester CSVs
+# --------------------------------------------------
+csv_dir <- file.path(cache_dir, "csv")
+dir.create(csv_dir, showWarnings = FALSE)
+
+walk(unique(d$semester), function(sem) {
+
+  csv_file <- file.path(
+    csv_dir,
+    glue("npn_obs_network-{network_id}_semester-{sem}.csv")
+  )
+
+  d %>%
+    filter(semester == sem) %>%
+    arrange(observation_date) %>%
+    write_csv(csv_file)
+
+  # Upload to GitHub Release (overwrite-safe)
+  piggyback::pb_upload(
+    file      = csv_file,
+    tag       = release_tag,
+    repo      = repo,
+    overwrite = TRUE
+  )
+})
+
+
+###############################################################################
+# AUTO-GENERATE semesters.qmd (ENHANCED)
+###############################################################################
+
+semester_index <- semester_stats %>%
+  mutate(
+    year = substr(semester, 1, 4),
+    term = substr(semester, 6, 6),
+    label = case_when(
+      term == "1" ~ paste("Spring", year),
+      term == "2" ~ paste("Fall",   year),
+      TRUE        ~ semester
+    ),
+    status = if_else(is_current, "In progress", "Complete"),
+    page_href = glue("generated/semester_{semester}.html"),
+    csv_href  = glue(
+      "https://github.com/{repo}/releases/download/{release_tag}/",
+      "npn_obs_network-{network_id}_semester-{semester}.csv"
+    )
+  )
+
+# --------------------------------------------------
+# Markdown table
+# --------------------------------------------------
+semester_table <- semester_index %>%
+  mutate(
+    page_href = glue("generated/semester_{semester}.html"),
+    csv_href  = glue(
+      "https://github.com/{repo}/releases/download/{release_tag}/",
+      "npn_obs_network-{network_id}_semester-{semester}.csv"
+    ),
+    status = if_else(is_current, "In progress", "Complete")
+  ) %>%
+  transmute(
+    Semester     = label,
+    Status       = status,
+    Observers    = n_observers,
+    Observations = n_observations,
+    Page         = glue("[View]({page_href})"),
+    Data         = glue("[CSV]({csv_href})")
+  )
+
+# Convert to Markdown table for QMD
+md_table <- paste0(
+  "| ", paste(names(semester_table), collapse = " | "), " |\n",
+  "|", paste(rep("---", ncol(semester_table)), collapse = "|"), "|\n",
+  paste(
+    apply(semester_table, 1, function(row) paste(row, collapse = " | ")),
+    collapse = "\n"
+  )
+)
+
+writeLines(
+  c(
+    "---",
+    "title: \"Semester Data\"",
+    "format:",
+    "  html:",
+    "    toc: false",
+    "---",
+    "",
+    "This page lists all semesters with available observation data.",
+    "",
+    md_table
+  ),
+  "semesters.qmd"
+)

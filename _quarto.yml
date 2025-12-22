@@ -1,5 +1,7 @@
 project:
   type: website
+  pre-render: scripts/npn_download_prep.R
+  output-dir: _site
 
 website:
   title: "UB Campus Phenology"
@@ -7,6 +9,9 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - text: "Semester Data"
+        href: semesters.qmd
+
 
 format:
   html:
