@@ -50,4 +50,5 @@ rsconnect/
 
 /.quarto/
 _site
-data
+data/
+!data/trees.csv

@@ -34,7 +34,7 @@ cache_dir <- "data/cache"
 base_dir  <- "data/processed"
 dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
 
-generated_dir <- "generated"
+generated_dir <- "data/generated"
 dir.create(generated_dir, showWarnings = FALSE)
 
 csv_dir <- file.path(cache_dir, "csv")
@@ -336,7 +336,7 @@ walk(unique(d$semester), function(sem) {
   if (nrow(ds_sem) == 0) return()
 
   rmarkdown::render(
-    input       = "template/semester_template.Rmd",
+    input       = "template/semester_template.qmd",
     output_file = sem_file,
     params      = list(
       semester        = sem,
@@ -360,7 +360,7 @@ walk(unique(d$semester), function(sem) {
   walk(nnids, function(nnid) {
     student_file <- file.path(generated_dir, glue("student_{sem}_{nnid}.html"))
     rmarkdown::render(
-      input       = "template/student_template.Rmd",
+      input       = "template/student_template.qmd",
       output_file = student_file,
       params      = list(
         semester = sem,

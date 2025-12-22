@@ -1,0 +1,25 @@
+---
+title: "Semester Data"
+format:
+  html:
+    toc: false
+---
+
+This page lists all semesters with available observation data.
+
+| Semester | Status | Observers | Observations | Page | Data |
+|---|---|---|---|---|---|
+Fall 2025 | In progress | 105 | 27683 | [View](generated/semester_2025.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2025.2.csv)
+Spring 2025 | Complete | 116 | 35666 | [View](generated/semester_2025.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2025.1.csv)
+Fall 2024 | Complete | 148 | 39713 | [View](generated/semester_2024.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2024.2.csv)
+Spring 2024 | Complete | 159 | 46727 | [View](generated/semester_2024.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2024.1.csv)
+Fall 2023 | Complete | 162 | 36549 | [View](generated/semester_2023.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2023.2.csv)
+Spring 2023 | Complete | 165 | 50443 | [View](generated/semester_2023.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2023.1.csv)
+Fall 2022 | Complete | 175 | 55879 | [View](generated/semester_2022.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2022.2.csv)
+Spring 2022 | Complete | 171 | 51689 | [View](generated/semester_2022.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2022.1.csv)
+Fall 2021 | Complete | 169 | 49446 | [View](generated/semester_2021.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2021.2.csv)
+Spring 2021 | Complete |  73 | 19362 | [View](generated/semester_2021.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2021.1.csv)
+Fall 2020 | Complete |  82 | 24272 | [View](generated/semester_2020.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2020.2.csv)
+Spring 2020 | Complete | 165 | 19776 | [View](generated/semester_2020.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2020.1.csv)
+Fall 2019 | Complete | 176 | 40532 | [View](generated/semester_2019.2.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2019.2.csv)
+Spring 2019 | Complete |   1 |     6 | [View](generated/semester_2019.1.html) | [CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-2019.1.csv)
