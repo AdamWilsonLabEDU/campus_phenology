@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "data/Readme.html",
+    "href": "data/Readme.html",
+    "title": "Data Folder",
+    "section": "",
+    "text": "Data Folder\nPlace any data needed by your analysis in this folder. Please do not store large files here. Then read in any data using the ‘data’ path. For example, read_csv(\"data/data.csv\")."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Phenology Observations at the University at Buffalo",
+    "section": "",
+    "text": "Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.\nThroughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.\nThese data were last updated on 2025-12-21 20:23:59.124958."
+  },
+  {
+    "objectID": "index.html#observations-by-species",
+    "href": "index.html#observations-by-species",
+    "title": "Phenology Observations at the University at Buffalo",
+    "section": "Observations by Species",
+    "text": "Observations by Species"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
