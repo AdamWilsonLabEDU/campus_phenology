@@ -1,5 +1,5 @@
 ---
-title: "Semester Data - {{semester}}"
+title: "Semester Data"
 format:
   html:
     toc: true
@@ -13,7 +13,7 @@ params:
   require_obs_per_week: 4
 ---
 
-```{r}
+```{r echo=F}
 library(tidyverse)
 library(DT)
 library(ggplot2)
@@ -30,9 +30,9 @@ There are `r nrow(params$ds)` total observations this semester.
 
 ---
 
-## Student Overview
+## Observer Overview
 
-```{r}
+```{r  echo=F}
 params$ds %>%
   group_by(observedby_person_id) %>%
   summarize(total_obs = n()) %>%
@@ -45,7 +45,7 @@ params$ds %>%
 
 ## Weekly Observations Heatmap
 
-```{r}
+```{r  echo=F, fig.height=12 }
 if(nrow(params$ds) > 0) {
   params$ds %>%
     group_by(observedby_person_id, observation_week) %>%
@@ -63,7 +63,7 @@ if(nrow(params$ds) > 0) {
 
 ## Phenology Observations by Species
 
-```{r}
+```{r  echo=F}
 if(nrow(params$ds) > 0) {
   params$ds %>%
     group_by(common_name) %>%

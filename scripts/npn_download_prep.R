@@ -34,11 +34,12 @@ cache_dir <- "data/cache"
 base_dir  <- "data/processed"
 dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
 
-generated_dir <- "data/generated"
-dir.create(generated_dir, showWarnings = FALSE)
 
 csv_dir <- file.path(cache_dir, "csv")
 dir.create(csv_dir, showWarnings = FALSE)
+
+generated_dir <- "generated"
+dir.create(generated_dir, showWarnings = FALSE)
 
 # -------------------------------------------------------------------
 # Ensure GitHub Release Exists
@@ -337,7 +338,7 @@ walk(unique(d$semester), function(sem) {
 
   rmarkdown::render(
     input       = "template/semester_template.qmd",
-    output_file = sem_file,
+    output_file = file.path("..",sem_file),
     params      = list(
       semester        = sem,
       ds              = ds_sem,
@@ -361,7 +362,8 @@ walk(unique(d$semester), function(sem) {
     student_file <- file.path(generated_dir, glue("student_{sem}_{nnid}.html"))
     rmarkdown::render(
       input       = "template/student_template.qmd",
-      output_file = student_file,
+#      output_file = student_file,
+      output_file = file.path("..",student_file),
       params      = list(
         semester = sem,
         nnid     = nnid,
