@@ -12,7 +12,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r echo=F, results='hide', message=FALSE}
+```{r echo=F, results='hide', message=FALSE, output='hide'}
 library(tidyverse)
 library(DT)
 library(ggplot2)

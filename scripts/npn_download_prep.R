@@ -396,7 +396,7 @@ walk(unique(d$semester), function(sem) {
     "```",
     "",
     # Rest of template (skip header)
-    template_content[which(template_content == "```")[2]:length(template_content)]
+    template_content[(which(template_content == "```")[2] + 1):length(template_content)]
   )
   
   writeLines(new_content, qmd_file)
@@ -444,7 +444,7 @@ walk(nnids, function(nnid) {
     "```",
     "",
     # Rest of template (skip header)
-    template_content[which(template_content == "```")[2]:length(template_content)]
+    template_content[(which(template_content == "```")[2] + 1):length(template_content)]
   )
   
   writeLines(new_content, qmd_file)
@@ -521,7 +521,7 @@ walk(seq_len(nrow(tree_list)), function(i) {
     "```",
     "",
     # Rest of template (skip header)
-    template_content[which(template_content == "```")[2]:length(template_content)]
+    template_content[(which(template_content == "```")[2] + 1):length(template_content)]
   )
   
   qmd_file <- file.path(generated_dir, glue("tree_{tree_id}.qmd"))

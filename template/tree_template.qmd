@@ -65,7 +65,7 @@ if(nrow(tree_data) > 0) {
 
 This chart shows all observations for this tree (black points) compared to all observations for other trees of the same species (grey points with transparency).
 
-```{r echo=F, fig.width=10, fig.height=6}
+```{r echo=F, fig.width=10, fig.height=15}
 if(nrow(ds) > 0) {
   # Filter for same species and this tree
   species_obs <- ds_all %>% filter(common_name == params$common_name)
