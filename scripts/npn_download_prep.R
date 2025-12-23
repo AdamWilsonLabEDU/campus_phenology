@@ -17,7 +17,7 @@ library(rmarkdown)
 # -------------------------------------------------------------------
 # User-configurable parameters
 # -------------------------------------------------------------------
-year_start <- 2019
+year_start <- 2020
 year_stop  <- year(Sys.Date())
 
 network_id <- 891
@@ -116,6 +116,23 @@ missing_semesters <- union(
   setdiff(closed_semesters, available_semesters),
   current_semester
 )
+
+# Check if current semester was recently downloaded; skip if < 1 day old
+current_sem_file <- list.files(
+  cache_dir,
+  pattern = glue("npn_obs_network-{network_id}_semester-{current_semester}\\.parquet"),
+  full.names = TRUE
+)
+
+if (length(current_sem_file) > 0 && file.exists(current_sem_file)) {
+  file_mtime <- file.mtime(current_sem_file)
+  time_since_download <- as.numeric(difftime(Sys.time(), file_mtime, units = "days"))
+  
+  if (time_since_download < 1) {
+    message("Current semester data is fresh (<1 day old); skipping download.")
+    missing_semesters <- setdiff(missing_semesters, current_semester)
+  }
+}
 
 message("Semesters missing from GitHub Release: ",
         ifelse(length(missing_semesters) == 0, "none", paste(missing_semesters, collapse = ", ")))
@@ -327,51 +344,107 @@ writeLines(
 )
 
 # -------------------------------------------------------------------
-# Render Semester Pages
+# Generate Semester QMD Files (Quarto will render them)
 # -------------------------------------------------------------------
 walk(unique(d$semester), function(sem) {
-  sem_file <- file.path(generated_dir, glue("semester_{sem}.html"))
   ds_sem <- d %>% filter(semester == sem)
   ds_obs <- d_obs %>% filter(semester == sem)
   ds_obs_weekly <- d_obs_weekly %>% filter(semester == sem)
   if (nrow(ds_sem) == 0) return()
 
-  rmarkdown::render(
-    input       = "template/semester_template.qmd",
-    output_file = file.path("..",sem_file),
-    params      = list(
-      semester        = sem,
-      ds              = ds_sem,
-      ds_obs          = ds_obs,
-      ds_obs_weekly   = ds_obs_weekly,
-      required_weeks  = required_weeks,
-      require_obs_per_week = require_obs_per_week
-    ),
-    envir = new.env(parent = globalenv())
+  qmd_file <- file.path(generated_dir, glue("semester_{sem}.qmd"))
+  
+  # Save data objects as RDS for retrieval at render time
+  ds_sem_file <- file.path(generated_dir, glue(".semester_{sem}_ds.rds"))
+  ds_obs_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs.rds"))
+  ds_obs_weekly_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs_weekly.rds"))
+  
+  saveRDS(ds_sem, ds_sem_file)
+  saveRDS(ds_obs, ds_obs_file)
+  saveRDS(ds_obs_weekly, ds_obs_weekly_file)
+  
+  # Read template and write with embedded params
+  template_content <- readLines("template/semester_template.qmd")
+  
+  # Inject params into YAML frontmatter
+  new_content <- c(
+    "---",
+    "title: \"Semester Data\"",
+    "format:",
+    "  html:",
+    "    toc: true",
+    "    number-sections: true",
+    "params:",
+    glue("  semester: {sem}"),
+    glue("  ds_file: '{ds_sem_file}'"),
+    glue("  ds_obs_file: '{ds_obs_file}'"),
+    glue("  ds_obs_weekly_file: '{ds_obs_weekly_file}'"),
+    glue("  required_weeks: {required_weeks}"),
+    glue("  require_obs_per_week: {require_obs_per_week}"),
+    "editor_options:",
+    "  chunk_output_type: console",
+    "---",
+    "",
+    "```{r echo=F}",
+    "library(tidyverse)",
+    "library(DT)",
+    "library(ggplot2)",
+    "params$ds <- readRDS(params$ds_file)",
+    "params$ds_obs <- readRDS(params$ds_obs_file)",
+    "params$ds_obs_weekly <- readRDS(params$ds_obs_weekly_file)",
+    "```",
+    "",
+    # Rest of template (skip header)
+    template_content[which(template_content == "```")[2]:length(template_content)]
   )
+  
+  writeLines(new_content, qmd_file)
+  message("Generated semester QMD: ", qmd_file)
 })
 
 # -------------------------------------------------------------------
-# Render Student Pages
+# Generate Student QMD Files (current semester only; Quarto will render them)
 # -------------------------------------------------------------------
-walk(unique(d$semester), function(sem) {
-  ds_sem <- d %>% filter(semester == sem)
-  nnids <- unique(ds_sem$observedby_person_id)
+ds_sem <- d %>% filter(semester == current_semester)
+nnids <- unique(ds_sem$observedby_person_id)
 
-  walk(nnids, function(nnid) {
-    student_file <- file.path(generated_dir, glue("student_{sem}_{nnid}.html"))
-    rmarkdown::render(
-      input       = "template/student_template.qmd",
-#      output_file = student_file,
-      output_file = file.path("..",student_file),
-      params      = list(
-        semester = sem,
-        nnid     = nnid,
-        ds       = ds_sem %>% filter(observedby_person_id == nnid),
-        required_weeks = required_weeks,
-        require_obs_per_week = require_obs_per_week
-      ),
-      envir = new.env(parent = globalenv())
-    )
-  })
+walk(nnids, function(nnid) {
+  qmd_file <- file.path(generated_dir, glue("student_{current_semester}_{nnid}.qmd"))
+  
+  # Save data object as RDS for retrieval at render time
+  ds_student_file <- file.path(generated_dir, glue(".student_{current_semester}_{nnid}_ds.rds"))
+  ds_student <- ds_sem %>% filter(observedby_person_id == nnid)
+  saveRDS(ds_student, ds_student_file)
+  
+  # Read template and write with embedded params
+  template_content <- readLines("template/student_template.qmd")
+  
+  # Inject params into YAML frontmatter
+  new_content <- c(
+    "---",
+    "title: \"Student Observations\"",
+    "format:",
+    "  html:",
+    "    toc: true",
+    "    number-sections: true",
+    "params:",
+    glue("  semester: {current_semester}"),
+    glue("  nnid: {nnid}"),
+    glue("  ds_file: '{ds_student_file}'"),
+    glue("  required_weeks: {required_weeks}"),
+    glue("  require_obs_per_week: {require_obs_per_week}"),
+    "---",
+    "",
+    "```{r echo=F}",
+    "library(tidyverse)",
+    "library(ggplot2)",
+    "params$ds <- readRDS(params$ds_file)",
+    "```",
+    "",
+    # Rest of template (skip header)
+    template_content[which(template_content == "```")[2]:length(template_content)]
+  )
+  
+  writeLines(new_content, qmd_file)
+  message("Generated student QMD: ", qmd_file)
 })

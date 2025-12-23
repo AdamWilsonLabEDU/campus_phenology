@@ -11,6 +11,8 @@ params:
   ds_obs_weekly: null
   required_weeks: 9
   require_obs_per_week: 4
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r echo=F}
@@ -26,7 +28,7 @@ There are `r nrow(params$ds)` total observations this semester.
 **Number of observers:** `r n_distinct(params$ds$observedby_person_id)`  
 **Total observations:** `r nrow(params$ds)`
 
-[Download CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-{{params$semester}}.csv)
+[Download CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-`r params$semester`.csv)
 
 ---
 

@@ -2,6 +2,12 @@ project:
   type: website
   pre-render: scripts/npn_download_prep.R
   output-dir: _site
+  render:
+    - "!template/*"
+  execute-dir: project
+
+execute:
+  freeze: auto
 
 website:
   title: "UB Campus Phenology"
