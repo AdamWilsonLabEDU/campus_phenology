@@ -91,44 +91,6 @@ if(nrow(tree_data) > 0) {
 
 ---
 
-## Phenology Observations Over Time
-
-This chart shows all observations for this tree (black points) compared to all observations for other trees of the same species (grey points with transparency).
-
-```{r phenology-comparison, echo=F, fig.width=10, fig.height=15}
-if(nrow(ds) > 0) {
-  # Filter for same species and this tree
-  species_obs <- ds_species %>% filter(common_name == params$common_name,
-  phenophase_description=="Leaves")
-  tree_obs <- ds %>% filter(individual_id == params$tree_id, phenophase_description=="Leaves")
-  
-  ggplot() +
-    # All species observations in light grey
-    geom_point(data = species_obs, 
-               aes(x = observation_datey, y = intensity),
-               color = "grey80", alpha = 0.5, size = 2) +
-    # Smoothed trend for species
-#    geom_smooth(data = species_obs,
-#                aes(x = observation_datey, y = intensity,group=semester),
-#                method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
-    # This tree's observations in black
-    geom_point(data = tree_obs,
-               aes(x = observation_datey, y = intensity),
-               color = "black", size = 3) +
-    labs(
-      title = paste("Phenology for", params$plant_nickname),
-      subtitle = paste("Compared to other", params$common_name, "trees"),
-      x = "Observation Date",
-      y = "Phenophase"
-    ) +
-    facet_wrap(~year(observation_date))+
-    theme_minimal() +
-    theme(axis.text.y = element_text(size = 8))
-}
-```
-
----
-
 ## Leaf Phenology Details
 
 Focusing on leaf-related phenophases for this tree compared to the species.
@@ -136,7 +98,7 @@ Focusing on leaf-related phenophases for this tree compared to the species.
 ```{r leaf-phenology, echo=F, fig.width=10, fig.height=6}
 if(nrow(ds) > 0) {
   # Filter for leaf phenophases only
-  leaf_keywords <- c("Leaves", "Leaf", "leaves", "leaf", "Colored", "Falling")
+  leaf_keywords <- c("Colored leaves", "Increasing leaf size", "Leaves")
   
   species_leaf <- ds_species %>% 
     filter(common_name == params$common_name) %>%
@@ -150,15 +112,15 @@ if(nrow(ds) > 0) {
     ggplot() +
       # All species leaf observations in light grey
       geom_point(data = species_leaf, 
-                 aes(x = observation_datey, y = phenophase_description),
+                 aes(x = observation_datey, y = intensity),
                  color = "grey80", alpha = 0.5, size = 2) +
       # Smoothed trend for species
-      geom_smooth(data = species_leaf,
-                  aes(x = observation_datey, y = as.numeric(factor(phenophase_description))),
-                  method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
-      # This tree's leaf observations in black
+#      geom_smooth(data = species_leaf,
+#                  aes(x = observation_datey, y = intensity),
+#                  method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
+     # This tree's leaf observations in black
       geom_point(data = tree_leaf,
-                 aes(x = observation_datey, y = phenophase_description),
+                 aes(x = observation_datey, y = intensity),
                  color = "black", size = 3) +
       labs(
         title = paste("Leaf Phenology for", params$plant_nickname),
@@ -166,7 +128,8 @@ if(nrow(ds) > 0) {
         x = "Date (normalized to same year)",
         y = "Phenophase"
       ) +
-      theme_minimal() +
+#      theme_minimal() +
+      facet_grid(phenophase_description~year(observation_date),scales="free_y")
       theme(axis.text.y = element_text(size = 8))
   } else {
     cat("No leaf phenophase observations recorded for this tree.\n")
