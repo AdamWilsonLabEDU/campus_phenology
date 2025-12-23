@@ -450,3 +450,81 @@ walk(nnids, function(nnid) {
   writeLines(new_content, qmd_file)
   message("Generated student QMD: ", qmd_file)
 })
+
+# -------------------------------------------------------------------
+# Generate Tree QMD Files (all trees with observations)
+# -------------------------------------------------------------------
+tree_list <- d %>%
+  filter(!is.na(individual_id)) %>%
+  group_by(individual_id) %>%
+  summarize(
+    common_name = first(common_name),
+    plant_nickname = first(plant_nickname),
+    .groups = "drop"
+  ) %>%
+  left_join(trees %>% select(individual_id, tag, lat, lon), by = "individual_id") %>%
+  filter(!is.na(tag))
+
+walk(seq_len(nrow(tree_list)), function(i) {
+  tree_info <- tree_list[i, ]
+  tree_id <- tree_info$individual_id
+  
+  # Save data objects as parquet for retrieval at render time
+  ds_tree_file <- file.path(generated_dir, glue(".tree_{tree_id}_ds.parquet"))
+  ds_tree <- d %>% filter(individual_id == tree_id)
+  write_parquet(ds_tree, ds_tree_file)
+  
+  # All observations for same species
+  ds_all_file <- file.path(generated_dir, glue(".tree_{tree_id}_ds_all.parquet"))
+  ds_all <- d %>% filter(common_name == tree_info$common_name)
+  write_parquet(ds_all, ds_all_file)
+  
+  # Tree location data with plant nicknames
+  ds_trees_file <- file.path(generated_dir, glue(".tree_{tree_id}_ds_trees.parquet"))
+  trees_with_nicknames <- d %>%
+    group_by(individual_id) %>%
+    summarize(plant_nickname = first(plant_nickname), .groups = "drop") %>%
+    right_join(trees, by = "individual_id")
+  write_parquet(trees_with_nicknames, ds_trees_file)
+  
+  # Read template and write with embedded params
+  template_content <- readLines("template/tree_template.qmd")
+  
+  # Inject params into YAML frontmatter
+  new_content <- c(
+    "---",
+    "title: \"Tree Observations\"",
+    "format:",
+    "  html:",
+    "    toc: true",
+    "    number-sections: true",
+    "params:",
+    glue("  tree_id: {tree_id}"),
+    glue("  common_name: '{tree_info$common_name}'"),
+    glue("  plant_nickname: '{tree_info$plant_nickname}'"),
+    glue("  tag: '{tree_info$tag}'"),
+    glue("  ds_file: '{ds_tree_file}'"),
+    glue("  ds_all_file: '{ds_all_file}'"),
+    glue("  ds_trees_file: '{ds_trees_file}'"),
+    "editor_options:",
+    "  chunk_output_type: console",
+    "---",
+    "",
+    "```{r echo=F}",
+    "library(tidyverse)",
+    "library(leaflet)",
+    "library(ggplot2)",
+    "library(arrow)",
+    "ds <- read_parquet(params$ds_file)",
+    "ds_all <- read_parquet(params$ds_all_file)",
+    "ds_trees <- read_parquet(params$ds_trees_file)",
+    "```",
+    "",
+    # Rest of template (skip header)
+    template_content[which(template_content == "```")[2]:length(template_content)]
+  )
+  
+  qmd_file <- file.path(generated_dir, glue("tree_{tree_id}.qmd"))
+  writeLines(new_content, qmd_file)
+  message("Generated tree QMD: ", qmd_file)
+})

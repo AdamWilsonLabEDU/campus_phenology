@@ -1,0 +1,162 @@
+---
+title: "Tree Observations"
+format:
+  html:
+    toc: true
+    number-sections: true
+params:
+  tree_id: null
+  common_name: null
+  plant_nickname: null
+  tag: null
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r echo=F, results='hide', message=FALSE}
+library(tidyverse)
+library(leaflet)
+library(ggplot2)
+```
+
+# Tree Overview
+
+**Tree ID:** `r params$tree_id`  
+**Common Name:** `r params$common_name`  
+**Plant Nickname:** `r params$plant_nickname`  
+**Tag:** `r params$tag`
+
+---
+
+## Location Map
+
+This map shows the location of this tree (red marker) and other trees of the same species (blue markers).
+
+```{r echo=F}
+# Filter for this tree and same species
+tree_data <- ds_trees %>% filter(individual_id == params$tree_id)
+species_trees <- ds_trees %>% filter(common_name == params$common_name)
+
+if(nrow(tree_data) > 0) {
+  leaflet(species_trees) %>%
+    addTiles() %>%
+    addCircleMarkers(
+      lng = ~lon,
+      lat = ~lat,
+      popup = ~paste0("<b>", plant_nickname, "</b><br>",
+                      "Tag: ", tag, "<br>",
+                      "ID: ", individual_id),
+      color = ~ifelse(individual_id == params$tree_id, "red", "blue"),
+      fillOpacity = ~ifelse(individual_id == params$tree_id, 1, 0.5),
+      radius = ~ifelse(individual_id == params$tree_id, 8, 5)
+    ) %>%
+    addLegend(
+      position = "bottomright",
+      colors = c("red", "blue"),
+      labels = c("This tree", "Same species"),
+      opacity = 1
+    )
+}
+```
+
+---
+
+## Phenology Observations Over Time
+
+This chart shows all observations for this tree (black points) compared to all observations for other trees of the same species (grey points with transparency).
+
+```{r echo=F, fig.width=10, fig.height=6}
+if(nrow(ds) > 0) {
+  # Filter for same species and this tree
+  species_obs <- ds_all %>% filter(common_name == params$common_name)
+  tree_obs <- ds %>% filter(individual_id == params$tree_id)
+  
+  ggplot() +
+    # All species observations in light grey
+    geom_point(data = species_obs, 
+               aes(x = observation_date, y = phenophase_description),
+               color = "grey80", alpha = 0.5, size = 2) +
+    # Smoothed trend for species
+    geom_smooth(data = species_obs,
+                aes(x = observation_date, y = as.numeric(factor(phenophase_description))),
+                method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
+    # This tree's observations in black
+    geom_point(data = tree_obs,
+               aes(x = observation_date, y = phenophase_description),
+               color = "black", size = 3) +
+    labs(
+      title = paste("Phenology for", params$plant_nickname),
+      subtitle = paste("Compared to other", params$common_name, "trees"),
+      x = "Observation Date",
+      y = "Phenophase"
+    ) +
+    theme_minimal() +
+    theme(axis.text.y = element_text(size = 8))
+}
+```
+
+---
+
+## Leaf Phenology Details
+
+Focusing on leaf-related phenophases for this tree compared to the species.
+
+```{r echo=F, fig.width=10, fig.height=6}
+if(nrow(ds) > 0) {
+  # Filter for leaf phenophases only
+  leaf_keywords <- c("Leaves", "Leaf", "leaves", "leaf", "Colored", "Falling")
+  
+  species_leaf <- ds_all %>% 
+    filter(common_name == params$common_name) %>%
+    filter(str_detect(phenophase_description, paste(leaf_keywords, collapse = "|")))
+  
+  tree_leaf <- ds %>% 
+    filter(individual_id == params$tree_id) %>%
+    filter(str_detect(phenophase_description, paste(leaf_keywords, collapse = "|")))
+  
+  if(nrow(tree_leaf) > 0) {
+    ggplot() +
+      # All species leaf observations in light grey
+      geom_point(data = species_leaf, 
+                 aes(x = observation_datey, y = phenophase_description),
+                 color = "grey80", alpha = 0.5, size = 2) +
+      # Smoothed trend for species
+      geom_smooth(data = species_leaf,
+                  aes(x = observation_datey, y = as.numeric(factor(phenophase_description))),
+                  method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
+      # This tree's leaf observations in black
+      geom_point(data = tree_leaf,
+                 aes(x = observation_datey, y = phenophase_description),
+                 color = "black", size = 3) +
+      labs(
+        title = paste("Leaf Phenology for", params$plant_nickname),
+        subtitle = paste("Compared to other", params$common_name, "trees"),
+        x = "Date (normalized to same year)",
+        y = "Phenophase"
+      ) +
+      theme_minimal() +
+      theme(axis.text.y = element_text(size = 8))
+  } else {
+    cat("No leaf phenophase observations recorded for this tree.\n")
+  }
+}
+```
+
+---
+
+## Observation Summary
+
+```{r echo=F}
+if(nrow(ds) > 0) {
+  ds %>%
+    group_by(phenophase_description) %>%
+    summarize(
+      n_observations = n(),
+      first_date = min(observation_date),
+      last_date = max(observation_date),
+      .groups = "drop"
+    ) %>%
+    arrange(desc(n_observations)) %>%
+    knitr::kable()
+}
+```

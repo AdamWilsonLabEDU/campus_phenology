@@ -59,23 +59,54 @@ These data were last updated on `r Sys.time()`.
 The map below shows the locations of monitored trees on UB's North Campus.
 
 ```{r}
+# Prepare tree data with observation stats
+tree_obs_stats <- d %>%
+  filter(!is.na(individual_id)) %>%
+  group_by(individual_id) %>%
+  summarize(
+    n_obs = n(),
+    last_obs_date = max(observation_date),
+    .groups = "drop"
+  )
+
+trees_with_stats <- trees %>%
+  left_join(tree_obs_stats, by = "individual_id") %>%
+  mutate(
+    n_obs = replace_na(n_obs, 0),
+    last_obs_date = replace_na(last_obs_date, as.Date(NA))
+  )
+
+# Create popups with HTML formatting
+trees_with_stats <- trees_with_stats %>%
+  mutate(
+    popup_html = paste0(
+      "<b>Tag:</b> ", tag, "<br>",
+      "<b>Species:</b> ", common_name, "<br>",
+      "<b>Scientific Name:</b> <i>", species, "</i><br>",
+      "<b>Observations:</b> ", n_obs, "<br>",
+      "<b>Last Observation:</b> ", format(last_obs_date, "%Y-%m-%d"), "<br>",
+      "<a href='generated/tree_", individual_id, ".html'>View tree details</a>"
+    )
+  )
+
 icons <- awesomeIcons(
-icon = "ios-close",
-iconColor = "white",
-library = "ion",
-markerColor = trees$color
+  icon = "ios-close",
+  iconColor = "white",
+  library = "ion",
+  markerColor = trees_with_stats$color
 )
 
-leaflet(trees) |>
-addTiles() |>
-addAwesomeMarkers(
-~lon, ~lat,
-icon = icons,
-label = paste(
-"Tag:", trees$tag, "|",
-"Species:", trees$common_name
-)
-)
+leaflet(trees_with_stats) %>%
+  addTiles() %>%
+  addAwesomeMarkers(
+    ~lon, ~lat,
+    icon = icons,
+    popup = ~popup_html,
+    label = paste(
+      "Tag:", trees_with_stats$tag, "|",
+      "Species:", trees_with_stats$common_name
+    )
+  )
 ```
 
 # Current Observation Status
