@@ -11,6 +11,18 @@ params:
   require_obs_per_week: 4
 ---
 
+```{r example-params, include=FALSE}
+# Quick dev compile helper
+if (FALSE) {
+  params <- list(
+    semester = "2025.2",
+    nnid = 60171,
+    required_weeks = 9,
+    require_obs_per_week = 4
+  )
+}
+```
+
 ```{r setup-libraries, echo=F, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(ggplot2)

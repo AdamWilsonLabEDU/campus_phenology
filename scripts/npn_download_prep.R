@@ -69,22 +69,42 @@ if (!release_exists) {
 # -------------------------------------------------------------------
 trees <- read_csv("data/trees.csv", show_col_types = FALSE) %>%
   mutate(
+    # Standardize common_name to match NPN API format (lowercase, full names)
+    common_name = case_match(
+      common_name,
+      "Red Oak"            ~ "northern red oak",
+      "Black Oak"          ~ "black oak",
+      "Silver Maple"       ~ "silver maple",
+      "Red Maple"          ~ "red maple",
+      "Honey Locust"       ~ "honeylocust",
+      "Sugar Maple"        ~ "sugar maple",
+      "Staghorn Sumac"     ~ "staghorn sumac",
+      "Eastern Cottonwood" ~ "eastern cottonwood",
+      "Apple"              ~ "apple",
+      "American Basswood"  ~ "American basswood",
+      "River Birch"        ~ "river birch",
+      "White Birch"        ~ "paper birch",
+      "Ginkgo"             ~ "maidenhair tree",
+      "Black Locust"       ~ "black locust",
+      .default = tolower(common_name)
+    ),
     color = case_match(
       common_name,
-      "Red Oak"            ~ "red",
-      "Black Oak"          ~ "black",
-      "Silver Maple"       ~ "darkblue",
-      "Red Maple"          ~ "orange",
-      "Honey Locust"       ~ "purple",
-      "Sugar Maple"        ~ "darkpurple",
-      "Staghorn Sumac"     ~ "blue",
-      "Eastern Cottonwood" ~ "beige",
-      "Apple"              ~ "yellow",
-      "American Basswood"  ~ "pink",
-      "River Birch"        ~ "lightred",
-      "White Birch"        ~ "cadetblue",
-      "Ginkgo"             ~ "lightgray",
-      .default             = NA_character_
+      "northern red oak"   ~ "red",
+      "black oak"          ~ "black",
+      "silver maple"       ~ "darkblue",
+      "red maple"          ~ "orange",
+      "honeylocust"        ~ "purple",
+      "sugar maple"        ~ "darkpurple",
+      "staghorn sumac"     ~ "blue",
+      "eastern cottonwood" ~ "beige",
+      "apple"              ~ "yellow",
+      "American basswood"  ~ "pink",
+      "river birch"        ~ "lightred",
+      "paper birch"        ~ "cadetblue",
+      "maidenhair tree"    ~ "lightgray",
+      "black locust"       ~ "darkgreen",
+      .default = NA_character_
     ),
     common_name_tag = paste(tag, common_name)
   ) %>%

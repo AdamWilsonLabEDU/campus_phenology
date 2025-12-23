@@ -13,6 +13,18 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r example-params, include=FALSE}
+# Quick dev compile helper
+if (FALSE) {
+  params <- list(
+    tree_id = 204858,
+    common_name = "northern red oak",
+    plant_nickname = "101 red oak",
+    tag = "101"
+  )
+}
+```
+
 ```{r setup-libraries, echo=F, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(leaflet)
@@ -25,11 +37,12 @@ library(arrow)
 ds_all <- read_parquet("data/processed/full_data.parquet")
 ds_trees <- read_parquet("data/processed/trees.parquet")
 
-# Add plant nicknames to trees
+# Add plant nicknames to trees (use tag + common_name as fallback)
 trees_with_nicknames <- ds_all %>%
   group_by(individual_id) %>%
   summarize(plant_nickname = first(plant_nickname), .groups = "drop") %>%
-  right_join(ds_trees, by = "individual_id")
+  right_join(ds_trees, by = "individual_id") %>%
+  mutate(plant_nickname = coalesce(plant_nickname, common_name_tag))
 
 # Filter for this tree and species
 ds <- ds_all %>% filter(individual_id == params$tree_id)
@@ -85,21 +98,22 @@ This chart shows all observations for this tree (black points) compared to all o
 ```{r phenology-comparison, echo=F, fig.width=10, fig.height=15}
 if(nrow(ds) > 0) {
   # Filter for same species and this tree
-  species_obs <- ds_species %>% filter(common_name == params$common_name)
-  tree_obs <- ds %>% filter(individual_id == params$tree_id)
+  species_obs <- ds_species %>% filter(common_name == params$common_name,
+  phenophase_description=="Leaves")
+  tree_obs <- ds %>% filter(individual_id == params$tree_id, phenophase_description=="Leaves")
   
   ggplot() +
     # All species observations in light grey
     geom_point(data = species_obs, 
-               aes(x = observation_date, y = phenophase_description),
+               aes(x = observation_datey, y = intensity),
                color = "grey80", alpha = 0.5, size = 2) +
     # Smoothed trend for species
-    geom_smooth(data = species_obs,
-                aes(x = observation_date, y = as.numeric(factor(phenophase_description))),
-                method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
+#    geom_smooth(data = species_obs,
+#                aes(x = observation_datey, y = intensity,group=semester),
+#                method = "loess", se = FALSE, color = "grey50", linetype = "dashed") +
     # This tree's observations in black
     geom_point(data = tree_obs,
-               aes(x = observation_date, y = phenophase_description),
+               aes(x = observation_datey, y = intensity),
                color = "black", size = 3) +
     labs(
       title = paste("Phenology for", params$plant_nickname),
@@ -107,6 +121,7 @@ if(nrow(ds) > 0) {
       x = "Observation Date",
       y = "Phenophase"
     ) +
+    facet_wrap(~year(observation_date))+
     theme_minimal() +
     theme(axis.text.y = element_text(size = 8))
 }

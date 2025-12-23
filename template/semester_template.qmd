@@ -12,6 +12,17 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r example-params, include=FALSE}
+# Quick dev compile helper
+if (FALSE) {
+  params <- list(
+    semester = "2025.2",
+    required_weeks = 9,
+    require_obs_per_week = 4
+  )
+}
+```
+
 ```{r setup-libraries, echo=F, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(DT)
@@ -40,6 +51,7 @@ There are `r nrow(ds)` total observations this semester.
 
 [Download CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-`r params$semester`.csv)
 
+The NNID in the table and figures below is an anonymized individual observer ID. 
 
 ## Observer Overview
 
@@ -54,6 +66,9 @@ ds %>%
 
 
 ## Weekly Observations Heatmap
+
+
+The figure below visualizes the number of observations made by each observer during each week of the semester. 
 
 ```{r weekly-heatmap, echo=F, fig.height=12 }
 if(nrow(ds) > 0) {
