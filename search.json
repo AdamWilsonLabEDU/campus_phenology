@@ -1,0 +1,1787 @@
+[
+  {
+    "objectID": "semesters.html",
+    "href": "semesters.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "This page lists all semesters with available observation data.\n\n\n\nSemester\nStatus\nObservers\nObservations\nPage\nData\n\n\n\n\nFall 2025\nIn progress\n105\n27683\nView\nCSV\n\n\nSpring 2025\nComplete\n116\n35666\nView\nCSV\n\n\nFall 2024\nComplete\n148\n39713\nView\nCSV\n\n\nSpring 2024\nComplete\n159\n46727\nView\nCSV\n\n\nFall 2023\nComplete\n162\n36549\nView\nCSV\n\n\nSpring 2023\nComplete\n165\n50443\nView\nCSV\n\n\nFall 2022\nComplete\n175\n55879\nView\nCSV\n\n\nSpring 2022\nComplete\n171\n51689\nView\nCSV\n\n\nFall 2021\nComplete\n169\n49446\nView\nCSV\n\n\nSpring 2021\nComplete\n73\n19362\nView\nCSV\n\n\nFall 2020\nComplete\n82\n24272\nView\nCSV\n\n\nSpring 2020\nComplete\n165\n19776\nView\nCSV\n\n\nFall 2019\nComplete\n176\n40532\nView\nCSV\n\n\nSpring 2019\nComplete\n1\n6\nView\nCSV"
+  },
+  {
+    "objectID": "generated/student_2025.2_81829.html",
+    "href": "generated/student_2025.2_81829.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81829.html#observations-by-plant",
+    "href": "generated/student_2025.2_81829.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81791.html",
+    "href": "generated/student_2025.2_81791.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81791.html#observations-by-plant",
+    "href": "generated/student_2025.2_81791.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81733.html",
+    "href": "generated/student_2025.2_81733.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81733.html#observations-by-plant",
+    "href": "generated/student_2025.2_81733.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81680.html",
+    "href": "generated/student_2025.2_81680.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81680.html#observations-by-plant",
+    "href": "generated/student_2025.2_81680.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81596.html",
+    "href": "generated/student_2025.2_81596.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81596.html#observations-by-plant",
+    "href": "generated/student_2025.2_81596.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81590.html",
+    "href": "generated/student_2025.2_81590.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81590.html#observations-by-plant",
+    "href": "generated/student_2025.2_81590.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81517.html",
+    "href": "generated/student_2025.2_81517.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81517.html#observations-by-plant",
+    "href": "generated/student_2025.2_81517.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81491.html",
+    "href": "generated/student_2025.2_81491.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81491.html#observations-by-plant",
+    "href": "generated/student_2025.2_81491.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81489.html",
+    "href": "generated/student_2025.2_81489.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81489.html#observations-by-plant",
+    "href": "generated/student_2025.2_81489.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81487.html",
+    "href": "generated/student_2025.2_81487.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81487.html#observations-by-plant",
+    "href": "generated/student_2025.2_81487.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81485.html",
+    "href": "generated/student_2025.2_81485.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81485.html#observations-by-plant",
+    "href": "generated/student_2025.2_81485.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81482.html",
+    "href": "generated/student_2025.2_81482.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81482.html#observations-by-plant",
+    "href": "generated/student_2025.2_81482.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81476.html",
+    "href": "generated/student_2025.2_81476.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81476.html#observations-by-plant",
+    "href": "generated/student_2025.2_81476.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81472.html",
+    "href": "generated/student_2025.2_81472.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81472.html#observations-by-plant",
+    "href": "generated/student_2025.2_81472.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81470.html",
+    "href": "generated/student_2025.2_81470.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81470.html#observations-by-plant",
+    "href": "generated/student_2025.2_81470.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81468.html",
+    "href": "generated/student_2025.2_81468.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81468.html#observations-by-plant",
+    "href": "generated/student_2025.2_81468.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81466.html",
+    "href": "generated/student_2025.2_81466.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81466.html#observations-by-plant",
+    "href": "generated/student_2025.2_81466.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81464.html",
+    "href": "generated/student_2025.2_81464.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81464.html#observations-by-plant",
+    "href": "generated/student_2025.2_81464.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81462.html",
+    "href": "generated/student_2025.2_81462.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81462.html#observations-by-plant",
+    "href": "generated/student_2025.2_81462.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81432.html",
+    "href": "generated/student_2025.2_81432.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81432.html#observations-by-plant",
+    "href": "generated/student_2025.2_81432.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81430.html",
+    "href": "generated/student_2025.2_81430.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81430.html#observations-by-plant",
+    "href": "generated/student_2025.2_81430.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81428.html",
+    "href": "generated/student_2025.2_81428.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81428.html#observations-by-plant",
+    "href": "generated/student_2025.2_81428.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81425.html",
+    "href": "generated/student_2025.2_81425.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81425.html#observations-by-plant",
+    "href": "generated/student_2025.2_81425.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81422.html",
+    "href": "generated/student_2025.2_81422.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81422.html#observations-by-plant",
+    "href": "generated/student_2025.2_81422.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81420.html",
+    "href": "generated/student_2025.2_81420.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81420.html#observations-by-plant",
+    "href": "generated/student_2025.2_81420.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81409.html",
+    "href": "generated/student_2025.2_81409.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81409.html#observations-by-plant",
+    "href": "generated/student_2025.2_81409.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81406.html",
+    "href": "generated/student_2025.2_81406.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81406.html#observations-by-plant",
+    "href": "generated/student_2025.2_81406.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81404.html",
+    "href": "generated/student_2025.2_81404.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81404.html#observations-by-plant",
+    "href": "generated/student_2025.2_81404.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81386.html",
+    "href": "generated/student_2025.2_81386.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81386.html#observations-by-plant",
+    "href": "generated/student_2025.2_81386.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81384.html",
+    "href": "generated/student_2025.2_81384.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81384.html#observations-by-plant",
+    "href": "generated/student_2025.2_81384.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81374.html",
+    "href": "generated/student_2025.2_81374.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81374.html#observations-by-plant",
+    "href": "generated/student_2025.2_81374.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81372.html",
+    "href": "generated/student_2025.2_81372.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81372.html#observations-by-plant",
+    "href": "generated/student_2025.2_81372.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81370.html",
+    "href": "generated/student_2025.2_81370.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81370.html#observations-by-plant",
+    "href": "generated/student_2025.2_81370.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81368.html",
+    "href": "generated/student_2025.2_81368.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81368.html#observations-by-plant",
+    "href": "generated/student_2025.2_81368.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81366.html",
+    "href": "generated/student_2025.2_81366.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81366.html#observations-by-plant",
+    "href": "generated/student_2025.2_81366.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81364.html",
+    "href": "generated/student_2025.2_81364.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81364.html#observations-by-plant",
+    "href": "generated/student_2025.2_81364.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81362.html",
+    "href": "generated/student_2025.2_81362.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81362.html#observations-by-plant",
+    "href": "generated/student_2025.2_81362.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81360.html",
+    "href": "generated/student_2025.2_81360.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81360.html#observations-by-plant",
+    "href": "generated/student_2025.2_81360.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81347.html",
+    "href": "generated/student_2025.2_81347.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81347.html#observations-by-plant",
+    "href": "generated/student_2025.2_81347.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81345.html",
+    "href": "generated/student_2025.2_81345.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81345.html#observations-by-plant",
+    "href": "generated/student_2025.2_81345.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81343.html",
+    "href": "generated/student_2025.2_81343.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81343.html#observations-by-plant",
+    "href": "generated/student_2025.2_81343.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81341.html",
+    "href": "generated/student_2025.2_81341.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81341.html#observations-by-plant",
+    "href": "generated/student_2025.2_81341.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81339.html",
+    "href": "generated/student_2025.2_81339.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81339.html#observations-by-plant",
+    "href": "generated/student_2025.2_81339.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81337.html",
+    "href": "generated/student_2025.2_81337.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81337.html#observations-by-plant",
+    "href": "generated/student_2025.2_81337.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81335.html",
+    "href": "generated/student_2025.2_81335.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81335.html#observations-by-plant",
+    "href": "generated/student_2025.2_81335.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81333.html",
+    "href": "generated/student_2025.2_81333.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81333.html#observations-by-plant",
+    "href": "generated/student_2025.2_81333.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81330.html",
+    "href": "generated/student_2025.2_81330.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81330.html#observations-by-plant",
+    "href": "generated/student_2025.2_81330.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81328.html",
+    "href": "generated/student_2025.2_81328.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81328.html#observations-by-plant",
+    "href": "generated/student_2025.2_81328.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81307.html",
+    "href": "generated/student_2025.2_81307.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81307.html#observations-by-plant",
+    "href": "generated/student_2025.2_81307.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81288.html",
+    "href": "generated/student_2025.2_81288.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81288.html#observations-by-plant",
+    "href": "generated/student_2025.2_81288.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_76178.html",
+    "href": "generated/student_2025.2_76178.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_76178.html#observations-by-plant",
+    "href": "generated/student_2025.2_76178.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_60788.html",
+    "href": "generated/student_2025.2_60788.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_60788.html#observations-by-plant",
+    "href": "generated/student_2025.2_60788.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/semester_2025.2.html",
+    "href": "generated/semester_2025.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2025.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2025.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2025.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2025.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2024.2.html",
+    "href": "generated/semester_2024.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2024.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2024.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2024.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2024.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2023.2.html",
+    "href": "generated/semester_2023.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2023.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2023.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2023.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2023.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2022.2.html",
+    "href": "generated/semester_2022.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2022.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2022.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2022.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2022.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2021.2.html",
+    "href": "generated/semester_2021.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2021.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2021.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2021.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2021.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2020.2.html",
+    "href": "generated/semester_2020.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2020.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2020.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2020.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2020.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2019.2.html",
+    "href": "generated/semester_2019.2.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2019.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2019.2.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2019.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2019.2.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Phenology Observations at the University at Buffalo",
+    "section": "",
+    "text": "Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.\nThroughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.\nThese data were last updated on 2025-12-23 08:11:03.732405."
+  },
+  {
+    "objectID": "index.html#observations-by-species",
+    "href": "index.html#observations-by-species",
+    "title": "Phenology Observations at the University at Buffalo",
+    "section": "Observations by Species",
+    "text": "Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2019.1.html",
+    "href": "generated/semester_2019.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2019.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2019.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2019.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2019.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2020.1.html",
+    "href": "generated/semester_2020.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2020.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2020.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2020.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2020.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2021.1.html",
+    "href": "generated/semester_2021.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2021.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2021.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2021.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2021.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2022.1.html",
+    "href": "generated/semester_2022.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2022.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2022.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2022.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2022.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2023.1.html",
+    "href": "generated/semester_2023.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2023.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2023.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2023.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2023.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2024.1.html",
+    "href": "generated/semester_2024.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2024.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2024.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2024.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2024.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/semester_2025.1.html",
+    "href": "generated/semester_2025.1.html",
+    "title": "Semester Data",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/semester_2025.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2025.1.html#weekly-observations-heatmap",
+    "title": "Semester Data",
+    "section": "1 Weekly Observations Heatmap",
+    "text": "1 Weekly Observations Heatmap"
+  },
+  {
+    "objectID": "generated/semester_2025.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2025.1.html#phenology-observations-by-species",
+    "title": "Semester Data",
+    "section": "2 Phenology Observations by Species",
+    "text": "2 Phenology Observations by Species"
+  },
+  {
+    "objectID": "generated/student_2025.2_60171.html",
+    "href": "generated/student_2025.2_60171.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_60171.html#observations-by-plant",
+    "href": "generated/student_2025.2_60171.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_74478.html",
+    "href": "generated/student_2025.2_74478.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_74478.html#observations-by-plant",
+    "href": "generated/student_2025.2_74478.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_76263.html",
+    "href": "generated/student_2025.2_76263.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_76263.html#observations-by-plant",
+    "href": "generated/student_2025.2_76263.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81305.html",
+    "href": "generated/student_2025.2_81305.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81305.html#observations-by-plant",
+    "href": "generated/student_2025.2_81305.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81327.html",
+    "href": "generated/student_2025.2_81327.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81327.html#observations-by-plant",
+    "href": "generated/student_2025.2_81327.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81329.html",
+    "href": "generated/student_2025.2_81329.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81329.html#observations-by-plant",
+    "href": "generated/student_2025.2_81329.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81332.html",
+    "href": "generated/student_2025.2_81332.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81332.html#observations-by-plant",
+    "href": "generated/student_2025.2_81332.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81334.html",
+    "href": "generated/student_2025.2_81334.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81334.html#observations-by-plant",
+    "href": "generated/student_2025.2_81334.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81336.html",
+    "href": "generated/student_2025.2_81336.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81336.html#observations-by-plant",
+    "href": "generated/student_2025.2_81336.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81338.html",
+    "href": "generated/student_2025.2_81338.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81338.html#observations-by-plant",
+    "href": "generated/student_2025.2_81338.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81340.html",
+    "href": "generated/student_2025.2_81340.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81340.html#observations-by-plant",
+    "href": "generated/student_2025.2_81340.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81342.html",
+    "href": "generated/student_2025.2_81342.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81342.html#observations-by-plant",
+    "href": "generated/student_2025.2_81342.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81344.html",
+    "href": "generated/student_2025.2_81344.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81344.html#observations-by-plant",
+    "href": "generated/student_2025.2_81344.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81346.html",
+    "href": "generated/student_2025.2_81346.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81346.html#observations-by-plant",
+    "href": "generated/student_2025.2_81346.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81348.html",
+    "href": "generated/student_2025.2_81348.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81348.html#observations-by-plant",
+    "href": "generated/student_2025.2_81348.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81361.html",
+    "href": "generated/student_2025.2_81361.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81361.html#observations-by-plant",
+    "href": "generated/student_2025.2_81361.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81363.html",
+    "href": "generated/student_2025.2_81363.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81363.html#observations-by-plant",
+    "href": "generated/student_2025.2_81363.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81365.html",
+    "href": "generated/student_2025.2_81365.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81365.html#observations-by-plant",
+    "href": "generated/student_2025.2_81365.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81367.html",
+    "href": "generated/student_2025.2_81367.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81367.html#observations-by-plant",
+    "href": "generated/student_2025.2_81367.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81369.html",
+    "href": "generated/student_2025.2_81369.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81369.html#observations-by-plant",
+    "href": "generated/student_2025.2_81369.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81371.html",
+    "href": "generated/student_2025.2_81371.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81371.html#observations-by-plant",
+    "href": "generated/student_2025.2_81371.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81373.html",
+    "href": "generated/student_2025.2_81373.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81373.html#observations-by-plant",
+    "href": "generated/student_2025.2_81373.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81375.html",
+    "href": "generated/student_2025.2_81375.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81375.html#observations-by-plant",
+    "href": "generated/student_2025.2_81375.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81385.html",
+    "href": "generated/student_2025.2_81385.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81385.html#observations-by-plant",
+    "href": "generated/student_2025.2_81385.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81403.html",
+    "href": "generated/student_2025.2_81403.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81403.html#observations-by-plant",
+    "href": "generated/student_2025.2_81403.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81405.html",
+    "href": "generated/student_2025.2_81405.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81405.html#observations-by-plant",
+    "href": "generated/student_2025.2_81405.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81407.html",
+    "href": "generated/student_2025.2_81407.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81407.html#observations-by-plant",
+    "href": "generated/student_2025.2_81407.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81410.html",
+    "href": "generated/student_2025.2_81410.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81410.html#observations-by-plant",
+    "href": "generated/student_2025.2_81410.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81421.html",
+    "href": "generated/student_2025.2_81421.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81421.html#observations-by-plant",
+    "href": "generated/student_2025.2_81421.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81423.html",
+    "href": "generated/student_2025.2_81423.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81423.html#observations-by-plant",
+    "href": "generated/student_2025.2_81423.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81427.html",
+    "href": "generated/student_2025.2_81427.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81427.html#observations-by-plant",
+    "href": "generated/student_2025.2_81427.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81429.html",
+    "href": "generated/student_2025.2_81429.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81429.html#observations-by-plant",
+    "href": "generated/student_2025.2_81429.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81431.html",
+    "href": "generated/student_2025.2_81431.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81431.html#observations-by-plant",
+    "href": "generated/student_2025.2_81431.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81461.html",
+    "href": "generated/student_2025.2_81461.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81461.html#observations-by-plant",
+    "href": "generated/student_2025.2_81461.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81463.html",
+    "href": "generated/student_2025.2_81463.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81463.html#observations-by-plant",
+    "href": "generated/student_2025.2_81463.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81465.html",
+    "href": "generated/student_2025.2_81465.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81465.html#observations-by-plant",
+    "href": "generated/student_2025.2_81465.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81467.html",
+    "href": "generated/student_2025.2_81467.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81467.html#observations-by-plant",
+    "href": "generated/student_2025.2_81467.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81469.html",
+    "href": "generated/student_2025.2_81469.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81469.html#observations-by-plant",
+    "href": "generated/student_2025.2_81469.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81471.html",
+    "href": "generated/student_2025.2_81471.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81471.html#observations-by-plant",
+    "href": "generated/student_2025.2_81471.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81473.html",
+    "href": "generated/student_2025.2_81473.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81473.html#observations-by-plant",
+    "href": "generated/student_2025.2_81473.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81481.html",
+    "href": "generated/student_2025.2_81481.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81481.html#observations-by-plant",
+    "href": "generated/student_2025.2_81481.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81483.html",
+    "href": "generated/student_2025.2_81483.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81483.html#observations-by-plant",
+    "href": "generated/student_2025.2_81483.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81486.html",
+    "href": "generated/student_2025.2_81486.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81486.html#observations-by-plant",
+    "href": "generated/student_2025.2_81486.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81488.html",
+    "href": "generated/student_2025.2_81488.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81488.html#observations-by-plant",
+    "href": "generated/student_2025.2_81488.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81490.html",
+    "href": "generated/student_2025.2_81490.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81490.html#observations-by-plant",
+    "href": "generated/student_2025.2_81490.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81492.html",
+    "href": "generated/student_2025.2_81492.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81492.html#observations-by-plant",
+    "href": "generated/student_2025.2_81492.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81585.html",
+    "href": "generated/student_2025.2_81585.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81585.html#observations-by-plant",
+    "href": "generated/student_2025.2_81585.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81592.html",
+    "href": "generated/student_2025.2_81592.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81592.html#observations-by-plant",
+    "href": "generated/student_2025.2_81592.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81615.html",
+    "href": "generated/student_2025.2_81615.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81615.html#observations-by-plant",
+    "href": "generated/student_2025.2_81615.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81715.html",
+    "href": "generated/student_2025.2_81715.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81715.html#observations-by-plant",
+    "href": "generated/student_2025.2_81715.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81745.html",
+    "href": "generated/student_2025.2_81745.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81745.html#observations-by-plant",
+    "href": "generated/student_2025.2_81745.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81824.html",
+    "href": "generated/student_2025.2_81824.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81824.html#observations-by-plant",
+    "href": "generated/student_2025.2_81824.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  },
+  {
+    "objectID": "generated/student_2025.2_81938.html",
+    "href": "generated/student_2025.2_81938.html",
+    "title": "Student Observations",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'arrow'\n\n\nThe following object is masked from 'package:lubridate':\n\n    duration\n\n\nThe following object is masked from 'package:utils':\n\n    timestamp\n```"
+  },
+  {
+    "objectID": "generated/student_2025.2_81938.html#observations-by-plant",
+    "href": "generated/student_2025.2_81938.html#observations-by-plant",
+    "title": "Student Observations",
+    "section": "1 Observations by Plant",
+    "text": "1 Observations by Plant\nThe number of observations per individual plant monitored by this student."
+  }
+]
