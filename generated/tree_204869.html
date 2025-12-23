@@ -68,6 +68,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
 
 
 </head>
@@ -113,9 +123,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#phenology-observations-over-time" id="toc-phenology-observations-over-time" class="nav-link active" data-scroll-target="#phenology-observations-over-time"><span class="header-section-number">1</span> Phenology Observations Over Time</a></li>
-  <li><a href="#leaf-phenology-details" id="toc-leaf-phenology-details" class="nav-link" data-scroll-target="#leaf-phenology-details"><span class="header-section-number">2</span> Leaf Phenology Details</a></li>
-  <li><a href="#observation-summary" id="toc-observation-summary" class="nav-link" data-scroll-target="#observation-summary"><span class="header-section-number">3</span> Observation Summary</a></li>
+  <li><a href="#tree-overview" id="toc-tree-overview" class="nav-link active" data-scroll-target="#tree-overview"><span class="header-section-number">1</span> Tree Overview</a>
+  <ul class="collapse">
+  <li><a href="#location-map" id="toc-location-map" class="nav-link" data-scroll-target="#location-map"><span class="header-section-number">1.1</span> Location Map</a></li>
+  <li><a href="#phenology-observations-over-time" id="toc-phenology-observations-over-time" class="nav-link" data-scroll-target="#phenology-observations-over-time"><span class="header-section-number">1.2</span> Phenology Observations Over Time</a></li>
+  <li><a href="#leaf-phenology-details" id="toc-leaf-phenology-details" class="nav-link" data-scroll-target="#leaf-phenology-details"><span class="header-section-number">1.3</span> Leaf Phenology Details</a></li>
+  <li><a href="#observation-summary" id="toc-observation-summary" class="nav-link" data-scroll-target="#observation-summary"><span class="header-section-number">1.4</span> Observation Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -141,35 +155,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="tree-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Tree Overview</h1>
+<p><strong>Tree ID:</strong> 204869<br>
+<strong>Common Name:</strong> silver maple<br>
+<strong>Plant Nickname:</strong> 112 silver maple<br>
+<strong>Tag:</strong> 112</p>
+<hr>
+<section id="location-map" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="location-map"><span class="header-section-number">1.1</span> Location Map</h2>
+<p>This map shows the location of this tree (red marker) and other trees of the same species (blue markers).</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.6
-✔ forcats   1.0.1     ✔ stringr   1.6.0
-✔ ggplot2   4.0.1     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.2
-✔ purrr     1.2.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
-
-Attaching package: 'arrow'
-
-
-The following object is masked from 'package:lubridate':
-
-    duration
-
-
-The following object is masked from 'package:utils':
-
-    timestamp</code></pre>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-fce2d2a9c1e9ba2b5f22" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-fce2d2a9c1e9ba2b5f22">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[],[],[],null,null,{"interactive":true,"className":"","stroke":true,"color":[],"weight":5,"opacity":0.5,"fill":true,"fillColor":[],"fillOpacity":[]},null,null,"<b><\/b><br>Tag: <br>ID: ",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["red","blue"],"labels":["This tree","Same species"],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"unknown","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":[]},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <hr>
-<section id="phenology-observations-over-time" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="phenology-observations-over-time"><span class="header-section-number">1</span> Phenology Observations Over Time</h2>
+</section>
+<section id="phenology-observations-over-time" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="phenology-observations-over-time"><span class="header-section-number">1.2</span> Phenology Observations Over Time</h2>
 <p>This chart shows all observations for this tree (black points) compared to all observations for other trees of the same species (grey points with transparency).</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
@@ -178,15 +183,15 @@ The following object is masked from 'package:utils':
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tree_204869_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="960"></p>
+<p><img src="tree_204869_files/figure-html/phenology-comparison-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 <hr>
 </section>
-<section id="leaf-phenology-details" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="leaf-phenology-details"><span class="header-section-number">2</span> Leaf Phenology Details</h2>
+<section id="leaf-phenology-details" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="leaf-phenology-details"><span class="header-section-number">1.3</span> Leaf Phenology Details</h2>
 <p>Focusing on leaf-related phenophases for this tree compared to the species.</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
@@ -195,15 +200,15 @@ The following object is masked from 'package:utils':
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tree_204869_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
+<p><img src="tree_204869_files/figure-html/leaf-phenology-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 <hr>
 </section>
-<section id="observation-summary" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="observation-summary"><span class="header-section-number">3</span> Observation Summary</h2>
+<section id="observation-summary" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="observation-summary"><span class="header-section-number">1.4</span> Observation Summary</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -288,6 +293,7 @@ The following object is masked from 'package:utils':
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
