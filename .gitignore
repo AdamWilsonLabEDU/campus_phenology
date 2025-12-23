@@ -53,3 +53,8 @@ _site
 data/
 generated/
 !data/trees.csv
+
+**/*.quarto_ipynb
+_freeze/*
+index_files/*
+site_libs/*

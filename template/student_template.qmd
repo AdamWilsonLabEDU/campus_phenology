@@ -7,7 +7,6 @@ format:
 params:
   semester: null
   nnid: null
-  ds: null
   required_weeks: 9
   require_obs_per_week: 4
 ---
@@ -22,15 +21,15 @@ library(ggplot2)
 ## **NNID:** `r params$nnid`  
 
 **Semester:** `r params$semester`  
-**Total observations:** `r nrow(params$ds)`  
-**Weeks with observations:** `r sum(tapply(params$ds$site_id, params$ds$observation_week, length) > 0)`
+**Total observations:** `r nrow(ds)`  
+**Weeks with observations:** `r sum(tapply(ds$site_id, ds$observation_week, length) > 0)`
 
 ---
 
 ## Weekly Observations
 
 ```{r echo=F}
-params$ds %>%
+ds %>%
   group_by(observation_week) %>%
   summarize(n_obs = n()) %>%
   ggplot(aes(x = observation_week, y = n_obs)) +
@@ -46,7 +45,7 @@ params$ds %>%
 The number of observations per individual plant monitored by this student.
 
 ```{r echo=F}
-params$ds %>%
+ds %>%
   group_by(plant_nickname) %>%
   summarize(n_obs = n()) %>%
   ggplot(aes(x = reorder(plant_nickname, n_obs), y = n_obs)) +

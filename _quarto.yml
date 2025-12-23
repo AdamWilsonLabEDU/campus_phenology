@@ -4,6 +4,9 @@ project:
   output-dir: _site
   render:
     - "!template/*"
+    - index.qmd
+    - generated/*
+    - semesters.qmd
   execute-dir: project
 
 execute:

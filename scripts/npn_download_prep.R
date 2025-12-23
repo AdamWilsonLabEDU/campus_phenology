@@ -354,14 +354,14 @@ walk(unique(d$semester), function(sem) {
 
   qmd_file <- file.path(generated_dir, glue("semester_{sem}.qmd"))
   
-  # Save data objects as RDS for retrieval at render time
-  ds_sem_file <- file.path(generated_dir, glue(".semester_{sem}_ds.rds"))
-  ds_obs_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs.rds"))
-  ds_obs_weekly_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs_weekly.rds"))
+  # Save data objects as parquet for retrieval at render time
+  ds_sem_file <- file.path(generated_dir, glue(".semester_{sem}_ds.parquet"))
+  ds_obs_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs.parquet"))
+  ds_obs_weekly_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs_weekly.parquet"))
   
-  saveRDS(ds_sem, ds_sem_file)
-  saveRDS(ds_obs, ds_obs_file)
-  saveRDS(ds_obs_weekly, ds_obs_weekly_file)
+  write_parquet(ds_sem, ds_sem_file)
+  write_parquet(ds_obs, ds_obs_file)
+  write_parquet(ds_obs_weekly, ds_obs_weekly_file)
   
   # Read template and write with embedded params
   template_content <- readLines("template/semester_template.qmd")
@@ -389,9 +389,10 @@ walk(unique(d$semester), function(sem) {
     "library(tidyverse)",
     "library(DT)",
     "library(ggplot2)",
-    "params$ds <- readRDS(params$ds_file)",
-    "params$ds_obs <- readRDS(params$ds_obs_file)",
-    "params$ds_obs_weekly <- readRDS(params$ds_obs_weekly_file)",
+    "library(arrow)",
+    "ds <- read_parquet(params$ds_file)",
+    "ds_obs <- read_parquet(params$ds_obs_file)",
+    "ds_obs_weekly <- read_parquet(params$ds_obs_weekly_file)",
     "```",
     "",
     # Rest of template (skip header)
@@ -411,10 +412,10 @@ nnids <- unique(ds_sem$observedby_person_id)
 walk(nnids, function(nnid) {
   qmd_file <- file.path(generated_dir, glue("student_{current_semester}_{nnid}.qmd"))
   
-  # Save data object as RDS for retrieval at render time
-  ds_student_file <- file.path(generated_dir, glue(".student_{current_semester}_{nnid}_ds.rds"))
+  # Save data object as parquet for retrieval at render time
+  ds_student_file <- file.path(generated_dir, glue(".student_{current_semester}_{nnid}_ds.parquet"))
   ds_student <- ds_sem %>% filter(observedby_person_id == nnid)
-  saveRDS(ds_student, ds_student_file)
+  write_parquet(ds_student, ds_student_file)
   
   # Read template and write with embedded params
   template_content <- readLines("template/student_template.qmd")
@@ -438,7 +439,8 @@ walk(nnids, function(nnid) {
     "```{r echo=F}",
     "library(tidyverse)",
     "library(ggplot2)",
-    "params$ds <- readRDS(params$ds_file)",
+    "library(arrow)",
+    "ds <- read_parquet(params$ds_file)",
     "```",
     "",
     # Rest of template (skip header)
