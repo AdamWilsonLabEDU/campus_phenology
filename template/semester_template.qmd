@@ -12,10 +12,23 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r echo=F, results='hide', message=FALSE, output='hide'}
+```{r setup-libraries, echo=F, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(DT)
 library(ggplot2)
+library(arrow)
+```
+
+```{r load-data, echo=F}
+# Load global datasets
+d_all <- read_parquet("data/processed/full_data.parquet")
+d_obs_weekly_all <- read_parquet("data/processed/weekly_observer_stats.parquet")
+d_obs_all <- read_parquet("data/processed/semester_observer_stats.parquet")
+
+# Filter for this semester
+ds <- d_all %>% filter(semester == params$semester)
+ds_obs_weekly <- d_obs_weekly_all %>% filter(semester == params$semester)
+ds_obs <- d_obs_all %>% filter(semester == params$semester)
 ```
 
 ## Semester: `r params$semester`
@@ -30,7 +43,7 @@ There are `r nrow(ds)` total observations this semester.
 
 ## Observer Overview
 
-```{r  echo=F}
+```{r observer-overview, echo=F}
 ds %>%
   group_by(observedby_person_id) %>%
   summarize(total_obs = n()) %>%
@@ -42,7 +55,7 @@ ds %>%
 
 ## Weekly Observations Heatmap
 
-```{r  echo=F, fig.height=12 }
+```{r weekly-heatmap, echo=F, fig.height=12 }
 if(nrow(ds) > 0) {
   ds %>%
     group_by(observedby_person_id, observation_week) %>%
@@ -60,7 +73,7 @@ if(nrow(ds) > 0) {
 
 ## Phenology Observations by Species
 
-```{r  echo=F}
+```{r species-observations, echo=F}
 if(nrow(ds) > 0) {
   ds %>%
     group_by(common_name) %>%

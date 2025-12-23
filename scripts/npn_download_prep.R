@@ -348,57 +348,25 @@ writeLines(
 # -------------------------------------------------------------------
 walk(unique(d$semester), function(sem) {
   ds_sem <- d %>% filter(semester == sem)
-  ds_obs <- d_obs %>% filter(semester == sem)
-  ds_obs_weekly <- d_obs_weekly %>% filter(semester == sem)
   if (nrow(ds_sem) == 0) return()
 
-  qmd_file <- file.path(generated_dir, glue("semester_{sem}.qmd"))
-  
-  # Save data objects as parquet for retrieval at render time
-  ds_sem_file <- file.path(generated_dir, glue(".semester_{sem}_ds.parquet"))
-  ds_obs_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs.parquet"))
-  ds_obs_weekly_file <- file.path(generated_dir, glue(".semester_{sem}_ds_obs_weekly.parquet"))
-  
-  write_parquet(ds_sem, ds_sem_file)
-  write_parquet(ds_obs, ds_obs_file)
-  write_parquet(ds_obs_weekly, ds_obs_weekly_file)
-  
-  # Read template and write with embedded params
+  # Read template content
   template_content <- readLines("template/semester_template.qmd")
   
-  # Inject params into YAML frontmatter
-  new_content <- c(
-    "---",
-    "title: \"Semester Data\"",
-    "format:",
-    "  html:",
-    "    toc: true",
-    "    number-sections: true",
-    "params:",
-    glue("  semester: {sem}"),
-    glue("  ds_file: '{ds_sem_file}'"),
-    glue("  ds_obs_file: '{ds_obs_file}'"),
-    glue("  ds_obs_weekly_file: '{ds_obs_weekly_file}'"),
-    glue("  required_weeks: {required_weeks}"),
-    glue("  require_obs_per_week: {require_obs_per_week}"),
-    "editor_options:",
-    "  chunk_output_type: console",
-    "---",
-    "",
-    "```{r echo=F}",
-    "library(tidyverse)",
-    "library(DT)",
-    "library(ggplot2)",
-    "library(arrow)",
-    "ds <- read_parquet(params$ds_file)",
-    "ds_obs <- read_parquet(params$ds_obs_file)",
-    "ds_obs_weekly <- read_parquet(params$ds_obs_weekly_file)",
-    "```",
-    "",
-    # Rest of template (skip header)
-    template_content[(which(template_content == "```")[2] + 1):length(template_content)]
-  )
+  # Find YAML section
+  yaml_start <- which(template_content == "---")[1]
+  yaml_end <- which(template_content == "---")[2]
   
+  # Replace param values only in YAML section
+  yaml_lines <- template_content[yaml_start:yaml_end]
+  yaml_lines <- gsub("^  semester: null$", paste0("  semester: ", sem), yaml_lines)
+  yaml_lines <- gsub("^  required_weeks: 9$", paste0("  required_weeks: ", required_weeks), yaml_lines)
+  yaml_lines <- gsub("^  require_obs_per_week: 4$", paste0("  require_obs_per_week: ", require_obs_per_week), yaml_lines)
+  
+  # Reconstruct file
+  new_content <- c(yaml_lines, template_content[(yaml_end + 1):length(template_content)])
+  
+  qmd_file <- file.path(generated_dir, glue("semester_{sem}.qmd"))
   writeLines(new_content, qmd_file)
   message("Generated semester QMD: ", qmd_file)
 })
@@ -410,43 +378,24 @@ ds_sem <- d %>% filter(semester == current_semester)
 nnids <- unique(ds_sem$observedby_person_id)
 
 walk(nnids, function(nnid) {
-  qmd_file <- file.path(generated_dir, glue("student_{current_semester}_{nnid}.qmd"))
-  
-  # Save data object as parquet for retrieval at render time
-  ds_student_file <- file.path(generated_dir, glue(".student_{current_semester}_{nnid}_ds.parquet"))
-  ds_student <- ds_sem %>% filter(observedby_person_id == nnid)
-  write_parquet(ds_student, ds_student_file)
-  
-  # Read template and write with embedded params
+  # Read template content
   template_content <- readLines("template/student_template.qmd")
   
-  # Inject params into YAML frontmatter
-  new_content <- c(
-    "---",
-    "title: \"Student Observations\"",
-    "format:",
-    "  html:",
-    "    toc: true",
-    "    number-sections: true",
-    "params:",
-    glue("  semester: {current_semester}"),
-    glue("  nnid: {nnid}"),
-    glue("  ds_file: '{ds_student_file}'"),
-    glue("  required_weeks: {required_weeks}"),
-    glue("  require_obs_per_week: {require_obs_per_week}"),
-    "---",
-    "",
-    "```{r echo=F}",
-    "library(tidyverse)",
-    "library(ggplot2)",
-    "library(arrow)",
-    "ds <- read_parquet(params$ds_file)",
-    "```",
-    "",
-    # Rest of template (skip header)
-    template_content[(which(template_content == "```")[2] + 1):length(template_content)]
-  )
+  # Find YAML section
+  yaml_start <- which(template_content == "---")[1]
+  yaml_end <- which(template_content == "---")[2]
   
+  # Replace param values only in YAML section
+  yaml_lines <- template_content[yaml_start:yaml_end]
+  yaml_lines <- gsub("^  semester: null$", paste0("  semester: ", current_semester), yaml_lines)
+  yaml_lines <- gsub("^  nnid: null$", paste0("  nnid: ", nnid), yaml_lines)
+  yaml_lines <- gsub("^  required_weeks: 9$", paste0("  required_weeks: ", required_weeks), yaml_lines)
+  yaml_lines <- gsub("^  require_obs_per_week: 4$", paste0("  require_obs_per_week: ", require_obs_per_week), yaml_lines)
+  
+  # Reconstruct file
+  new_content <- c(yaml_lines, template_content[(yaml_end + 1):length(template_content)])
+  
+  qmd_file <- file.path(generated_dir, glue("student_{current_semester}_{nnid}.qmd"))
   writeLines(new_content, qmd_file)
   message("Generated student QMD: ", qmd_file)
 })
@@ -469,60 +418,22 @@ walk(seq_len(nrow(tree_list)), function(i) {
   tree_info <- tree_list[i, ]
   tree_id <- tree_info$individual_id
   
-  # Save data objects as parquet for retrieval at render time
-  ds_tree_file <- file.path(generated_dir, glue(".tree_{tree_id}_ds.parquet"))
-  ds_tree <- d %>% filter(individual_id == tree_id)
-  write_parquet(ds_tree, ds_tree_file)
-  
-  # All observations for same species
-  ds_all_file <- file.path(generated_dir, glue(".tree_{tree_id}_ds_all.parquet"))
-  ds_all <- d %>% filter(common_name == tree_info$common_name)
-  write_parquet(ds_all, ds_all_file)
-  
-  # Tree location data with plant nicknames
-  ds_trees_file <- file.path(generated_dir, glue(".tree_{tree_id}_ds_trees.parquet"))
-  trees_with_nicknames <- d %>%
-    group_by(individual_id) %>%
-    summarize(plant_nickname = first(plant_nickname), .groups = "drop") %>%
-    right_join(trees, by = "individual_id")
-  write_parquet(trees_with_nicknames, ds_trees_file)
-  
-  # Read template and write with embedded params
+  # Read template content
   template_content <- readLines("template/tree_template.qmd")
   
-  # Inject params into YAML frontmatter
-  new_content <- c(
-    "---",
-    "title: \"Tree Observations\"",
-    "format:",
-    "  html:",
-    "    toc: true",
-    "    number-sections: true",
-    "params:",
-    glue("  tree_id: {tree_id}"),
-    glue("  common_name: '{tree_info$common_name}'"),
-    glue("  plant_nickname: '{tree_info$plant_nickname}'"),
-    glue("  tag: '{tree_info$tag}'"),
-    glue("  ds_file: '{ds_tree_file}'"),
-    glue("  ds_all_file: '{ds_all_file}'"),
-    glue("  ds_trees_file: '{ds_trees_file}'"),
-    "editor_options:",
-    "  chunk_output_type: console",
-    "---",
-    "",
-    "```{r echo=F}",
-    "library(tidyverse)",
-    "library(leaflet)",
-    "library(ggplot2)",
-    "library(arrow)",
-    "ds <- read_parquet(params$ds_file)",
-    "ds_all <- read_parquet(params$ds_all_file)",
-    "ds_trees <- read_parquet(params$ds_trees_file)",
-    "```",
-    "",
-    # Rest of template (skip header)
-    template_content[(which(template_content == "```")[2] + 1):length(template_content)]
-  )
+  # Find YAML section
+  yaml_start <- which(template_content == "---")[1]
+  yaml_end <- which(template_content == "---")[2]
+  
+  # Replace param values only in YAML section
+  yaml_lines <- template_content[yaml_start:yaml_end]
+  yaml_lines <- gsub("^  tree_id: null$", paste0("  tree_id: ", tree_id), yaml_lines)
+  yaml_lines <- gsub("^  common_name: null$", paste0("  common_name: '", tree_info$common_name, "'"), yaml_lines)
+  yaml_lines <- gsub("^  plant_nickname: null$", paste0("  plant_nickname: '", tree_info$plant_nickname, "'"), yaml_lines)
+  yaml_lines <- gsub("^  tag: null$", paste0("  tag: '", tree_info$tag, "'"), yaml_lines)
+  
+  # Reconstruct file
+  new_content <- c(yaml_lines, template_content[(yaml_end + 1):length(template_content)])
   
   qmd_file <- file.path(generated_dir, glue("tree_{tree_id}.qmd"))
   writeLines(new_content, qmd_file)

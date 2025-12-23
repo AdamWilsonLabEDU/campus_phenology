@@ -13,10 +13,27 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r echo=F, results='hide', message=FALSE}
+```{r setup-libraries, echo=F, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(leaflet)
 library(ggplot2)
+library(arrow)
+```
+
+```{r load-data, echo=F}
+# Load global datasets
+ds_all <- read_parquet("data/processed/full_data.parquet")
+ds_trees <- read_parquet("data/processed/trees.parquet")
+
+# Add plant nicknames to trees
+trees_with_nicknames <- ds_all %>%
+  group_by(individual_id) %>%
+  summarize(plant_nickname = first(plant_nickname), .groups = "drop") %>%
+  right_join(ds_trees, by = "individual_id")
+
+# Filter for this tree and species
+ds <- ds_all %>% filter(individual_id == params$tree_id)
+ds_species <- ds_all %>% filter(common_name == params$common_name)
 ```
 
 # Tree Overview
@@ -32,10 +49,10 @@ library(ggplot2)
 
 This map shows the location of this tree (red marker) and other trees of the same species (blue markers).
 
-```{r echo=F}
+```{r location-map, echo=F}
 # Filter for this tree and same species
-tree_data <- ds_trees %>% filter(individual_id == params$tree_id)
-species_trees <- ds_trees %>% filter(common_name == params$common_name)
+tree_data <- trees_with_nicknames %>% filter(individual_id == params$tree_id)
+species_trees <- trees_with_nicknames %>% filter(common_name == params$common_name)
 
 if(nrow(tree_data) > 0) {
   leaflet(species_trees) %>%
@@ -65,10 +82,10 @@ if(nrow(tree_data) > 0) {
 
 This chart shows all observations for this tree (black points) compared to all observations for other trees of the same species (grey points with transparency).
 
-```{r echo=F, fig.width=10, fig.height=15}
+```{r phenology-comparison, echo=F, fig.width=10, fig.height=15}
 if(nrow(ds) > 0) {
   # Filter for same species and this tree
-  species_obs <- ds_all %>% filter(common_name == params$common_name)
+  species_obs <- ds_species %>% filter(common_name == params$common_name)
   tree_obs <- ds %>% filter(individual_id == params$tree_id)
   
   ggplot() +
@@ -101,12 +118,12 @@ if(nrow(ds) > 0) {
 
 Focusing on leaf-related phenophases for this tree compared to the species.
 
-```{r echo=F, fig.width=10, fig.height=6}
+```{r leaf-phenology, echo=F, fig.width=10, fig.height=6}
 if(nrow(ds) > 0) {
   # Filter for leaf phenophases only
   leaf_keywords <- c("Leaves", "Leaf", "leaves", "leaf", "Colored", "Falling")
   
-  species_leaf <- ds_all %>% 
+  species_leaf <- ds_species %>% 
     filter(common_name == params$common_name) %>%
     filter(str_detect(phenophase_description, paste(leaf_keywords, collapse = "|")))
   
@@ -146,7 +163,7 @@ if(nrow(ds) > 0) {
 
 ## Observation Summary
 
-```{r echo=F}
+```{r observation-summary, echo=F}
 if(nrow(ds) > 0) {
   ds %>%
     group_by(phenophase_description) %>%

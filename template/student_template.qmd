@@ -11,9 +11,18 @@ params:
   require_obs_per_week: 4
 ---
 
-```{r echo=F}
+```{r setup-libraries, echo=F, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(ggplot2)
+library(arrow)
+```
+
+```{r load-data, echo=F}
+# Load global dataset
+d_all <- read_parquet("data/processed/full_data.parquet")
+
+# Filter for this student and semester
+ds <- d_all %>% filter(semester == params$semester, observedby_person_id == params$nnid)
 ```
 
 # Student Overview
@@ -44,7 +53,7 @@ ds %>%
 
 The number of observations per individual plant monitored by this student.
 
-```{r echo=F}
+```{r observations-by-plant, echo=F}
 ds %>%
   group_by(plant_nickname) %>%
   summarize(n_obs = n()) %>%

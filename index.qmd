@@ -15,7 +15,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r echo=F, results='hide'}
+```{r setup-data, echo=F, warning=FALSE, message=FALSE}
 # Global options and libraries
 library(tidyverse)
 library(lubridate)
@@ -58,7 +58,7 @@ These data were last updated on `r Sys.time()`.
 
 The map below shows the locations of monitored trees on UB's North Campus.
 
-```{r}
+```{r tree-map, echo=F}
 # Prepare tree data with observation stats
 tree_obs_stats <- d %>%
   filter(!is.na(individual_id)) %>%
@@ -115,7 +115,7 @@ To date, the program has collected `r format(nrow(d), big.mark = ",")` individua
 
 ## Observations by Species
 
-```{r}
+```{r species-table, echo=F}
 d |>
 count(common_name, genus, species, name = "Observations") |>
 mutate(
@@ -130,7 +130,7 @@ datatable()
 
 # Observations Over Time
 
-```{r echo=F}
+```{r observations-timeline, echo=F}
 
 # cumulative sum of observations ggplot
 p1 <- d |>
@@ -159,7 +159,7 @@ plot_grid(p1,p2, ncol=1, align="hv",rel_heights = c(0.7,0.3))
 
 ```
 
-```{r echo=F, eval=F}
+```{r observers-per-semester, echo=F, eval=F}
 # Observers and Participation
 ## Unique Observers per Semester
 d |>
