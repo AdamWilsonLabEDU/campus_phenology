@@ -33,7 +33,7 @@ current_semester <- semester(Sys.Date(), with_year = TRUE)
 cache_dir <- "data/cache"
 base_dir  <- "data/processed"
 dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
-
+dir.create(base_dir, recursive = TRUE, showWarnings = FALSE)
 
 csv_dir <- file.path(cache_dir, "csv")
 dir.create(csv_dir, showWarnings = FALSE)
