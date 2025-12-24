@@ -129,7 +129,7 @@ if(nrow(ds) > 0) {
         y = "Phenophase"
       ) +
 #      theme_minimal() +
-      facet_grid(phenophase_description~year(observation_date),scales="free_y")
+      facet_grid(phenophase_description~year(observation_date),scales="free_y")+
       theme(axis.text.y = element_text(size = 8))
   } else {
     cat("No leaf phenophase observations recorded for this tree.\n")
