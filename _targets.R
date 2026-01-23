@@ -213,5 +213,18 @@ list(
     format = "file"
   ),
   # Quarto rendering target
-  tar_quarto(website)
+  tar_quarto(
+    website,
+    depends = list(
+      full_data_parquet,
+      trees_parquet,
+      weekly_observer_stats_parquet,
+      semester_observer_stats_parquet,
+      exported_csv_files,
+      semesters_qmd,
+      semester_qmds,
+      student_qmds,
+      tree_qmds
+    )
+  )
 )
