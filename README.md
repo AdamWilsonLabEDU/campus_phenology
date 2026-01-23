@@ -4,14 +4,23 @@ Quarto website that ingests USA–NPN status observations for a campus phenology
 
 ## How it works
 - Quarto pre-render hook runs an R pipeline before every render (see [_quarto.yml](_quarto.yml)).
-- The pipeline in [scripts/npn_download_prep.R](scripts/npn_download_prep.R) downloads data via `rnpn`, writes core Parquet files to [data/processed](data/processed), uploads per-semester CSVs/Parquet to a GitHub Release via `piggyback`, regenerates [semesters.qmd](semesters.qmd), and renders pages into [generated/](generated/).
-- Frontend pages (e.g., [index.qmd](index.qmd)) read the Parquet files (Arrow) at render time; Quarto outputs HTML to [_site](_site/). Do not edit `_site/` directly.
+- The pipeline in [scripts/npn_download_prep.R](scripts/npn_download_prep.R):
+	- Downloads USA–NPN status observations via `rnpn`.
+	- Downloads existing semester-partitioned release assets (GitHub Release tag `npn-data`) via `piggyback` and refreshes the current semester.
+	- Writes core Parquet files to [data/processed](data/processed).
+	- Writes per-semester CSV exports to `data/cache/csv/` (raw observations + per-observer summary).
+	- Regenerates [semesters.qmd](semesters.qmd) and generates per-semester/per-student/per-tree `.qmd` files under [generated/](generated/) from templates.
+	- Attempts to upload new/updated assets to the GitHub Release; if auth/permissions are missing, uploads are skipped and the pipeline continues.
+- Frontend pages (e.g., [index.qmd](index.qmd)) read the Parquet files (Arrow) at render time; Quarto renders `.qmd` to HTML under [_site](_site/). Do not edit `_site/` directly.
 
 Key files/directories:
-- Config: [_quarto.yml](_quarto.yml), [._github/workflows/publish_github_actions.yml](.github/workflows/publish_github_actions.yml)
-- Pipelines: [scripts/npn_download_prep.R](scripts/npn_download_prep.R), [scripts/npn_download.R](scripts/npn_download.R) (alternate pipeline)
+- Config: [_quarto.yml](_quarto.yml), [.github/workflows/publish_github_actions.yml](.github/workflows/publish_github_actions.yml)
+- Pipeline: [scripts/npn_download_prep.R](scripts/npn_download_prep.R)
 - Templates: [template/semester_template.qmd](template/semester_template.qmd), [template/student_template.qmd](template/student_template.qmd)
 - Data outputs: [data/processed/full_data.parquet](data/processed/full_data.parquet), [data/processed/trees.parquet](data/processed/trees.parquet), [data/processed/weekly_observer_stats.parquet](data/processed/weekly_observer_stats.parquet), [data/processed/semester_observer_stats.parquet](data/processed/semester_observer_stats.parquet)
+- Per-semester CSV exports (written locally to `data/cache/csv/` and expected as Release assets):
+	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
+	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
 - Optional NDVI task: [R/get_modis.R](R/get_modis.R) writes to [data/modis_semesters](data/modis_semesters)
 
 ## Run locally
@@ -50,21 +59,18 @@ quarto render
 ## Use this repo for a new NPN campus project
 Update the following to target your project’s USA–NPN network/project ID and branding.
 
-1) Set your NPN network ID in both pipelines:
+1) Set your NPN network ID in the pipeline:
 - [scripts/npn_download_prep.R](scripts/npn_download_prep.R)
-- [scripts/npn_download.R](scripts/npn_download.R)
 
 Example change:
 
 ```r
-# In both scripts
 network_id <- 1234   # replace 1234 with your NPN network id
 ```
 
 2) Point to your GitHub repository (used by `piggyback` for release assets):
 
 ```r
-# In both scripts
 repo <- "YourOrg/your_repo_name"
 release_tag <- "npn-data"  # keep or change, but use consistently
 ```
@@ -80,7 +86,7 @@ release_tag <- "npn-data"  # keep or change, but use consistently
 5) Prime and render:
 
 ```bash
-Rscript scripts/npn_download_prep.R   # downloads data, uploads release assets, generates pages
+Rscript scripts/npn_download_prep.R   # downloads data, attempts Release uploads, generates pages
 quarto render                         # builds the site to _site/
 ```
 
@@ -89,10 +95,14 @@ GitHub Actions workflow [publish_github_actions.yml](.github/workflows/publish_g
 
 ## Notes and conventions
 - Semester identifiers follow `YYYY.1` (Spring) and `YYYY.2` (Fall).
-- Release assets follow: `npn_obs_network-<NETWORKID>_semester-YYYY.S.{csv,parquet}`.
+- Release assets follow:
+	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.parquet` (semester partition)
+	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
+	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
 - Pages are generated under [generated/](generated/) and linked from [semesters.qmd](semesters.qmd); do not hand-edit generated files.
+- The student “grade” shown on student pages is `obs_week_percent`: mean weekly percent-of-requirement, capped at 100.
 
 ## Troubleshooting
 - Missing Parquet on render: ensure the pre-render finished and files are in [data/processed](data/processed).
-- Release upload failures locally: set `GITHUB_TOKEN` (or skip uploads); CI provides a token by default.
+- Release upload failures locally: set `GITHUB_TOKEN` with permission to create/upload Release assets in this repo; otherwise uploads are skipped.
 - Slow first run: backfills all missing semesters; subsequent runs reuse the release cache.
