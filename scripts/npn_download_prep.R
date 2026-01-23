@@ -169,27 +169,59 @@ if (length(release_assets) > 0) {
 # -------------------------------------------------------------------
 if (length(missing_semesters) > 0) {
   years_to_download <- unique(floor(as.numeric(missing_semesters)))
-  raw_new <- npn_download_status_data(
-    request_source    = "campus_phenology",
-    years             = as.character(years_to_download),
-    additional_fields = c("Plant_Nickname","ObservedBy_Person_ID","Submission_Datetime"),
-    network_ids = network_id
-  ) %>%
-    as_tibble() %>%
-    mutate(
-      observation_date = ymd(observation_date),
-      semester = sprintf("%d.%d", year(observation_date), semester(observation_date))
-    ) %>%
-    filter(semester %in% missing_semesters)
 
-  # Split by semester and persist
-  split(raw_new, raw_new$semester) %>%
-    walk(function(df) {
-      sem <- unique(df$semester)
-      out_file <- file.path(cache_dir, glue("npn_obs_network-{network_id}_semester-{sem}.parquet"))
-      write_parquet(df, out_file)
-      piggyback::pb_upload(file = out_file, tag = release_tag, repo = repo, overwrite = TRUE)
-    })
+  raw_download <- tryCatch(
+    {
+      npn_download_status_data(
+        request_source    = "campus_phenology",
+        years             = as.character(years_to_download),
+        additional_fields = c("Plant_Nickname", "ObservedBy_Person_ID", "Submission_Datetime"),
+        network_ids = network_id
+      )
+    },
+    error = function(e) {
+      message("NPN download failed; skipping missing semesters. Error: ", conditionMessage(e))
+      NULL
+    }
+  )
+
+  raw_new <- if (is.null(raw_download)) {
+    tibble()
+  } else {
+    as_tibble(raw_download)
+  }
+
+  if (!is.data.frame(raw_new) || nrow(raw_new) == 0 || !("observation_date" %in% names(raw_new))) {
+    message(
+      "No observation records returned for years: ",
+      paste(years_to_download, collapse = ", "),
+      ". Skipping download/upload for missing semesters."
+    )
+  } else {
+    raw_new <- raw_new %>%
+      mutate(
+        observation_date = ymd(observation_date),
+        semester = sprintf("%d.%d", year(observation_date), semester(observation_date))
+      ) %>%
+      filter(semester %in% missing_semesters)
+
+    if (nrow(raw_new) == 0) {
+      message(
+        "No observations match missing semesters (",
+        paste(missing_semesters, collapse = ", "),
+        "); nothing to upload."
+      )
+    } else {
+      # Split by semester and persist
+      split(raw_new, raw_new$semester) %>%
+        walk(function(df) {
+          sem <- unique(df$semester)
+          out_file <- file.path(cache_dir, glue("npn_obs_network-{network_id}_semester-{sem}.parquet"))
+          write_parquet(df, out_file)
+          piggyback::pb_upload(file = out_file, tag = release_tag, repo = repo, overwrite = TRUE)
+        })
+    }
+  }
 }
 
 # -------------------------------------------------------------------

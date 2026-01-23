@@ -219,31 +219,7 @@ theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 # Seasonal Phenology Patterns
 
-The following plot
-
-```{r, eval=F, echo=F}
-d |>
-filter(
-  phenophase_description == "Leaves",
-  day_of_year > 180
-  ) |>
-collect() |>
-ggplot( aes(
-            x = observation_date,
-            y = intensity_category_id,
-            group = common_name
-          )
-      ) +
-geom_jitter(height = 5, alpha = 0.4) +
-geom_smooth(method = "loess", span = 1, se = FALSE) +
-facet_grid( year(observation_date) ~ common_name) +
-labs(
-    x = "Day of Year (Standardized)",
-    y = "Percent Green Leaves",
-    title = "Fall Leaf Senescence Across Years"
-    ) +
-theme(strip.text.y.right = element_text(angle = 0))
-```
+The plot below summarizes fall canopy senescence using all “Leaves” observations collected after mid-year (day-of-year > 180). Each panel shows a single species (rows) in a single year (columns), with day-of-year on the x-axis and estimated percent green leaves on the y-axis. The black points are individual student observations, the faint blue curves show logistic curves for each monitored tree, and the red curve is a single logistic fit that summarizes the overall seasonal decline in leaf greenness for that species-year.
 
 ```{r echo=F}
 
@@ -258,7 +234,14 @@ d %>%
               col="black",size=.1,
               width = 0, height = 5, alpha = 0.1, show.legend = FALSE) +
   # Individual tree trends
-  geom_smooth(aes(group = individual_id), alpha = 0.1, size=.1,color = "blue",se=F) +
+    geom_smooth(aes(group = individual_id), alpha = 0.1, size=.1,color = "blue",
+    method = "nls",
+    formula = y ~ 100 + (B - 100) / (1 + exp((xmid - x)/scal)),
+    method.args = list(start = list(B = 50, xmid = 300, scal = 1)),
+    se = FALSE,
+    col = "red"
+  )+
+#  geom_smooth(aes(group = individual_id), alpha = 0.1, size=.1,color = "blue",se=F) +
 #  geom_smooth(aes(group = 1), alpha = 0.3, color = "red",se=T) +
     geom_smooth(
     method = "nls",
@@ -268,9 +251,13 @@ d %>%
     col = "red"
   )+
   facet_grid(common_name ~ year(observation_date)) +
-  labs(x = "Day of Year", y = "Percent Green Leaves",
+  scale_x_continuous(
+    breaks = c(244, 274, 305),
+    labels = c("Sep", "Oct", "Nov")
+  ) +
+  labs(x = "Month", y = "Percent Green Leaves",
        title = "Fall Leaf Cover Trends by Species") +
   theme_minimal()+
-  coord_cartesian(ylim=c(0,100),xlim=c(255,330))
+  coord_cartesian(ylim = c(0, 100), xlim = c(240, 335))
 
 ```
