@@ -54,6 +54,9 @@ data/
 generated/
 !data/trees.csv
 
+# Quarto/HTML outputs (should not be committed)
+/*.html
+
 **/*.quarto_ipynb
 _freeze/*
 index_files/*

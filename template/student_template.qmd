@@ -33,8 +33,26 @@ library(arrow)
 # Load global dataset
 d_all <- read_parquet("data/processed/full_data.parquet")
 
+# Load per-student semester summary stats (grade + timing)
+d_obs_all <- read_parquet("data/processed/semester_observer_stats.parquet")
+
+nnid_chr <- as.character(params$nnid)
+
 # Filter for this student and semester
-ds <- d_all %>% filter(semester == params$semester, observedby_person_id == params$nnid)
+ds <- d_all %>%
+  filter(
+    semester == params$semester,
+    as.character(observedby_person_id) == nnid_chr
+  )
+
+ds_obs <- d_obs_all %>%
+  filter(
+    semester == params$semester,
+    as.character(observedby_person_id) == nnid_chr
+  )
+
+obs_week_percent <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$obs_week_percent[[1]]
+median_date_dif <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$median_date_dif[[1]]
 ```
 
 # Student Overview
@@ -44,6 +62,9 @@ ds <- d_all %>% filter(semester == params$semester, observedby_person_id == para
 **Semester:** `r params$semester`  
 **Total observations:** `r nrow(ds)`  
 **Weeks with observations:** `r sum(tapply(ds$site_id, ds$observation_week, length) > 0)`
+
+**Current Observation grade (avg weekly %):** `r if (is.na(obs_week_percent)) "NA" else sprintf("%.1f%%", obs_week_percent)`  
+**Median submission delay (days):** `r if (is.na(median_date_dif)) "NA" else sprintf("%.1f", median_date_dif)`
 
 ---
 

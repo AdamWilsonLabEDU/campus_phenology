@@ -221,7 +221,7 @@ theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 The plot below summarizes fall canopy senescence using all “Leaves” observations collected after mid-year (day-of-year > 180). Each panel shows a single species (rows) in a single year (columns), with day-of-year on the x-axis and estimated percent green leaves on the y-axis. The black points are individual student observations, the faint blue curves show logistic curves for each monitored tree, and the red curve is a single logistic fit that summarizes the overall seasonal decline in leaf greenness for that species-year.
 
-```{r echo=F}
+```{r echo=F, fig.height=30}
 
 
 d %>%

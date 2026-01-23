@@ -15,6 +15,38 @@ library(glue)
 library(rmarkdown)
 
 # -------------------------------------------------------------------
+# Helpers
+# -------------------------------------------------------------------
+safe_pb_upload <- function(file, tag, repo, overwrite = TRUE) {
+  tryCatch(
+    {
+      piggyback::pb_upload(file = file, tag = tag, repo = repo, overwrite = overwrite)
+      TRUE
+    },
+    error = function(e) {
+      message(
+        "Skipping GitHub upload for ", basename(file),
+        ". Error: ", conditionMessage(e)
+      )
+      FALSE
+    }
+  )
+}
+
+safe_pb_release_create <- function(tag, repo, name, body) {
+  tryCatch(
+    {
+      piggyback::pb_release_create(tag = tag, repo = repo, name = name, body = body)
+      TRUE
+    },
+    error = function(e) {
+      message("Could not create GitHub release '", tag, "'. Error: ", conditionMessage(e))
+      FALSE
+    }
+  )
+}
+
+# -------------------------------------------------------------------
 # User-configurable parameters
 # -------------------------------------------------------------------
 year_start <- 2020
@@ -51,8 +83,8 @@ tryCatch(
 )
 
 if (!release_exists) {
-  piggyback::pb_release_create(
-    tag = release_tag,
+  safe_pb_release_create(
+    tag  = release_tag,
     repo = repo,
     name = release_tag,
     body = paste(
@@ -218,7 +250,7 @@ if (length(missing_semesters) > 0) {
           sem <- unique(df$semester)
           out_file <- file.path(cache_dir, glue("npn_obs_network-{network_id}_semester-{sem}.parquet"))
           write_parquet(df, out_file)
-          piggyback::pb_upload(file = out_file, tag = release_tag, repo = repo, overwrite = TRUE)
+          safe_pb_upload(file = out_file, tag = release_tag, repo = repo, overwrite = TRUE)
         })
     }
   }
@@ -276,6 +308,9 @@ d_obs_weekly <- d %>%
     median_date_dif = median(datedif, na.rm = TRUE),
     .groups = "drop"
   ) %>%
+  mutate(
+    p_observations = pmin(p_observations, 100)
+  ) %>%
   complete(
     semester,
     observedby_person_id,
@@ -303,6 +338,7 @@ d_obs <- d_obs_weekly %>%
     .groups = "drop"
   ) %>%
   mutate(
+    obs_week_percent = pmin(obs_week_percent, 100),
     percent = 100 * pmax(obs_week_count, obs_week_filled_count) / required_weeks,
     percent = pmin(percent, 100),
     percent = replace_na(percent, 0)
@@ -317,12 +353,49 @@ write_parquet(d_obs_weekly, file.path(base_dir, "weekly_observer_stats.parquet")
 write_parquet(d_obs,        file.path(base_dir, "semester_observer_stats.parquet"))
 
 # -------------------------------------------------------------------
+# Per-observer, per-semester summary (for "grades" + metadata export)
+# -------------------------------------------------------------------
+observer_semester_summary <- d %>%
+  group_by(semester, observedby_person_id) %>%
+  summarize(
+    total_observations     = n(),
+    first_observation_date = min(observation_date, na.rm = TRUE),
+    last_observation_date  = max(observation_date, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  left_join(
+    d_obs %>% select(semester, observedby_person_id, obs_week_percent, median_date_dif),
+    by = c("semester", "observedby_person_id")
+  ) %>%
+  mutate(NNID = as.character(observedby_person_id)) %>%
+  select(
+    semester,
+    NNID,
+    obs_week_percent,
+    median_date_dif,
+    total_observations,
+    first_observation_date,
+    last_observation_date
+  )
+
+# -------------------------------------------------------------------
 # Export CSVs per semester + upload to GitHub Release
 # -------------------------------------------------------------------
 walk(unique(d$semester), function(sem) {
   csv_file <- file.path(csv_dir, glue("npn_obs_network-{network_id}_semester-{sem}.csv"))
   d %>% filter(semester == sem) %>% arrange(observation_date) %>% write_csv(csv_file)
-  piggyback::pb_upload(file = csv_file, tag = release_tag, repo = repo, overwrite = TRUE)
+  safe_pb_upload(file = csv_file, tag = release_tag, repo = repo, overwrite = TRUE)
+
+  observer_csv_file <- file.path(
+    csv_dir,
+    glue("npn_obs_network-{network_id}_semester-{sem}_observer_summary.csv")
+  )
+  observer_semester_summary %>%
+    filter(semester == sem) %>%
+    select(-semester) %>%
+    arrange(NNID) %>%
+    write_csv(observer_csv_file)
+  safe_pb_upload(file = observer_csv_file, tag = release_tag, repo = repo, overwrite = TRUE)
 })
 
 # -------------------------------------------------------------------
@@ -354,6 +427,10 @@ semester_index <- semester_stats %>%
     csv_href  = glue(
       "https://github.com/{repo}/releases/download/{release_tag}/",
       "npn_obs_network-{network_id}_semester-{semester}.csv"
+    ),
+    observer_csv_href = glue(
+      "https://github.com/{repo}/releases/download/{release_tag}/",
+      "npn_obs_network-{network_id}_semester-{semester}_observer_summary.csv"
     )
   )
 
@@ -367,7 +444,8 @@ semester_table <- semester_index %>%
     Observers    = n_observers,
     Observations = n_observations,
     Page         = glue("[View]({page_href})"),
-    Data         = glue("[CSV]({csv_href})")
+    Data         = glue("[Observations CSV]({csv_href})"),
+    ObserverData = glue("[Observer summary CSV]({observer_csv_href})")
   )
 
 md_table <- paste0(
@@ -426,7 +504,23 @@ walk(unique(d$semester), function(sem) {
 # -------------------------------------------------------------------
 # Generate Student QMD Files (current semester only; Quarto will render them)
 # -------------------------------------------------------------------
-ds_sem <- d %>% filter(semester == current_semester)
+available_semesters_in_data <- d %>%
+  distinct(semester) %>%
+  mutate(
+    year = as.integer(substr(semester, 1, 4)),
+    term = as.integer(substr(semester, 6, 6))
+  ) %>%
+  arrange(year, term)
+
+semester_for_students <- if (current_semester %in% available_semesters_in_data$semester) {
+  current_semester
+} else {
+  available_semesters_in_data$semester[[nrow(available_semesters_in_data)]]
+}
+
+message("Generating student pages for semester: ", semester_for_students)
+
+ds_sem <- d %>% filter(semester == semester_for_students)
 nnids <- unique(ds_sem$observedby_person_id)
 
 walk(nnids, function(nnid) {
@@ -439,7 +533,7 @@ walk(nnids, function(nnid) {
   
   # Replace param values only in YAML section
   yaml_lines <- template_content[yaml_start:yaml_end]
-  yaml_lines <- gsub("^  semester: null$", paste0("  semester: ", current_semester), yaml_lines)
+  yaml_lines <- gsub("^  semester: null$", paste0("  semester: ", semester_for_students), yaml_lines)
   yaml_lines <- gsub("^  nnid: null$", paste0("  nnid: ", nnid), yaml_lines)
   yaml_lines <- gsub("^  required_weeks: 9$", paste0("  required_weeks: ", required_weeks), yaml_lines)
   yaml_lines <- gsub("^  require_obs_per_week: 4$", paste0("  require_obs_per_week: ", require_obs_per_week), yaml_lines)
@@ -447,7 +541,7 @@ walk(nnids, function(nnid) {
   # Reconstruct file
   new_content <- c(yaml_lines, template_content[(yaml_end + 1):length(template_content)])
   
-  qmd_file <- file.path(generated_dir, glue("student_{current_semester}_{nnid}.qmd"))
+  qmd_file <- file.path(generated_dir, glue("student_{semester_for_students}_{nnid}.qmd"))
   writeLines(new_content, qmd_file)
   message("Generated student QMD: ", qmd_file)
 })

@@ -49,7 +49,9 @@ There are `r nrow(ds)` total observations this semester.
 **Number of observers:** `r n_distinct(ds$observedby_person_id)`  
 **Total observations:** `r nrow(ds)`
 
-[Download CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-`r params$semester`.csv)
+[Download all observations from this semester (CSV)](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-`r params$semester`.csv)
+
+[Download observer summary CSV](https://github.com/AdamWilsonLabEDU/campus_phenology/releases/download/npn-data/npn_obs_network-891_semester-`r params$semester`_observer_summary.csv)
 
 The NNID in the table and figures below is an anonymized individual observer ID. 
 
