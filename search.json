@@ -4,7 +4,7 @@
     "href": "semesters.html",
     "title": "Semester Data",
     "section": "",
-    "text": "This page lists all semesters with available observation data.\n\n\n\nSemester\nStatus\nObservers\nObservations\nPage\nData\n\n\n\n\nFall 2025\nIn progress\n105\n27683\nView\nCSV\n\n\nSpring 2025\nComplete\n116\n35666\nView\nCSV\n\n\nFall 2024\nComplete\n148\n39713\nView\nCSV\n\n\nSpring 2024\nComplete\n159\n46727\nView\nCSV\n\n\nFall 2023\nComplete\n162\n36549\nView\nCSV\n\n\nSpring 2023\nComplete\n165\n50443\nView\nCSV\n\n\nFall 2022\nComplete\n175\n55879\nView\nCSV\n\n\nSpring 2022\nComplete\n171\n51689\nView\nCSV\n\n\nFall 2021\nComplete\n169\n49446\nView\nCSV\n\n\nSpring 2021\nComplete\n73\n19362\nView\nCSV\n\n\nFall 2020\nComplete\n82\n24272\nView\nCSV\n\n\nSpring 2020\nComplete\n165\n19776\nView\nCSV\n\n\nFall 2019\nComplete\n176\n40532\nView\nCSV\n\n\nSpring 2019\nComplete\n1\n6\nView\nCSV"
+    "text": "This page lists all semesters with available observation data.\n\n\n\nSemester\nStatus\nObservers\nObservations\nPage\nData\n\n\n\n\nFall 2025\nComplete\n105\n27683\nView\nCSV\n\n\nSpring 2025\nComplete\n116\n35666\nView\nCSV\n\n\nFall 2024\nComplete\n148\n39713\nView\nCSV\n\n\nSpring 2024\nComplete\n159\n46727\nView\nCSV\n\n\nFall 2023\nComplete\n162\n36549\nView\nCSV\n\n\nSpring 2023\nComplete\n165\n50443\nView\nCSV\n\n\nFall 2022\nComplete\n175\n55879\nView\nCSV\n\n\nSpring 2022\nComplete\n171\n51689\nView\nCSV\n\n\nFall 2021\nComplete\n169\n49446\nView\nCSV\n\n\nSpring 2021\nComplete\n73\n19362\nView\nCSV\n\n\nFall 2020\nComplete\n82\n24272\nView\nCSV\n\n\nSpring 2020\nComplete\n165\n19776\nView\nCSV\n\n\nFall 2019\nComplete\n176\n40532\nView\nCSV\n\n\nSpring 2019\nComplete\n1\n6\nView\nCSV"
   },
   {
     "objectID": "generated/tree_205575.html",
@@ -1379,1548 +1379,36 @@
     "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n927\n2019-08-15\n2025-12-03\n\n\nColored leaves\n887\n2019-08-15\n2025-12-03\n\n\nBreaking leaf buds\n863\n2019-08-15\n2025-12-03\n\n\nFalling leaves\n858\n2019-08-15\n2025-12-03\n\n\nIncreasing leaf size\n816\n2019-08-15\n2025-12-03\n\n\nRecent fruit or seed drop\n806\n2019-08-15\n2025-12-03\n\n\nFlowers or flower buds\n786\n2019-08-15\n2025-12-03\n\n\nOpen flowers\n783\n2019-08-15\n2025-12-03\n\n\nRipe fruits\n777\n2019-08-15\n2025-12-03\n\n\nFruits\n776\n2019-08-15\n2025-12-03\n\n\nPollen release (flowers)\n770\n2019-08-15\n2025-12-03"
   },
   {
-    "objectID": "generated/student_2025.2_81938.html",
-    "href": "generated/student_2025.2_81938.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 210\nWeeks with observations: 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81938.html#nnid-81938",
-    "href": "generated/student_2025.2_81938.html#nnid-81938",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 210\nWeeks with observations: 5"
-  },
-  {
-    "objectID": "generated/student_2025.2_81938.html#observations-by-plant",
-    "href": "generated/student_2025.2_81938.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81824.html",
-    "href": "generated/student_2025.2_81824.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 132\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81824.html#nnid-81824",
-    "href": "generated/student_2025.2_81824.html#nnid-81824",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 132\nWeeks with observations: 3"
-  },
-  {
-    "objectID": "generated/student_2025.2_81824.html#observations-by-plant",
-    "href": "generated/student_2025.2_81824.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81745.html",
-    "href": "generated/student_2025.2_81745.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 52\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81745.html#nnid-81745",
-    "href": "generated/student_2025.2_81745.html#nnid-81745",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 52\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81745.html#observations-by-plant",
-    "href": "generated/student_2025.2_81745.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81715.html",
-    "href": "generated/student_2025.2_81715.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 442\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81715.html#nnid-81715",
-    "href": "generated/student_2025.2_81715.html#nnid-81715",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 442\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81715.html#observations-by-plant",
-    "href": "generated/student_2025.2_81715.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81615.html",
-    "href": "generated/student_2025.2_81615.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 504\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81615.html#nnid-81615",
-    "href": "generated/student_2025.2_81615.html#nnid-81615",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 504\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81615.html#observations-by-plant",
-    "href": "generated/student_2025.2_81615.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81592.html",
-    "href": "generated/student_2025.2_81592.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 41\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81592.html#nnid-81592",
-    "href": "generated/student_2025.2_81592.html#nnid-81592",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 41\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81592.html#observations-by-plant",
-    "href": "generated/student_2025.2_81592.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81585.html",
-    "href": "generated/student_2025.2_81585.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81585.html#nnid-81585",
-    "href": "generated/student_2025.2_81585.html#nnid-81585",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81585.html#observations-by-plant",
-    "href": "generated/student_2025.2_81585.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81492.html",
-    "href": "generated/student_2025.2_81492.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 189\nWeeks with observations: 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81492.html#nnid-81492",
-    "href": "generated/student_2025.2_81492.html#nnid-81492",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 189\nWeeks with observations: 8"
-  },
-  {
-    "objectID": "generated/student_2025.2_81492.html#observations-by-plant",
-    "href": "generated/student_2025.2_81492.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81490.html",
-    "href": "generated/student_2025.2_81490.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 160\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81490.html#nnid-81490",
-    "href": "generated/student_2025.2_81490.html#nnid-81490",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 160\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81490.html#observations-by-plant",
-    "href": "generated/student_2025.2_81490.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81488.html",
-    "href": "generated/student_2025.2_81488.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 183\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81488.html#nnid-81488",
-    "href": "generated/student_2025.2_81488.html#nnid-81488",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 183\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81488.html#observations-by-plant",
-    "href": "generated/student_2025.2_81488.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81486.html",
-    "href": "generated/student_2025.2_81486.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 450\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81486.html#nnid-81486",
-    "href": "generated/student_2025.2_81486.html#nnid-81486",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 450\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81486.html#observations-by-plant",
-    "href": "generated/student_2025.2_81486.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81483.html",
-    "href": "generated/student_2025.2_81483.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 191\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81483.html#nnid-81483",
-    "href": "generated/student_2025.2_81483.html#nnid-81483",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 191\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81483.html#observations-by-plant",
-    "href": "generated/student_2025.2_81483.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81481.html",
-    "href": "generated/student_2025.2_81481.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81481.html#nnid-81481",
-    "href": "generated/student_2025.2_81481.html#nnid-81481",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81481.html#observations-by-plant",
-    "href": "generated/student_2025.2_81481.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81473.html",
-    "href": "generated/student_2025.2_81473.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 180\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81473.html#nnid-81473",
-    "href": "generated/student_2025.2_81473.html#nnid-81473",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 180\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81473.html#observations-by-plant",
-    "href": "generated/student_2025.2_81473.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81471.html",
-    "href": "generated/student_2025.2_81471.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81471.html#nnid-81471",
-    "href": "generated/student_2025.2_81471.html#nnid-81471",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81471.html#observations-by-plant",
-    "href": "generated/student_2025.2_81471.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81469.html",
-    "href": "generated/student_2025.2_81469.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 314\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81469.html#nnid-81469",
-    "href": "generated/student_2025.2_81469.html#nnid-81469",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 314\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81469.html#observations-by-plant",
-    "href": "generated/student_2025.2_81469.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81467.html",
-    "href": "generated/student_2025.2_81467.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 251\nWeeks with observations: 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81467.html#nnid-81467",
-    "href": "generated/student_2025.2_81467.html#nnid-81467",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 251\nWeeks with observations: 6"
-  },
-  {
-    "objectID": "generated/student_2025.2_81467.html#observations-by-plant",
-    "href": "generated/student_2025.2_81467.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81465.html",
-    "href": "generated/student_2025.2_81465.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 24\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81465.html#nnid-81465",
-    "href": "generated/student_2025.2_81465.html#nnid-81465",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 24\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81465.html#observations-by-plant",
-    "href": "generated/student_2025.2_81465.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81463.html",
-    "href": "generated/student_2025.2_81463.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 48\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81463.html#nnid-81463",
-    "href": "generated/student_2025.2_81463.html#nnid-81463",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 48\nWeeks with observations: 3"
-  },
-  {
-    "objectID": "generated/student_2025.2_81463.html#observations-by-plant",
-    "href": "generated/student_2025.2_81463.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81461.html",
-    "href": "generated/student_2025.2_81461.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 138\nWeeks with observations: 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81461.html#nnid-81461",
-    "href": "generated/student_2025.2_81461.html#nnid-81461",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 138\nWeeks with observations: 6"
-  },
-  {
-    "objectID": "generated/student_2025.2_81461.html#observations-by-plant",
-    "href": "generated/student_2025.2_81461.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81431.html",
-    "href": "generated/student_2025.2_81431.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 488\nWeeks with observations: 13\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81431.html#nnid-81431",
-    "href": "generated/student_2025.2_81431.html#nnid-81431",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 488\nWeeks with observations: 13"
-  },
-  {
-    "objectID": "generated/student_2025.2_81431.html#observations-by-plant",
-    "href": "generated/student_2025.2_81431.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81429.html",
-    "href": "generated/student_2025.2_81429.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 526\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81429.html#nnid-81429",
-    "href": "generated/student_2025.2_81429.html#nnid-81429",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 526\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81429.html#observations-by-plant",
-    "href": "generated/student_2025.2_81429.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81427.html",
-    "href": "generated/student_2025.2_81427.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 282\nWeeks with observations: 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81427.html#nnid-81427",
-    "href": "generated/student_2025.2_81427.html#nnid-81427",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 282\nWeeks with observations: 7"
-  },
-  {
-    "objectID": "generated/student_2025.2_81427.html#observations-by-plant",
-    "href": "generated/student_2025.2_81427.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81423.html",
-    "href": "generated/student_2025.2_81423.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 548\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81423.html#nnid-81423",
-    "href": "generated/student_2025.2_81423.html#nnid-81423",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 548\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81423.html#observations-by-plant",
-    "href": "generated/student_2025.2_81423.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81421.html",
-    "href": "generated/student_2025.2_81421.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81421.html#nnid-81421",
-    "href": "generated/student_2025.2_81421.html#nnid-81421",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81421.html#observations-by-plant",
-    "href": "generated/student_2025.2_81421.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81410.html",
-    "href": "generated/student_2025.2_81410.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 11\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81410.html#nnid-81410",
-    "href": "generated/student_2025.2_81410.html#nnid-81410",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 11\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81410.html#observations-by-plant",
-    "href": "generated/student_2025.2_81410.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81407.html",
-    "href": "generated/student_2025.2_81407.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 484\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81407.html#nnid-81407",
-    "href": "generated/student_2025.2_81407.html#nnid-81407",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 484\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81407.html#observations-by-plant",
-    "href": "generated/student_2025.2_81407.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81405.html",
-    "href": "generated/student_2025.2_81405.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 396\nWeeks with observations: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81405.html#nnid-81405",
-    "href": "generated/student_2025.2_81405.html#nnid-81405",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 396\nWeeks with observations: 9"
-  },
-  {
-    "objectID": "generated/student_2025.2_81405.html#observations-by-plant",
-    "href": "generated/student_2025.2_81405.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81403.html",
-    "href": "generated/student_2025.2_81403.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 232\nWeeks with observations: 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81403.html#nnid-81403",
-    "href": "generated/student_2025.2_81403.html#nnid-81403",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 232\nWeeks with observations: 5"
-  },
-  {
-    "objectID": "generated/student_2025.2_81403.html#observations-by-plant",
-    "href": "generated/student_2025.2_81403.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81385.html",
-    "href": "generated/student_2025.2_81385.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81385.html#nnid-81385",
-    "href": "generated/student_2025.2_81385.html#nnid-81385",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 2"
-  },
-  {
-    "objectID": "generated/student_2025.2_81385.html#observations-by-plant",
-    "href": "generated/student_2025.2_81385.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81375.html",
-    "href": "generated/student_2025.2_81375.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81375.html#nnid-81375",
-    "href": "generated/student_2025.2_81375.html#nnid-81375",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81375.html#observations-by-plant",
-    "href": "generated/student_2025.2_81375.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81373.html",
-    "href": "generated/student_2025.2_81373.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 519\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81373.html#nnid-81373",
-    "href": "generated/student_2025.2_81373.html#nnid-81373",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 519\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81373.html#observations-by-plant",
-    "href": "generated/student_2025.2_81373.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81371.html",
-    "href": "generated/student_2025.2_81371.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 440\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81371.html#nnid-81371",
-    "href": "generated/student_2025.2_81371.html#nnid-81371",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 440\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81371.html#observations-by-plant",
-    "href": "generated/student_2025.2_81371.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81369.html",
-    "href": "generated/student_2025.2_81369.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 520\nWeeks with observations: 13\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81369.html#nnid-81369",
-    "href": "generated/student_2025.2_81369.html#nnid-81369",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 520\nWeeks with observations: 13"
-  },
-  {
-    "objectID": "generated/student_2025.2_81369.html#observations-by-plant",
-    "href": "generated/student_2025.2_81369.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81367.html",
-    "href": "generated/student_2025.2_81367.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 473\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81367.html#nnid-81367",
-    "href": "generated/student_2025.2_81367.html#nnid-81367",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 473\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81367.html#observations-by-plant",
-    "href": "generated/student_2025.2_81367.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81365.html",
-    "href": "generated/student_2025.2_81365.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81365.html#nnid-81365",
-    "href": "generated/student_2025.2_81365.html#nnid-81365",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81365.html#observations-by-plant",
-    "href": "generated/student_2025.2_81365.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81363.html",
-    "href": "generated/student_2025.2_81363.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 420\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81363.html#nnid-81363",
-    "href": "generated/student_2025.2_81363.html#nnid-81363",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 420\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81363.html#observations-by-plant",
-    "href": "generated/student_2025.2_81363.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81361.html",
-    "href": "generated/student_2025.2_81361.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81361.html#nnid-81361",
-    "href": "generated/student_2025.2_81361.html#nnid-81361",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81361.html#observations-by-plant",
-    "href": "generated/student_2025.2_81361.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81348.html",
-    "href": "generated/student_2025.2_81348.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 33\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81348.html#nnid-81348",
-    "href": "generated/student_2025.2_81348.html#nnid-81348",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 33\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81348.html#observations-by-plant",
-    "href": "generated/student_2025.2_81348.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81346.html",
-    "href": "generated/student_2025.2_81346.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 210\nWeeks with observations: 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81346.html#nnid-81346",
-    "href": "generated/student_2025.2_81346.html#nnid-81346",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 210\nWeeks with observations: 6"
-  },
-  {
-    "objectID": "generated/student_2025.2_81346.html#observations-by-plant",
-    "href": "generated/student_2025.2_81346.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81344.html",
-    "href": "generated/student_2025.2_81344.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 350\nWeeks with observations: 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81344.html#nnid-81344",
-    "href": "generated/student_2025.2_81344.html#nnid-81344",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 350\nWeeks with observations: 8"
-  },
-  {
-    "objectID": "generated/student_2025.2_81344.html#observations-by-plant",
-    "href": "generated/student_2025.2_81344.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81342.html",
-    "href": "generated/student_2025.2_81342.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 40\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81342.html#nnid-81342",
-    "href": "generated/student_2025.2_81342.html#nnid-81342",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 40\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81342.html#observations-by-plant",
-    "href": "generated/student_2025.2_81342.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81340.html",
-    "href": "generated/student_2025.2_81340.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81340.html#nnid-81340",
-    "href": "generated/student_2025.2_81340.html#nnid-81340",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81340.html#observations-by-plant",
-    "href": "generated/student_2025.2_81340.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81338.html",
-    "href": "generated/student_2025.2_81338.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 378\nWeeks with observations: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81338.html#nnid-81338",
-    "href": "generated/student_2025.2_81338.html#nnid-81338",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 378\nWeeks with observations: 9"
-  },
-  {
-    "objectID": "generated/student_2025.2_81338.html#observations-by-plant",
-    "href": "generated/student_2025.2_81338.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81336.html",
-    "href": "generated/student_2025.2_81336.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 126\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81336.html#nnid-81336",
-    "href": "generated/student_2025.2_81336.html#nnid-81336",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 126\nWeeks with observations: 3"
-  },
-  {
-    "objectID": "generated/student_2025.2_81336.html#observations-by-plant",
-    "href": "generated/student_2025.2_81336.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81334.html",
-    "href": "generated/student_2025.2_81334.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81334.html#nnid-81334",
-    "href": "generated/student_2025.2_81334.html#nnid-81334",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81334.html#observations-by-plant",
-    "href": "generated/student_2025.2_81334.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81332.html",
-    "href": "generated/student_2025.2_81332.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 34\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81332.html#nnid-81332",
-    "href": "generated/student_2025.2_81332.html#nnid-81332",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 34\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81332.html#observations-by-plant",
-    "href": "generated/student_2025.2_81332.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81329.html",
-    "href": "generated/student_2025.2_81329.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 62\nWeeks with observations: 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81329.html#nnid-81329",
-    "href": "generated/student_2025.2_81329.html#nnid-81329",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 62\nWeeks with observations: 2"
-  },
-  {
-    "objectID": "generated/student_2025.2_81329.html#observations-by-plant",
-    "href": "generated/student_2025.2_81329.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81327.html",
-    "href": "generated/student_2025.2_81327.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 555\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81327.html#nnid-81327",
-    "href": "generated/student_2025.2_81327.html#nnid-81327",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 555\nWeeks with observations: 12"
-  },
-  {
-    "objectID": "generated/student_2025.2_81327.html#observations-by-plant",
-    "href": "generated/student_2025.2_81327.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81305.html",
-    "href": "generated/student_2025.2_81305.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81305.html#nnid-81305",
-    "href": "generated/student_2025.2_81305.html#nnid-81305",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81305.html#observations-by-plant",
-    "href": "generated/student_2025.2_81305.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_76263.html",
-    "href": "generated/student_2025.2_76263.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 43\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_76263.html#nnid-76263",
-    "href": "generated/student_2025.2_76263.html#nnid-76263",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 43\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_76263.html#observations-by-plant",
-    "href": "generated/student_2025.2_76263.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_74478.html",
-    "href": "generated/student_2025.2_74478.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 420\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_74478.html#nnid-74478",
-    "href": "generated/student_2025.2_74478.html#nnid-74478",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 420\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_74478.html#observations-by-plant",
-    "href": "generated/student_2025.2_74478.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_60171.html",
-    "href": "generated/student_2025.2_60171.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 2\nWeeks with observations: 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_60171.html#nnid-60171",
-    "href": "generated/student_2025.2_60171.html#nnid-60171",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 2\nWeeks with observations: 2"
-  },
-  {
-    "objectID": "generated/student_2025.2_60171.html#observations-by-plant",
-    "href": "generated/student_2025.2_60171.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/semester_2025.1.html",
-    "href": "generated/semester_2025.1.html",
+    "objectID": "generated/semester_2025.2.html",
+    "href": "generated/semester_2025.2.html",
     "title": "Semester Overview",
     "section": "",
-    "text": "There are 35666 total observations this semester.\nNumber of observers: 116\nTotal observations: 35666\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
+    "text": "There are 27683 total observations this semester.\nNumber of observers: 105\nTotal observations: 27683\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/semester_2025.1.html#semester-2025.1",
-    "href": "generated/semester_2025.1.html#semester-2025.1",
+    "objectID": "generated/semester_2025.2.html#semester-2025.2",
+    "href": "generated/semester_2025.2.html#semester-2025.2",
     "title": "Semester Overview",
     "section": "",
-    "text": "There are 35666 total observations this semester.\nNumber of observers: 116\nTotal observations: 35666\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
+    "text": "There are 27683 total observations this semester.\nNumber of observers: 105\nTotal observations: 27683\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/semester_2025.1.html#observer-overview",
-    "href": "generated/semester_2025.1.html#observer-overview",
+    "objectID": "generated/semester_2025.2.html#observer-overview",
+    "href": "generated/semester_2025.2.html#observer-overview",
     "title": "Semester Overview",
     "section": "2 Observer Overview",
     "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/semester_2025.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2025.1.html#weekly-observations-heatmap",
+    "objectID": "generated/semester_2025.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2025.2.html#weekly-observations-heatmap",
     "title": "Semester Overview",
     "section": "3 Weekly Observations Heatmap",
     "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/semester_2025.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2025.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2024.1.html",
-    "href": "generated/semester_2024.1.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 46727 total observations this semester.\nNumber of observers: 159\nTotal observations: 46727\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2024.1.html#semester-2024.1",
-    "href": "generated/semester_2024.1.html#semester-2024.1",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 46727 total observations this semester.\nNumber of observers: 159\nTotal observations: 46727\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2024.1.html#observer-overview",
-    "href": "generated/semester_2024.1.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2024.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2024.1.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2024.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2024.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2023.1.html",
-    "href": "generated/semester_2023.1.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 50443 total observations this semester.\nNumber of observers: 165\nTotal observations: 50443\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2023.1.html#semester-2023.1",
-    "href": "generated/semester_2023.1.html#semester-2023.1",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 50443 total observations this semester.\nNumber of observers: 165\nTotal observations: 50443\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2023.1.html#observer-overview",
-    "href": "generated/semester_2023.1.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2023.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2023.1.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2023.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2023.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2022.1.html",
-    "href": "generated/semester_2022.1.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 51689 total observations this semester.\nNumber of observers: 171\nTotal observations: 51689\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2022.1.html#semester-2022.1",
-    "href": "generated/semester_2022.1.html#semester-2022.1",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 51689 total observations this semester.\nNumber of observers: 171\nTotal observations: 51689\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2022.1.html#observer-overview",
-    "href": "generated/semester_2022.1.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2022.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2022.1.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2022.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2022.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2021.1.html",
-    "href": "generated/semester_2021.1.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 19362 total observations this semester.\nNumber of observers: 73\nTotal observations: 19362\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2021.1.html#semester-2021.1",
-    "href": "generated/semester_2021.1.html#semester-2021.1",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 19362 total observations this semester.\nNumber of observers: 73\nTotal observations: 19362\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2021.1.html#observer-overview",
-    "href": "generated/semester_2021.1.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2021.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2021.1.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2021.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2021.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2020.1.html",
-    "href": "generated/semester_2020.1.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 19776 total observations this semester.\nNumber of observers: 165\nTotal observations: 19776\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2020.1.html#semester-2020.1",
-    "href": "generated/semester_2020.1.html#semester-2020.1",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 19776 total observations this semester.\nNumber of observers: 165\nTotal observations: 19776\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2020.1.html#observer-overview",
-    "href": "generated/semester_2020.1.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2020.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2020.1.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2020.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2020.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2019.1.html",
-    "href": "generated/semester_2019.1.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 6 total observations this semester.\nNumber of observers: 1\nTotal observations: 6\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2019.1.html#semester-2019.1",
-    "href": "generated/semester_2019.1.html#semester-2019.1",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 6 total observations this semester.\nNumber of observers: 1\nTotal observations: 6\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2019.1.html#observer-overview",
-    "href": "generated/semester_2019.1.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2019.1.html#weekly-observations-heatmap",
-    "href": "generated/semester_2019.1.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2019.1.html#phenology-observations-by-species",
-    "href": "generated/semester_2019.1.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Phenology Observations at the University at Buffalo",
-    "section": "",
-    "text": "Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.\nThroughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.\nThese data were last updated on 2025-12-24 14:54:01.937994."
-  },
-  {
-    "objectID": "index.html#observations-by-species",
-    "href": "index.html#observations-by-species",
-    "title": "Phenology Observations at the University at Buffalo",
-    "section": "Observations by Species",
-    "text": "Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2019.2.html",
-    "href": "generated/semester_2019.2.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 40532 total observations this semester.\nNumber of observers: 176\nTotal observations: 40532\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2019.2.html#semester-2019.2",
-    "href": "generated/semester_2019.2.html#semester-2019.2",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 40532 total observations this semester.\nNumber of observers: 176\nTotal observations: 40532\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2019.2.html#observer-overview",
-    "href": "generated/semester_2019.2.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2019.2.html#weekly-observations-heatmap",
-    "href": "generated/semester_2019.2.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2019.2.html#phenology-observations-by-species",
-    "href": "generated/semester_2019.2.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2020.2.html",
-    "href": "generated/semester_2020.2.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 24272 total observations this semester.\nNumber of observers: 82\nTotal observations: 24272\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2020.2.html#semester-2020.2",
-    "href": "generated/semester_2020.2.html#semester-2020.2",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 24272 total observations this semester.\nNumber of observers: 82\nTotal observations: 24272\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2020.2.html#observer-overview",
-    "href": "generated/semester_2020.2.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2020.2.html#weekly-observations-heatmap",
-    "href": "generated/semester_2020.2.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2020.2.html#phenology-observations-by-species",
-    "href": "generated/semester_2020.2.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2021.2.html",
-    "href": "generated/semester_2021.2.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 49446 total observations this semester.\nNumber of observers: 169\nTotal observations: 49446\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2021.2.html#semester-2021.2",
-    "href": "generated/semester_2021.2.html#semester-2021.2",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 49446 total observations this semester.\nNumber of observers: 169\nTotal observations: 49446\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2021.2.html#observer-overview",
-    "href": "generated/semester_2021.2.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2021.2.html#weekly-observations-heatmap",
-    "href": "generated/semester_2021.2.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2021.2.html#phenology-observations-by-species",
-    "href": "generated/semester_2021.2.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2022.2.html",
-    "href": "generated/semester_2022.2.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 55879 total observations this semester.\nNumber of observers: 175\nTotal observations: 55879\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2022.2.html#semester-2022.2",
-    "href": "generated/semester_2022.2.html#semester-2022.2",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 55879 total observations this semester.\nNumber of observers: 175\nTotal observations: 55879\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2022.2.html#observer-overview",
-    "href": "generated/semester_2022.2.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2022.2.html#weekly-observations-heatmap",
-    "href": "generated/semester_2022.2.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2022.2.html#phenology-observations-by-species",
-    "href": "generated/semester_2022.2.html#phenology-observations-by-species",
-    "title": "Semester Overview",
-    "section": "4 Phenology Observations by Species",
-    "text": "4 Phenology Observations by Species"
-  },
-  {
-    "objectID": "generated/semester_2023.2.html",
-    "href": "generated/semester_2023.2.html",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 36549 total observations this semester.\nNumber of observers: 162\nTotal observations: 36549\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2023.2.html#semester-2023.2",
-    "href": "generated/semester_2023.2.html#semester-2023.2",
-    "title": "Semester Overview",
-    "section": "",
-    "text": "There are 36549 total observations this semester.\nNumber of observers: 162\nTotal observations: 36549\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
-  },
-  {
-    "objectID": "generated/semester_2023.2.html#observer-overview",
-    "href": "generated/semester_2023.2.html#observer-overview",
-    "title": "Semester Overview",
-    "section": "2 Observer Overview",
-    "text": "2 Observer Overview"
-  },
-  {
-    "objectID": "generated/semester_2023.2.html#weekly-observations-heatmap",
-    "href": "generated/semester_2023.2.html#weekly-observations-heatmap",
-    "title": "Semester Overview",
-    "section": "3 Weekly Observations Heatmap",
-    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
-  },
-  {
-    "objectID": "generated/semester_2023.2.html#phenology-observations-by-species",
-    "href": "generated/semester_2023.2.html#phenology-observations-by-species",
+    "objectID": "generated/semester_2025.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2025.2.html#phenology-observations-by-species",
     "title": "Semester Overview",
     "section": "4 Phenology Observations by Species",
     "text": "4 Phenology Observations by Species"
@@ -2961,1131 +1449,438 @@
     "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/semester_2025.2.html",
-    "href": "generated/semester_2025.2.html",
+    "objectID": "generated/semester_2023.2.html",
+    "href": "generated/semester_2023.2.html",
     "title": "Semester Overview",
     "section": "",
-    "text": "There are 27683 total observations this semester.\nNumber of observers: 105\nTotal observations: 27683\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
+    "text": "There are 36549 total observations this semester.\nNumber of observers: 162\nTotal observations: 36549\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/semester_2025.2.html#semester-2025.2",
-    "href": "generated/semester_2025.2.html#semester-2025.2",
+    "objectID": "generated/semester_2023.2.html#semester-2023.2",
+    "href": "generated/semester_2023.2.html#semester-2023.2",
     "title": "Semester Overview",
     "section": "",
-    "text": "There are 27683 total observations this semester.\nNumber of observers: 105\nTotal observations: 27683\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
+    "text": "There are 36549 total observations this semester.\nNumber of observers: 162\nTotal observations: 36549\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/semester_2025.2.html#observer-overview",
-    "href": "generated/semester_2025.2.html#observer-overview",
+    "objectID": "generated/semester_2023.2.html#observer-overview",
+    "href": "generated/semester_2023.2.html#observer-overview",
     "title": "Semester Overview",
     "section": "2 Observer Overview",
     "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/semester_2025.2.html#weekly-observations-heatmap",
-    "href": "generated/semester_2025.2.html#weekly-observations-heatmap",
+    "objectID": "generated/semester_2023.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2023.2.html#weekly-observations-heatmap",
     "title": "Semester Overview",
     "section": "3 Weekly Observations Heatmap",
     "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/semester_2025.2.html#phenology-observations-by-species",
-    "href": "generated/semester_2025.2.html#phenology-observations-by-species",
+    "objectID": "generated/semester_2023.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2023.2.html#phenology-observations-by-species",
     "title": "Semester Overview",
     "section": "4 Phenology Observations by Species",
     "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_60788.html",
-    "href": "generated/student_2025.2_60788.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2022.2.html",
+    "href": "generated/semester_2022.2.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 128\nWeeks with observations: 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 55879 total observations this semester.\nNumber of observers: 175\nTotal observations: 55879\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_60788.html#nnid-60788",
-    "href": "generated/student_2025.2_60788.html#nnid-60788",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2022.2.html#semester-2022.2",
+    "href": "generated/semester_2022.2.html#semester-2022.2",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 128\nWeeks with observations: 7"
+    "text": "There are 55879 total observations this semester.\nNumber of observers: 175\nTotal observations: 55879\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_60788.html#observations-by-plant",
-    "href": "generated/student_2025.2_60788.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_76178.html",
-    "href": "generated/student_2025.2_76178.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 88\nWeeks with observations: 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_76178.html#nnid-76178",
-    "href": "generated/student_2025.2_76178.html#nnid-76178",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 88\nWeeks with observations: 2"
-  },
-  {
-    "objectID": "generated/student_2025.2_76178.html#observations-by-plant",
-    "href": "generated/student_2025.2_76178.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81288.html",
-    "href": "generated/student_2025.2_81288.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 14\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81288.html#nnid-81288",
-    "href": "generated/student_2025.2_81288.html#nnid-81288",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 14\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81288.html#observations-by-plant",
-    "href": "generated/student_2025.2_81288.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81307.html",
-    "href": "generated/student_2025.2_81307.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 125\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81307.html#nnid-81307",
-    "href": "generated/student_2025.2_81307.html#nnid-81307",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 125\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81307.html#observations-by-plant",
-    "href": "generated/student_2025.2_81307.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81328.html",
-    "href": "generated/student_2025.2_81328.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 250\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81328.html#nnid-81328",
-    "href": "generated/student_2025.2_81328.html#nnid-81328",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 250\nWeeks with observations: 3"
-  },
-  {
-    "objectID": "generated/student_2025.2_81328.html#observations-by-plant",
-    "href": "generated/student_2025.2_81328.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81330.html",
-    "href": "generated/student_2025.2_81330.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 533\nWeeks with observations: 13\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81330.html#nnid-81330",
-    "href": "generated/student_2025.2_81330.html#nnid-81330",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 533\nWeeks with observations: 13"
-  },
-  {
-    "objectID": "generated/student_2025.2_81330.html#observations-by-plant",
-    "href": "generated/student_2025.2_81330.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81333.html",
-    "href": "generated/student_2025.2_81333.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 132\nWeeks with observations: 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81333.html#nnid-81333",
-    "href": "generated/student_2025.2_81333.html#nnid-81333",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 132\nWeeks with observations: 2"
-  },
-  {
-    "objectID": "generated/student_2025.2_81333.html#observations-by-plant",
-    "href": "generated/student_2025.2_81333.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81335.html",
-    "href": "generated/student_2025.2_81335.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81335.html#nnid-81335",
-    "href": "generated/student_2025.2_81335.html#nnid-81335",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81335.html#observations-by-plant",
-    "href": "generated/student_2025.2_81335.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81337.html",
-    "href": "generated/student_2025.2_81337.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81337.html#nnid-81337",
-    "href": "generated/student_2025.2_81337.html#nnid-81337",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81337.html#observations-by-plant",
-    "href": "generated/student_2025.2_81337.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81339.html",
-    "href": "generated/student_2025.2_81339.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 209\nWeeks with observations: 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81339.html#nnid-81339",
-    "href": "generated/student_2025.2_81339.html#nnid-81339",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 209\nWeeks with observations: 5"
-  },
-  {
-    "objectID": "generated/student_2025.2_81339.html#observations-by-plant",
-    "href": "generated/student_2025.2_81339.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81341.html",
-    "href": "generated/student_2025.2_81341.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 168\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81341.html#nnid-81341",
-    "href": "generated/student_2025.2_81341.html#nnid-81341",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 168\nWeeks with observations: 3"
-  },
-  {
-    "objectID": "generated/student_2025.2_81341.html#observations-by-plant",
-    "href": "generated/student_2025.2_81341.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81343.html",
-    "href": "generated/student_2025.2_81343.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 43\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81343.html#nnid-81343",
-    "href": "generated/student_2025.2_81343.html#nnid-81343",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 43\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81343.html#observations-by-plant",
-    "href": "generated/student_2025.2_81343.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81345.html",
-    "href": "generated/student_2025.2_81345.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 419\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81345.html#nnid-81345",
-    "href": "generated/student_2025.2_81345.html#nnid-81345",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 419\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81345.html#observations-by-plant",
-    "href": "generated/student_2025.2_81345.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81347.html",
-    "href": "generated/student_2025.2_81347.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 122\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81347.html#nnid-81347",
-    "href": "generated/student_2025.2_81347.html#nnid-81347",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 122\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81347.html#observations-by-plant",
-    "href": "generated/student_2025.2_81347.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81360.html",
-    "href": "generated/student_2025.2_81360.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 535\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81360.html#nnid-81360",
-    "href": "generated/student_2025.2_81360.html#nnid-81360",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 535\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81360.html#observations-by-plant",
-    "href": "generated/student_2025.2_81360.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81362.html",
-    "href": "generated/student_2025.2_81362.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 420\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81362.html#nnid-81362",
-    "href": "generated/student_2025.2_81362.html#nnid-81362",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 420\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81362.html#observations-by-plant",
-    "href": "generated/student_2025.2_81362.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81364.html",
-    "href": "generated/student_2025.2_81364.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 361\nWeeks with observations: 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81364.html#nnid-81364",
-    "href": "generated/student_2025.2_81364.html#nnid-81364",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 361\nWeeks with observations: 8"
-  },
-  {
-    "objectID": "generated/student_2025.2_81364.html#observations-by-plant",
-    "href": "generated/student_2025.2_81364.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81366.html",
-    "href": "generated/student_2025.2_81366.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 125\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81366.html#nnid-81366",
-    "href": "generated/student_2025.2_81366.html#nnid-81366",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 125\nWeeks with observations: 3"
-  },
-  {
-    "objectID": "generated/student_2025.2_81366.html#observations-by-plant",
-    "href": "generated/student_2025.2_81366.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81368.html",
-    "href": "generated/student_2025.2_81368.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 461\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81368.html#nnid-81368",
-    "href": "generated/student_2025.2_81368.html#nnid-81368",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 461\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81368.html#observations-by-plant",
-    "href": "generated/student_2025.2_81368.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81370.html",
-    "href": "generated/student_2025.2_81370.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 438\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81370.html#nnid-81370",
-    "href": "generated/student_2025.2_81370.html#nnid-81370",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 438\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81370.html#observations-by-plant",
-    "href": "generated/student_2025.2_81370.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81372.html",
-    "href": "generated/student_2025.2_81372.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 430\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81372.html#nnid-81372",
-    "href": "generated/student_2025.2_81372.html#nnid-81372",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 430\nWeeks with observations: 10"
-  },
-  {
-    "objectID": "generated/student_2025.2_81372.html#observations-by-plant",
-    "href": "generated/student_2025.2_81372.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81374.html",
-    "href": "generated/student_2025.2_81374.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 451\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81374.html#nnid-81374",
-    "href": "generated/student_2025.2_81374.html#nnid-81374",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 451\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81374.html#observations-by-plant",
-    "href": "generated/student_2025.2_81374.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81384.html",
-    "href": "generated/student_2025.2_81384.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 338\nWeeks with observations: 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81384.html#nnid-81384",
-    "href": "generated/student_2025.2_81384.html#nnid-81384",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 338\nWeeks with observations: 8"
-  },
-  {
-    "objectID": "generated/student_2025.2_81384.html#observations-by-plant",
-    "href": "generated/student_2025.2_81384.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81386.html",
-    "href": "generated/student_2025.2_81386.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 388\nWeeks with observations: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81386.html#nnid-81386",
-    "href": "generated/student_2025.2_81386.html#nnid-81386",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 388\nWeeks with observations: 9"
-  },
-  {
-    "objectID": "generated/student_2025.2_81386.html#observations-by-plant",
-    "href": "generated/student_2025.2_81386.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81404.html",
-    "href": "generated/student_2025.2_81404.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 275\nWeeks with observations: 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81404.html#nnid-81404",
-    "href": "generated/student_2025.2_81404.html#nnid-81404",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 275\nWeeks with observations: 7"
-  },
-  {
-    "objectID": "generated/student_2025.2_81404.html#observations-by-plant",
-    "href": "generated/student_2025.2_81404.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81406.html",
-    "href": "generated/student_2025.2_81406.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81406.html#nnid-81406",
-    "href": "generated/student_2025.2_81406.html#nnid-81406",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 44\nWeeks with observations: 1"
-  },
-  {
-    "objectID": "generated/student_2025.2_81406.html#observations-by-plant",
-    "href": "generated/student_2025.2_81406.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81409.html",
-    "href": "generated/student_2025.2_81409.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 84\nWeeks with observations: 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81409.html#nnid-81409",
-    "href": "generated/student_2025.2_81409.html#nnid-81409",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 84\nWeeks with observations: 2"
-  },
-  {
-    "objectID": "generated/student_2025.2_81409.html#observations-by-plant",
-    "href": "generated/student_2025.2_81409.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81420.html",
-    "href": "generated/student_2025.2_81420.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 241\nWeeks with observations: 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81420.html#nnid-81420",
-    "href": "generated/student_2025.2_81420.html#nnid-81420",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 241\nWeeks with observations: 6"
-  },
-  {
-    "objectID": "generated/student_2025.2_81420.html#observations-by-plant",
-    "href": "generated/student_2025.2_81420.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81422.html",
-    "href": "generated/student_2025.2_81422.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 478\nWeeks with observations: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81422.html#nnid-81422",
-    "href": "generated/student_2025.2_81422.html#nnid-81422",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 478\nWeeks with observations: 9"
-  },
-  {
-    "objectID": "generated/student_2025.2_81422.html#observations-by-plant",
-    "href": "generated/student_2025.2_81422.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81425.html",
-    "href": "generated/student_2025.2_81425.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 378\nWeeks with observations: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81425.html#nnid-81425",
-    "href": "generated/student_2025.2_81425.html#nnid-81425",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 378\nWeeks with observations: 9"
-  },
-  {
-    "objectID": "generated/student_2025.2_81425.html#observations-by-plant",
-    "href": "generated/student_2025.2_81425.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81428.html",
-    "href": "generated/student_2025.2_81428.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 470\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81428.html#nnid-81428",
-    "href": "generated/student_2025.2_81428.html#nnid-81428",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 470\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81428.html#observations-by-plant",
-    "href": "generated/student_2025.2_81428.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81430.html",
-    "href": "generated/student_2025.2_81430.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 346\nWeeks with observations: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81430.html#nnid-81430",
-    "href": "generated/student_2025.2_81430.html#nnid-81430",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 346\nWeeks with observations: 9"
-  },
-  {
-    "objectID": "generated/student_2025.2_81430.html#observations-by-plant",
-    "href": "generated/student_2025.2_81430.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81432.html",
-    "href": "generated/student_2025.2_81432.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81432.html#nnid-81432",
-    "href": "generated/student_2025.2_81432.html#nnid-81432",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 462\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81432.html#observations-by-plant",
-    "href": "generated/student_2025.2_81432.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2022.2.html#observer-overview",
+    "href": "generated/semester_2022.2.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81462.html",
-    "href": "generated/student_2025.2_81462.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 429\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81462.html#nnid-81462",
-    "href": "generated/student_2025.2_81462.html#nnid-81462",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 429\nWeeks with observations: 11"
-  },
-  {
-    "objectID": "generated/student_2025.2_81462.html#observations-by-plant",
-    "href": "generated/student_2025.2_81462.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
-  },
-  {
-    "objectID": "generated/student_2025.2_81464.html",
-    "href": "generated/student_2025.2_81464.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 160\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2022.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2022.2.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81464.html#nnid-81464",
-    "href": "generated/student_2025.2_81464.html#nnid-81464",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 160\nWeeks with observations: 10"
+    "objectID": "generated/semester_2022.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2022.2.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81464.html#observations-by-plant",
-    "href": "generated/student_2025.2_81464.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2021.2.html",
+    "href": "generated/semester_2021.2.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 49446 total observations this semester.\nNumber of observers: 169\nTotal observations: 49446\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81466.html",
-    "href": "generated/student_2025.2_81466.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2021.2.html#semester-2021.2",
+    "href": "generated/semester_2021.2.html#semester-2021.2",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 48\nWeeks with observations: 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 49446 total observations this semester.\nNumber of observers: 169\nTotal observations: 49446\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81466.html#nnid-81466",
-    "href": "generated/student_2025.2_81466.html#nnid-81466",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 48\nWeeks with observations: 3"
+    "objectID": "generated/semester_2021.2.html#observer-overview",
+    "href": "generated/semester_2021.2.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81466.html#observations-by-plant",
-    "href": "generated/student_2025.2_81466.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2021.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2021.2.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81468.html",
-    "href": "generated/student_2025.2_81468.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2021.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2021.2.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81468.html#nnid-81468",
-    "href": "generated/student_2025.2_81468.html#nnid-81468",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2020.2.html",
+    "href": "generated/semester_2020.2.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 11"
+    "text": "There are 24272 total observations this semester.\nNumber of observers: 82\nTotal observations: 24272\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81468.html#observations-by-plant",
-    "href": "generated/student_2025.2_81468.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2020.2.html#semester-2020.2",
+    "href": "generated/semester_2020.2.html#semester-2020.2",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 24272 total observations this semester.\nNumber of observers: 82\nTotal observations: 24272\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81470.html",
-    "href": "generated/student_2025.2_81470.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 112\nWeeks with observations: 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2020.2.html#observer-overview",
+    "href": "generated/semester_2020.2.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81470.html#nnid-81470",
-    "href": "generated/student_2025.2_81470.html#nnid-81470",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 112\nWeeks with observations: 7"
+    "objectID": "generated/semester_2020.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2020.2.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81470.html#observations-by-plant",
-    "href": "generated/student_2025.2_81470.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2020.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2020.2.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81472.html",
-    "href": "generated/student_2025.2_81472.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2019.2.html",
+    "href": "generated/semester_2019.2.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 419\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 40532 total observations this semester.\nNumber of observers: 176\nTotal observations: 40532\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81472.html#nnid-81472",
-    "href": "generated/student_2025.2_81472.html#nnid-81472",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2019.2.html#semester-2019.2",
+    "href": "generated/semester_2019.2.html#semester-2019.2",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 419\nWeeks with observations: 10"
+    "text": "There are 40532 total observations this semester.\nNumber of observers: 176\nTotal observations: 40532\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81472.html#observations-by-plant",
-    "href": "generated/student_2025.2_81472.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2019.2.html#observer-overview",
+    "href": "generated/semester_2019.2.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81476.html",
-    "href": "generated/student_2025.2_81476.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 543\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2019.2.html#weekly-observations-heatmap",
+    "href": "generated/semester_2019.2.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81476.html#nnid-81476",
-    "href": "generated/student_2025.2_81476.html#nnid-81476",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 543\nWeeks with observations: 10"
+    "objectID": "generated/semester_2019.2.html#phenology-observations-by-species",
+    "href": "generated/semester_2019.2.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81476.html#observations-by-plant",
-    "href": "generated/student_2025.2_81476.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Phenology Observations at the University at Buffalo",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.\nThroughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.\nThese data were last updated on 2026-01-23 14:57:12.835916."
   },
   {
-    "objectID": "generated/student_2025.2_81482.html",
-    "href": "generated/student_2025.2_81482.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 16\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "index.html#observations-by-species",
+    "href": "index.html#observations-by-species",
+    "title": "Phenology Observations at the University at Buffalo",
+    "section": "Observations by Species",
+    "text": "Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81482.html#nnid-81482",
-    "href": "generated/student_2025.2_81482.html#nnid-81482",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2019.1.html",
+    "href": "generated/semester_2019.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 16\nWeeks with observations: 1"
+    "text": "There are 6 total observations this semester.\nNumber of observers: 1\nTotal observations: 6\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81482.html#observations-by-plant",
-    "href": "generated/student_2025.2_81482.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2019.1.html#semester-2019.1",
+    "href": "generated/semester_2019.1.html#semester-2019.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 6 total observations this semester.\nNumber of observers: 1\nTotal observations: 6\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81485.html",
-    "href": "generated/student_2025.2_81485.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 528\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2019.1.html#observer-overview",
+    "href": "generated/semester_2019.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81485.html#nnid-81485",
-    "href": "generated/student_2025.2_81485.html#nnid-81485",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 528\nWeeks with observations: 12"
+    "objectID": "generated/semester_2019.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2019.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81485.html#observations-by-plant",
-    "href": "generated/student_2025.2_81485.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2019.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2019.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81487.html",
-    "href": "generated/student_2025.2_81487.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2020.1.html",
+    "href": "generated/semester_2020.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 504\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 19776 total observations this semester.\nNumber of observers: 165\nTotal observations: 19776\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81487.html#nnid-81487",
-    "href": "generated/student_2025.2_81487.html#nnid-81487",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2020.1.html#semester-2020.1",
+    "href": "generated/semester_2020.1.html#semester-2020.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 504\nWeeks with observations: 12"
+    "text": "There are 19776 total observations this semester.\nNumber of observers: 165\nTotal observations: 19776\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81487.html#observations-by-plant",
-    "href": "generated/student_2025.2_81487.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2020.1.html#observer-overview",
+    "href": "generated/semester_2020.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81489.html",
-    "href": "generated/student_2025.2_81489.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2020.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2020.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81489.html#nnid-81489",
-    "href": "generated/student_2025.2_81489.html#nnid-81489",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 192\nWeeks with observations: 10"
+    "objectID": "generated/semester_2020.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2020.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81489.html#observations-by-plant",
-    "href": "generated/student_2025.2_81489.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2021.1.html",
+    "href": "generated/semester_2021.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 19362 total observations this semester.\nNumber of observers: 73\nTotal observations: 19362\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81491.html",
-    "href": "generated/student_2025.2_81491.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2021.1.html#semester-2021.1",
+    "href": "generated/semester_2021.1.html#semester-2021.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 160\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 19362 total observations this semester.\nNumber of observers: 73\nTotal observations: 19362\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81491.html#nnid-81491",
-    "href": "generated/student_2025.2_81491.html#nnid-81491",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 160\nWeeks with observations: 10"
+    "objectID": "generated/semester_2021.1.html#observer-overview",
+    "href": "generated/semester_2021.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81491.html#observations-by-plant",
-    "href": "generated/student_2025.2_81491.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2021.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2021.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81517.html",
-    "href": "generated/student_2025.2_81517.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 546\nWeeks with observations: 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2021.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2021.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81517.html#nnid-81517",
-    "href": "generated/student_2025.2_81517.html#nnid-81517",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2022.1.html",
+    "href": "generated/semester_2022.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 546\nWeeks with observations: 12"
+    "text": "There are 51689 total observations this semester.\nNumber of observers: 171\nTotal observations: 51689\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81517.html#observations-by-plant",
-    "href": "generated/student_2025.2_81517.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2022.1.html#semester-2022.1",
+    "href": "generated/semester_2022.1.html#semester-2022.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 51689 total observations this semester.\nNumber of observers: 171\nTotal observations: 51689\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81590.html",
-    "href": "generated/student_2025.2_81590.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 41\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2022.1.html#observer-overview",
+    "href": "generated/semester_2022.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81590.html#nnid-81590",
-    "href": "generated/student_2025.2_81590.html#nnid-81590",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 41\nWeeks with observations: 1"
+    "objectID": "generated/semester_2022.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2022.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81590.html#observations-by-plant",
-    "href": "generated/student_2025.2_81590.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2022.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2022.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81596.html",
-    "href": "generated/student_2025.2_81596.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2023.1.html",
+    "href": "generated/semester_2023.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 297\nWeeks with observations: 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 50443 total observations this semester.\nNumber of observers: 165\nTotal observations: 50443\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81596.html#nnid-81596",
-    "href": "generated/student_2025.2_81596.html#nnid-81596",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2023.1.html#semester-2023.1",
+    "href": "generated/semester_2023.1.html#semester-2023.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 297\nWeeks with observations: 7"
+    "text": "There are 50443 total observations this semester.\nNumber of observers: 165\nTotal observations: 50443\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81596.html#observations-by-plant",
-    "href": "generated/student_2025.2_81596.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2023.1.html#observer-overview",
+    "href": "generated/semester_2023.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81680.html",
-    "href": "generated/student_2025.2_81680.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 539\nWeeks with observations: 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2023.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2023.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81680.html#nnid-81680",
-    "href": "generated/student_2025.2_81680.html#nnid-81680",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 539\nWeeks with observations: 10"
+    "objectID": "generated/semester_2023.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2023.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81680.html#observations-by-plant",
-    "href": "generated/student_2025.2_81680.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2024.1.html",
+    "href": "generated/semester_2024.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 46727 total observations this semester.\nNumber of observers: 159\nTotal observations: 46727\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81733.html",
-    "href": "generated/student_2025.2_81733.html",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2024.1.html#semester-2024.1",
+    "href": "generated/semester_2024.1.html#semester-2024.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 240\nWeeks with observations: 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "There are 46727 total observations this semester.\nNumber of observers: 159\nTotal observations: 46727\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81733.html#nnid-81733",
-    "href": "generated/student_2025.2_81733.html#nnid-81733",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 240\nWeeks with observations: 6"
+    "objectID": "generated/semester_2024.1.html#observer-overview",
+    "href": "generated/semester_2024.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81733.html#observations-by-plant",
-    "href": "generated/student_2025.2_81733.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2024.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2024.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81791.html",
-    "href": "generated/student_2025.2_81791.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2024.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2024.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
-    "objectID": "generated/student_2025.2_81791.html#nnid-81791",
-    "href": "generated/student_2025.2_81791.html#nnid-81791",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2025.1.html",
+    "href": "generated/semester_2025.1.html",
+    "title": "Semester Overview",
     "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 42\nWeeks with observations: 1"
+    "text": "There are 35666 total observations this semester.\nNumber of observers: 116\nTotal observations: 35666\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81791.html#observations-by-plant",
-    "href": "generated/student_2025.2_81791.html#observations-by-plant",
-    "title": "Student Observations",
+    "objectID": "generated/semester_2025.1.html#semester-2025.1",
+    "href": "generated/semester_2025.1.html#semester-2025.1",
+    "title": "Semester Overview",
     "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "text": "There are 35666 total observations this semester.\nNumber of observers: 116\nTotal observations: 35666\nDownload CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
-    "objectID": "generated/student_2025.2_81829.html",
-    "href": "generated/student_2025.2_81829.html",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 502\nWeeks with observations: 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2025.1.html#observer-overview",
+    "href": "generated/semester_2025.1.html#observer-overview",
+    "title": "Semester Overview",
+    "section": "2 Observer Overview",
+    "text": "2 Observer Overview"
   },
   {
-    "objectID": "generated/student_2025.2_81829.html#nnid-81829",
-    "href": "generated/student_2025.2_81829.html#nnid-81829",
-    "title": "Student Observations",
-    "section": "",
-    "text": "Semester: 2025.2\nTotal observations: 502\nWeeks with observations: 11"
+    "objectID": "generated/semester_2025.1.html#weekly-observations-heatmap",
+    "href": "generated/semester_2025.1.html#weekly-observations-heatmap",
+    "title": "Semester Overview",
+    "section": "3 Weekly Observations Heatmap",
+    "text": "3 Weekly Observations Heatmap\nThe figure below visualizes the number of observations made by each observer during each week of the semester."
   },
   {
-    "objectID": "generated/student_2025.2_81829.html#observations-by-plant",
-    "href": "generated/student_2025.2_81829.html#observations-by-plant",
-    "title": "Student Observations",
-    "section": "",
-    "text": "The number of observations per individual plant monitored by this student."
+    "objectID": "generated/semester_2025.1.html#phenology-observations-by-species",
+    "href": "generated/semester_2025.1.html#phenology-observations-by-species",
+    "title": "Semester Overview",
+    "section": "4 Phenology Observations by Species",
+    "text": "4 Phenology Observations by Species"
   },
   {
     "objectID": "generated/tree_199342.html",
