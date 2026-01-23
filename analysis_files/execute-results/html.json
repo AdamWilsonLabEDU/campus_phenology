@@ -1,0 +1,17 @@
+{
+  "hash": "4b9013f89dd20aed881972cf9e3549a2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Leaves (%) Across Years\"\nformat:\n  html:\n    toc: true\n---\n\nThis page summarizes the **Leaves** phenophase intensity (interpreted as “% leaves”) across years.\n\n- **Points:** raw observations (very transparent)\n- **Red curves:** a double-logistic fit per species-year, appended into one continuous time series\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n## % Leaves by species (all years)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](analysis_files/figure-html/leaves-plot-1.png){width=1152}\n:::\n:::\n\n\n",
+    "supporting": [
+      "analysis_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

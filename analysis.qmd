@@ -22,7 +22,10 @@ library(phenolocrop)
 ```
 
 ```{r load-and-filter}
-d_all <- read_parquet("data/processed/full_data.parquet")
+library(targets)
+tar_load(d_all)
+
+# d_all is now loaded from targets
 
 ds_leaves <- d_all %>%
 	filter(

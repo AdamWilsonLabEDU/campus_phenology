@@ -33,9 +33,9 @@ library(arrow)
 ```
 
 ```{r load-data, echo=F}
-# Load global datasets
-ds_all <- read_parquet("data/processed/full_data.parquet")
-ds_trees <- read_parquet("data/processed/trees.parquet")
+library(targets)
+tar_load(ds_all)
+tar_load(ds_trees)
 
 # Add plant nicknames to trees (use tag + common_name as fallback)
 trees_with_nicknames <- ds_all %>%

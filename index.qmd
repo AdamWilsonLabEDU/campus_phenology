@@ -25,25 +25,15 @@ library(leaflet)
 library(DT)
 library(arrow)
 library(cowplot)
+library(targets)
 
-# Load  datasets (Parquet via Arrow)
+# Load datasets from targets
+# This will load: trees, d, d_obs_weekly, d_obs
 
-data_dir <- "data/processed"
-
-trees <- read_parquet(file.path(data_dir, "trees.parquet"))
-
-d <- read_parquet(
-file.path(data_dir, "full_data.parquet")
-)
-
-
-d_obs_weekly <- read_parquet(
-file.path(data_dir, "weekly_observer_stats.parquet")
-)
-
-d_obs <- read_parquet(
-file.path(data_dir, "semester_observer_stats.parquet")
-)
+tar_load(trees)
+tar_load(d)
+tar_load(d_obs_weekly)
+tar_load(d_obs)
 ```
 
 # Overview

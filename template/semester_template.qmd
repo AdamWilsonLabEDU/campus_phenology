@@ -31,10 +31,10 @@ library(arrow)
 ```
 
 ```{r load-data, echo=F}
-# Load global datasets
-d_all <- read_parquet("data/processed/full_data.parquet")
-d_obs_weekly_all <- read_parquet("data/processed/weekly_observer_stats.parquet")
-d_obs_all <- read_parquet("data/processed/semester_observer_stats.parquet")
+library(targets)
+tar_load(d_all)
+tar_load(d_obs_weekly_all)
+tar_load(d_obs_all)
 
 # Filter for this semester
 ds <- d_all %>% filter(semester == params$semester)
