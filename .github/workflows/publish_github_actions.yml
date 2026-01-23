@@ -47,7 +47,10 @@ jobs:
         with:
           cache-version: 1
 
-      - name: Render and Publish
+      - name: Build data and site with targets
+        run: Rscript -e "targets::tar_make()"
+
+      - name: Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
