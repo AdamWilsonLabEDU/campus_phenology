@@ -19,6 +19,18 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Cache targets + data outputs
+        uses: actions/cache@v4
+        with:
+          path: |
+            _targets
+            data/cache
+            data/processed
+            generated
+          key: ${{ runner.os }}-targets-${{ hashFiles('_targets.R', 'R/**', 'scripts/**', 'renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-targets-
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 

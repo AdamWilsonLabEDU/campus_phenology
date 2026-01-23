@@ -2,6 +2,14 @@
 # PRE-RENDER SCRIPT FOR CAMPUS PHENOLOGY QUARTO SITE
 ###############################################################################
 
+# NOTE (2026-01): This pipeline is now implemented as a {targets} workflow.
+# This script is kept as a compatibility wrapper for existing docs/commands.
+if (file.exists("_targets.R") && requireNamespace("targets", quietly = TRUE)) {
+  message("Running targets pipeline (site_ready) instead of legacy script.")
+  targets::tar_make(names = "site_ready", callr_function = NULL)
+  quit(save = "no", status = 0)
+}
+
 # -------------------------------------------------------------------
 # Libraries
 # -------------------------------------------------------------------

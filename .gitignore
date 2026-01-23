@@ -50,6 +50,7 @@ rsconnect/
 
 /.quarto/
 _site
+_targets/
 data/
 generated/
 !data/trees.csv

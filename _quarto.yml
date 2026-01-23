@@ -1,10 +1,10 @@
 project:
   type: website
-  pre-render: scripts/npn_download_prep.R
   output-dir: _site
   render:
     - "!template/*"
     - index.qmd
+    - analysis.qmd
     - generated/*
     - semesters.qmd
   execute-dir: project
@@ -20,6 +20,8 @@ website:
         text: Home
       - text: "Semester Data"
         href: semesters.qmd
+      - text: "Leaves Summary"
+        href: analysis.qmd
 
 
 format:

@@ -4,18 +4,21 @@ Quarto website that ingests USA–NPN status observations for a campus phenology
 
 ## How it works
 - Quarto pre-render hook runs an R pipeline before every render (see [_quarto.yml](_quarto.yml)).
-- The pipeline in [scripts/npn_download_prep.R](scripts/npn_download_prep.R):
+
+- The pipeline is implemented as a [{targets}](https://docs.ropensci.org/targets/) workflow (see [_targets.R](_targets.R)) and executed via [scripts/run_targets.R](scripts/run_targets.R).
 	- Downloads USA–NPN status observations via `rnpn`.
 	- Downloads existing semester-partitioned release assets (GitHub Release tag `npn-data`) via `piggyback` and refreshes the current semester.
 	- Writes core Parquet files to [data/processed](data/processed).
 	- Writes per-semester CSV exports to `data/cache/csv/` (raw observations + per-observer summary).
 	- Regenerates [semesters.qmd](semesters.qmd) and generates per-semester/per-student/per-tree `.qmd` files under [generated/](generated/) from templates.
 	- Attempts to upload new/updated assets to the GitHub Release; if auth/permissions are missing, uploads are skipped and the pipeline continues.
+
+- The old script [scripts/npn_download_prep.R](scripts/npn_download_prep.R) is kept as a compatibility wrapper and now delegates to `targets::tar_make('site_ready')`.
 - Frontend pages (e.g., [index.qmd](index.qmd)) read the Parquet files (Arrow) at render time; Quarto renders `.qmd` to HTML under [_site](_site/). Do not edit `_site/` directly.
 
 Key files/directories:
 - Config: [_quarto.yml](_quarto.yml), [.github/workflows/publish_github_actions.yml](.github/workflows/publish_github_actions.yml)
-- Pipeline: [scripts/npn_download_prep.R](scripts/npn_download_prep.R)
+- Pipeline: [_targets.R](_targets.R), [R/targets_pipeline.R](R/targets_pipeline.R), [scripts/run_targets.R](scripts/run_targets.R)
 - Templates: [template/semester_template.qmd](template/semester_template.qmd), [template/student_template.qmd](template/student_template.qmd)
 - Data outputs: [data/processed/full_data.parquet](data/processed/full_data.parquet), [data/processed/trees.parquet](data/processed/trees.parquet), [data/processed/weekly_observer_stats.parquet](data/processed/weekly_observer_stats.parquet), [data/processed/semester_observer_stats.parquet](data/processed/semester_observer_stats.parquet)
 - Per-semester CSV exports (written locally to `data/cache/csv/` and expected as Release assets):
@@ -37,7 +40,10 @@ quarto preview
 quarto render
 
 # Run only the data pipeline
-Rscript scripts/npn_download_prep.R
+Rscript scripts/run_targets.R
+
+# (or equivalently)
+R -q -e "targets::tar_make(names = 'site_ready', callr_function = NULL)"
 ```
 
 ### Clean re-seed (safe reset for migration/testing)
@@ -52,7 +58,7 @@ rm -f data/processed/*.parquet
 Then run:
 
 ```bash
-Rscript scripts/npn_download_prep.R
+Rscript scripts/run_targets.R
 quarto render
 ```
 
@@ -60,7 +66,7 @@ quarto render
 Update the following to target your project’s USA–NPN network/project ID and branding.
 
 1) Set your NPN network ID in the pipeline:
-- [scripts/npn_download_prep.R](scripts/npn_download_prep.R)
+- [R/targets_pipeline.R](R/targets_pipeline.R) (see `cp_config()`)
 
 Example change:
 
@@ -86,7 +92,7 @@ release_tag <- "npn-data"  # keep or change, but use consistently
 5) Prime and render:
 
 ```bash
-Rscript scripts/npn_download_prep.R   # downloads data, attempts Release uploads, generates pages
+Rscript scripts/run_targets.R         # downloads data, attempts Release uploads, generates pages
 quarto render                         # builds the site to _site/
 ```
 

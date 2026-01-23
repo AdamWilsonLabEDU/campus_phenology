@@ -1,0 +1,126 @@
+---
+title: "Leaves (%) Across Years"
+format:
+  html:
+    toc: true
+---
+
+This page summarizes the **Leaves** phenophase intensity (interpreted as “% leaves”) across years.
+
+- **Points:** raw observations (very transparent)
+- **Red curves:** a double-logistic fit per species-year, appended into one continuous time series
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r libraries}
+library(tidyverse)
+library(arrow)
+library(scales)
+library(phenolocrop)
+```
+
+```{r load-and-filter}
+d_all <- read_parquet("data/processed/full_data.parquet")
+
+ds_leaves <- d_all %>%
+	filter(
+		kingdom == "Plantae",
+		phenophase_description == "Leaves",
+		!is.na(intensity),
+		between(intensity, 0, 100),
+		!is.na(observation_doy),
+		!is.na(observation_year)
+	) %>%
+	mutate(
+		observation_year = as.integer(observation_year),
+		observation_doy = as.integer(observation_doy),
+		common_name = as.factor(common_name)
+	)
+
+stopifnot(requireNamespace("phenolocrop", quietly = TRUE))
+
+
+fit_doublelogis_species_year <- function(df, year) {
+	empty_out <- tibble(
+		observation_doy = integer(),
+		intensity_fitted = double(),
+		observation_date = as.Date(character())
+	)
+
+	df_xy <- df %>%
+		group_by(observation_doy) %>%
+		summarize(y = mean(intensity, na.rm = TRUE), .groups = "drop") %>%
+		filter(is.finite(y))
+
+	if (nrow(df_xy) < 12) {
+		return(empty_out)
+	}
+
+	fit <- tryCatch(
+		{
+			phenolocrop::doubleLogis(
+				dat = df_xy,
+				x = "observation_doy",
+				y = "y",
+				returnModels = TRUE
+			)
+		},
+		error = function(e) NULL
+	)
+
+	if (is.null(fit) || is.null(fit$model)) {
+		return(empty_out)
+	}
+
+	x_grid <- tibble(observation_doy = seq.int(1L, 366L, 1L))
+	yhat <- as.numeric(tryCatch(predict(fit$model, newdata = x_grid), error = function(e) rep(NA_real_, nrow(x_grid))))
+
+	tibble(
+		observation_doy = x_grid$observation_doy,
+		intensity_fitted = yhat
+	) %>%
+		filter(is.finite(intensity_fitted)) %>%
+		mutate(
+			observation_date = as.Date(sprintf("%d-01-01", year)) + (observation_doy - 1L)
+		)
+}
+
+ds_fits <- ds_leaves %>%
+	group_by(common_name, observation_year) %>%
+	group_modify(~fit_doublelogis_species_year(.x, year = .y$observation_year)) %>%
+	ungroup()
+```
+
+## % Leaves by species (all years)
+
+```{r leaves-plot, fig.height=12, fig.width=12}
+ggplot() +
+  geom_point(
+    data = ds_leaves,
+    aes(x = observation_date, y = intensity),
+    color = alpha("black", 0.03),
+    size = 0.2
+  ) +
+  geom_line(
+    data = ds_fits,
+    aes(
+      x = observation_date,
+      y = intensity_fitted,
+      group = interaction(common_name, observation_year)
+    ),
+    color = "red3",
+    alpha = 0.9,
+    linewidth = 0.8
+  ) +
+  facet_wrap(~common_name, ncol = 1) +
+  scale_x_date("Date", date_breaks = "1 year", date_labels = "%Y") +
+  scale_y_continuous("% Leaves", limits = c(0, 100)) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  )
+```
+
