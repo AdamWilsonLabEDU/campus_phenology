@@ -49,6 +49,8 @@ jobs:
 
       - name: Build data and site with targets
         run: Rscript -e "targets::tar_make()"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish
         uses: quarto-dev/quarto-actions/publish@v2
