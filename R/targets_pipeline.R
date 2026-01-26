@@ -174,22 +174,29 @@ cp_missing_semesters <- function(expected_semesters, available_semesters, curren
 
 cp_pb_download_missing_assets <- function(release_assets, tag, repo, dest) {
   if (!is.data.frame(release_assets) || nrow(release_assets) == 0) {
+    cat("[cp_pb_download_missing_assets] No release assets found.\n")
     return(invisible(character()))
   }
 
   remote_files <- unique(release_assets$file_name)
   remote_files <- remote_files[!is.na(remote_files)]
-  if (length(remote_files) == 0) return(invisible(character()))
+  if (length(remote_files) == 0) {
+    cat("[cp_pb_download_missing_assets] No remote files to download.\n")
+    return(invisible(character()))
+  }
 
   local_paths <- file.path(dest, remote_files)
   to_get <- remote_files[!file.exists(local_paths)]
+
+  cat("[cp_pb_download_missing_assets] Will attempt to download:", paste(to_get, collapse = ", "), "\n")
 
   if (length(to_get) == 0) {
     message("All release assets already present in cache.")
     return(invisible(local_paths[file.exists(local_paths)]))
   }
 
-  piggyback::pb_download(tag = tag, repo = repo, dest = dest, file = to_get)
+  result <- piggyback::pb_download(tag = tag, repo = repo, dest = dest, file = to_get)
+  cat("[cp_pb_download_missing_assets] Downloaded files:", paste(result, collapse = ", "), "\n")
   invisible(file.path(dest, to_get))
 }
 
