@@ -255,10 +255,14 @@ cp_list_semester_parquets <- function(cache_dir) {
 }
 
 cp_build_full_dataset <- function(parquet_files, trees) {
+  if (length(parquet_files) == 0) stop("No Parquet files found for dataset build.")
   obs_ds <- arrow::open_dataset(parquet_files)
-
-  obs_ds %>%
-    dplyr::collect() %>%
+  df <- obs_ds %>% dplyr::collect()
+  if (nrow(df) == 0) stop("No rows in combined dataset.")
+  print("Columns in combined dataset:")
+  print(names(df))
+  # Continue with the original pipeline
+  df %>%
     dplyr::mutate(
       submission_date = as.Date(submission_datetime),
       observation_week = lubridate::isoweek(observation_date),
