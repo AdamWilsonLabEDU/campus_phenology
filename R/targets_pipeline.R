@@ -251,7 +251,10 @@ cp_write_semester_parquets_and_upload <- function(raw_new, missing_semesters, ca
 }
 
 cp_list_semester_parquets <- function(cache_dir) {
-  list.files(cache_dir, pattern = "npn_obs_network-.*\\.parquet", full.names = TRUE)
+  files <- list.files(cache_dir, pattern = "npn_obs_network-.*\\.parquet", full.names = TRUE)
+  cat("[cp_list_semester_parquets] Found", length(files), "Parquet files in", cache_dir, "\n")
+  if (length(files) > 0) cat("[cp_list_semester_parquets] Files:\n", paste(basename(files), collapse = ", "), "\n")
+  files
 }
 
 cp_build_full_dataset <- function(parquet_files, trees) {
