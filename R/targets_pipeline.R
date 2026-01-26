@@ -197,6 +197,9 @@ cp_pb_download_missing_assets <- function(release_assets, tag, repo, dest) {
 
   result <- piggyback::pb_download(tag = tag, repo = repo, dest = dest, file = to_get)
   cat("[cp_pb_download_missing_assets] Downloaded files:", paste(result, collapse = ", "), "\n")
+  # Print files present in data/cache after download
+  cat("[cp_pb_download_missing_assets] Files present in", dest, "after download:\n")
+  print(list.files(dest, pattern = "parquet", full.names = TRUE))
   invisible(file.path(dest, to_get))
 }
 

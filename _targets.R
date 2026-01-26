@@ -211,7 +211,7 @@ list(
     tree_qmds,
     cp_generate_tree_qmds(d = d, trees = trees, generated_dir = config$generated_dir),
     format = "file"
-  ),
+  )#,
   # Quarto rendering target
-  tar_quarto(website)
+  #tar_quarto(website)
 )

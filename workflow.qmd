@@ -1,0 +1,79 @@
+# Data Pipeline Status
+
+This page summarizes the current status of the campus phenology data pipeline.
+
+## Semester Data Table
+
+The table below lists all semesters with available observation data, including links to per-semester pages and downloadable CSVs.
+
+```{r semester-table, echo=FALSE}
+# Load the semester index table from targets
+library(targets)
+tar_load(semester_index)
+library(DT)
+datatable(
+	semester_index %>%
+		dplyr::transmute(
+			Semester = label,
+			Status = status,
+			Observers = n_observers,
+			Observations = n_observations,
+			Page = paste0('<a href="', page_href, '">View</a>'),
+			Data = paste0('<a href="', csv_href, '">Observations CSV</a>'),
+			ObserverData = paste0('<a href="', observer_csv_href, '">Observer summary CSV</a>')
+		),
+	escape = FALSE,
+	options = list(pageLength = 15, autoWidth = TRUE)
+)
+```
+
+## Pipeline Visualization
+
+The current {targets} pipeline structure is shown below. This interactive graph helps diagnose dependencies and track progress.
+
+```{r pipeline-graph, echo=FALSE, fig.width=12, fig.height=8}
+library(targets)
+tar_visnetwork(targets_only = TRUE)
+```
+
+
+```{r pipeline-status, echo=FALSE}
+library(dplyr)
+progress <- read.csv('_targets/meta/progress', sep='|')
+errored <- progress %>% filter(progress == 'errored')
+skipped <- progress %>% filter(progress == 'skipped')
+cat('Errored targets:', paste(errored$name, collapse=', '), '\n')
+cat('Skipped targets:', paste(skipped$name, collapse=', '), '\n')
+```
+
+## Key Output Files
+
+| Output | Path |
+|--------|------|
+| Full data Parquet | data/processed/full_data.parquet |
+| Semester observer stats Parquet | data/processed/semester_observer_stats.parquet |
+| Trees Parquet | data/processed/trees.parquet |
+| Weekly observer stats Parquet | data/processed/weekly_observer_stats.parquet |
+| Semester CSVs | data/cache/csv/npn_obs_network-891_semester-YYYY.S.csv |
+| Semester observer summary CSVs | data/cache/csv/npn_obs_network-891_semester-YYYY.S_observer_summary.csv |
+
+## Data Freshness
+
+```{r data-freshness, echo=FALSE}
+fs <- function(path) if (file.exists(path)) file.info(path)$mtime else NA
+cat('full_data.parquet:', fs('data/processed/full_data.parquet'), '\n')
+cat('semester_observer_stats.parquet:', fs('data/processed/semester_observer_stats.parquet'), '\n')
+cat('trees.parquet:', fs('data/processed/trees.parquet'), '\n')
+cat('weekly_observer_stats.parquet:', fs('data/processed/weekly_observer_stats.parquet'), '\n')
+```
+
+
+## Environment Info
+
+```{r env-info, echo=FALSE}
+cat('R version:', R.version.string, '\n')
+cat('targets version:', as.character(packageVersion('targets')), '\n')
+cat('quarto version:', tryCatch(system('quarto --version', intern=TRUE), error=function(e) 'not found'), '\n')
+cat('Loaded packages:', paste(loadedNamespaces(), collapse=', '), '\n')
+```
+
