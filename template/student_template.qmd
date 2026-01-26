@@ -31,8 +31,10 @@ library(arrow)
 
 ```{r load-data, echo=F}
 library(targets)
-tar_load(d_all)
-tar_load(d_obs_all)
+
+tar_load(d)
+tar_load(d_obs_weekly)
+tar_load(d_obs)
 
 nnid_chr <- as.character(params$nnid)
 
