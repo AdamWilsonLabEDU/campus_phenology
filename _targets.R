@@ -114,11 +114,11 @@ list(
     cue = tar_cue(mode = "always")
   ),
   tar_target(
-    semester_parquets,
-    cp_list_semester_parquets(config$cache_dir),
-    format = "file",
-    cue = tar_cue(mode = "always")
-  ),
+      semester_parquets,
+      unique(c(cp_list_semester_parquets(config$cache_dir), written_semester_parquets)),
+      format = "file",
+      cue = tar_cue(mode = "always")
+    ),
   tar_target(
     d,
     cp_build_full_dataset(semester_parquets, trees)
