@@ -37,9 +37,9 @@ tar_load(d_obs_weekly)
 tar_load(d_obs)
 
 # Filter for this semester
-ds <- d_all %>% filter(semester == params$semester)
-ds_obs_weekly <- d_obs_weekly_all %>% filter(semester == params$semester)
-ds_obs <- d_obs_all %>% filter(semester == params$semester)
+ds <- d %>% filter(semester == params$semester)
+ds_obs_weekly <- d_obs_weekly %>% filter(semester == params$semester)
+ds_obs <- d_obs %>% filter(semester == params$semester)
 ```
 
 ## Semester: `r params$semester`
