@@ -107,6 +107,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../semesters.html"> 
 <span class="menu-text">Semester Data</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../analysis.html"> 
+<span class="menu-text">Leaves Summary</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -166,8 +170,8 @@ ul.task-list li input[type="checkbox"] {
 <p>This map shows the location of this tree (red marker) and other trees of the same species (blue markers).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-2a7459a2757b0b5e8518" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-2a7459a2757b0b5e8518">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[43.01030525,43.01004044,43.0099843,43.00984568,43.00978437,43.009599],[-78.78204923,-78.78203999999999,-78.78208843,-78.78204275,-78.78205234000001,-78.782501],[5,8,5,5,5,5],null,null,{"interactive":true,"className":"","stroke":true,"color":["blue","red","blue","blue","blue","blue"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["blue","red","blue","blue","blue","blue"],"fillOpacity":[0.5,1,0.5,0.5,0.5,0.5]},null,null,["<b>101 red oak<\/b><br>Tag: 101<br>ID: 204858","<b>103 red oak<\/b><br>Tag: 103<br>ID: 204860","<b>104 red oak<\/b><br>Tag: 104<br>ID: 204861","<b>106 red oak<\/b><br>Tag: 106<br>ID: 204863","<b>107 red oak<\/b><br>Tag: 107<br>ID: 204864","<b>109 red oak<\/b><br>Tag: 109<br>ID: 204866"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["red","blue"],"labels":["This tree","Same species"],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"unknown","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[43.009599,43.01030525],"lng":[-78.782501,-78.78203999999999]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-c0435e09954671d1e45c" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c0435e09954671d1e45c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[43.01030525,43.01004044,43.0099843,43.00984568,43.00978437,43.009599],[-78.78204923,-78.78203999999999,-78.78208843,-78.78204275,-78.78205234000001,-78.782501],[5,8,5,5,5,5],null,null,{"interactive":true,"className":"","stroke":true,"color":["blue","red","blue","blue","blue","blue"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["blue","red","blue","blue","blue","blue"],"fillOpacity":[0.5,1,0.5,0.5,0.5,0.5]},null,null,["<b>101 red oak<\/b><br>Tag: 101<br>ID: 204858","<b>103 red oak<\/b><br>Tag: 103<br>ID: 204860","<b>104 red oak<\/b><br>Tag: 104<br>ID: 204861","<b>106 red oak<\/b><br>Tag: 106<br>ID: 204863","<b>107 red oak<\/b><br>Tag: 107<br>ID: 204864","<b>109 red oak<\/b><br>Tag: 109<br>ID: 204866"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["red","blue"],"labels":["This tree","Same species"],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"unknown","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[43.009599,43.01030525],"lng":[-78.782501,-78.78203999999999]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <hr>
@@ -177,11 +181,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Focusing on leaf-related phenophases for this tree compared to the species.</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 6061 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 5742 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 1000 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 947 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
@@ -210,68 +214,68 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Leaves</td>
-<td style="text-align: right;">647</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">575</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Colored leaves</td>
-<td style="text-align: right;">639</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">567</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Falling leaves</td>
-<td style="text-align: right;">619</td>
-<td style="text-align: left;">2019-09-09</td>
-<td style="text-align: left;">2025-12-03</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Recent fruit or seed drop</td>
-<td style="text-align: right;">596</td>
-<td style="text-align: left;">2019-09-09</td>
-<td style="text-align: left;">2025-12-03</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Increasing leaf size</td>
-<td style="text-align: right;">576</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">558</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Breaking leaf buds</td>
-<td style="text-align: right;">572</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: left;">Falling leaves</td>
+<td style="text-align: right;">557</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Open flowers</td>
-<td style="text-align: right;">562</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">524</td>
+<td style="text-align: left;">2020-02-17</td>
+<td style="text-align: left;">2025-12-03</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Increasing leaf size</td>
+<td style="text-align: right;">523</td>
+<td style="text-align: left;">2020-02-17</td>
+<td style="text-align: left;">2025-12-03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Breaking leaf buds</td>
+<td style="text-align: right;">521</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Flowers or flower buds</td>
-<td style="text-align: right;">559</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">521</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pollen release (flowers)</td>
-<td style="text-align: right;">558</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ripe fruits</td>
-<td style="text-align: right;">557</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">519</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Fruits</td>
-<td style="text-align: right;">555</td>
-<td style="text-align: left;">2019-09-09</td>
+<td style="text-align: right;">517</td>
+<td style="text-align: left;">2020-02-17</td>
 <td style="text-align: left;">2025-12-03</td>
 </tr>
 </tbody>
