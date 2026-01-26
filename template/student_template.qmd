@@ -39,13 +39,13 @@ tar_load(d_obs)
 nnid_chr <- as.character(params$nnid)
 
 # Filter for this student and semester
-ds <- d_all %>%
+ds <- d %>%
   filter(
     semester == params$semester,
     as.character(observedby_person_id) == nnid_chr
   )
 
-ds_obs <- d_obs_all %>%
+ds_obs <- d_obs %>%
   filter(
     semester == params$semester,
     as.character(observedby_person_id) == nnid_chr

@@ -41,15 +41,15 @@ tar_load(d_obs)
 tar_load(trees)
 
 # Add plant nicknames to trees (use tag + common_name as fallback)
-trees_with_nicknames <- ds_all %>%
+trees_with_nicknames <- d %>%
   group_by(individual_id) %>%
   summarize(plant_nickname = first(plant_nickname), .groups = "drop") %>%
-  right_join(ds_trees, by = "individual_id") %>%
+  right_join(trees, by = "individual_id") %>%
   mutate(plant_nickname = coalesce(plant_nickname, common_name_tag))
 
 # Filter for this tree and species
-ds <- ds_all %>% filter(individual_id == params$tree_id)
-ds_species <- ds_all %>% filter(common_name == params$common_name)
+ds <- d %>% filter(individual_id == params$tree_id)
+ds_species <- d %>% filter(common_name == params$common_name)
 ```
 
 # Tree Overview
