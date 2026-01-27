@@ -7,8 +7,65 @@ format:
 
 This page summarizes the **Leaves** phenophase intensity (interpreted as “% leaves”) across years.
 
-- **Points:** raw observations (very transparent)
-- **Red curves:** a double-logistic fit per species-year, appended into one continuous time series
+
+```{r}
+library(phenofit)
+library(data.table)
+library(lubridate)
+library(purrr)
+library(tidyverse)
+
+library(targets)
+tar_load(d)
+
+# take mean intensity for each day to prevent duplicates
+
+d <- d |>
+    filter(phenophase_description=="Leaves")|>
+    group_by(common_name, genus, species,observation_date)|>
+    summarize(intensity=mean(intensity,na.rm=T))|>
+    arrange(species,observation_date)
+
+
+# Example: estimate phenology for each species
+species_list <- unique(d$species)
+results <- map(species_list, function(sp) {
+    # sp="nigra"
+	d_sp <- d[d$species == sp, ]
+	d_sp$y <- d_sp$intensity
+	d_sp$t <- as.Date(d_sp$observation_date)
+	d_sp$w <- 1 # or use qc_summary if you have QA/QC
+	d_sp$QC_flag <- 0
+
+	# Add head/tail for robust smoothing
+#	dnew <- add_HeadTail(d_sp, south=FALSE, nptperyear=23)
+	INPUT <- check_input(d_sp$t, d_sp$y, d_sp$w, d_sp$QC_flag,
+											 nptperyear=365, south=FALSE, maxgap=6, alpha=0.02, wmin=0.2)
+
+	# Segment growing seasons
+	brks <- season_mov(INPUT, list(rFUN = "smooth_wWHIT", wFUN = "wBisquare", maxExtendMonth = 6, r_min = 0.1))
+
+	# Fit multiple curve types
+	fit <- curvefits(INPUT, brks,
+		options = list(
+			methods = c("AG", "Zhang", "Beck", "Elmore"),
+			wFUN = wBisquare,
+			nextend = 2, maxExtendMonth = 3, minExtendMonth = 1, minPercValid = 0.2
+		))
+
+	# Extract phenology metrics
+	l_pheno <- get_pheno(fit, IsPlot = FALSE)
+	d_gof <- get_GOF(fit)
+	d_fit <- get_fitting(fit)
+	list(species = sp, pheno = l_pheno, gof = d_gof, fit = d_fit, brks = brks)
+})
+
+# Example: visualize for first species
+first <- results[[2]]
+g <- plot_curvefits(first$fit, first$brks, NULL, ylab = "Intensity", xlab = "Time")
+print(g)
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -22,9 +79,6 @@ library(phenofit)
 ```
 
 ```{r load-and-filter}
-library(targets)
-tar_load(d)
-
 ds_leaves <- d %>%
 	filter(
 		kingdom == "Plantae",
