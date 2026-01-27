@@ -75,7 +75,7 @@ fit_doublelogis_species_year <- function(df, year) {
 	if (is.null(fit) || is.null(fit$model)) {
 		return(empty_out)
 	}
-	yhat <- as.numeric(predict(fit,yout)
+	yhat <- as.numeric(predict(fit,yout))
 	tibble(
 		observation_doy = x_grid$observation_doy,
 		intensity_fitted = yhat
