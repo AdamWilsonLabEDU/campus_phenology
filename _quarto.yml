@@ -20,8 +20,6 @@ website:
         text: Home
       - text: "Semester Data"
         href: semesters.qmd
-      - text: "Leaves Summary"
-        href: analysis.qmd
 
 
 format:
