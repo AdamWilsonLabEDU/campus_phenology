@@ -226,20 +226,20 @@ d %>%
   # Individual tree trends
     geom_smooth(aes(group = individual_id), alpha = 0.1, size=.1,color = "blue",
     method = "nls",
-    formula = y ~ 100 + (B - 100) / (1 + exp((xmid - x)/scal)),
-    method.args = list(start = list(B = 50, xmid = 300, scal = 1)),
+    formula = y ~ 100 / (1 + exp((x-xmid)/scal)),
+    method.args = list(start = list(xmid = 300, scal = 30)),
     se = FALSE,
     col = "red"
   )+
 #  geom_smooth(aes(group = individual_id), alpha = 0.1, size=.1,color = "blue",se=F) +
 #  geom_smooth(aes(group = 1), alpha = 0.3, color = "red",se=T) +
     geom_smooth(
-    method = "nls",
-    formula = y ~ 100 + (B - 100) / (1 + exp((xmid - x)/scal)),
-    method.args = list(start = list(B = 50, xmid = 300, scal = 1)),
-    se = FALSE,
-    col = "red"
-  )+
+      method = "nls",
+      formula = y ~ 100 / (1 + exp((x-xmid)/scal)),
+      method.args = list(start = list(xmid = 300, scal = 30)),
+      se = FALSE,
+      col = "red"
+    )+
   facet_grid(common_name ~ year(observation_date)) +
   scale_x_continuous(
     breaks = c(244, 274, 305),

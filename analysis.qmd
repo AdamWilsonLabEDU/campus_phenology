@@ -18,14 +18,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(tidyverse)
 library(arrow)
 library(scales)
-library(phenolocrop)
+library(phenofit)
 ```
 
 ```{r load-and-filter}
 library(targets)
 tar_load(d)
-
-# d_all is now loaded from targets
 
 ds_leaves <- d %>%
 	filter(
@@ -42,44 +40,42 @@ ds_leaves <- d %>%
 		common_name = as.factor(common_name)
 	)
 
-stopifnot(requireNamespace("phenolocrop", quietly = TRUE))
 
 
+
+
+# Fit double logistic using phenofit for each species-year
 fit_doublelogis_species_year <- function(df, year) {
 	empty_out <- tibble(
 		observation_doy = integer(),
 		intensity_fitted = double(),
 		observation_date = as.Date(character())
 	)
-
 	df_xy <- df %>%
 		group_by(observation_doy) %>%
 		summarize(y = mean(intensity, na.rm = TRUE), .groups = "drop") %>%
 		filter(is.finite(y))
-
 	if (nrow(df_xy) < 12) {
 		return(empty_out)
 	}
-
-	fit <- tryCatch(
-		{
-			phenolocrop::doubleLogis(
-				dat = df_xy,
-				x = "observation_doy",
-				y = "y",
-				returnModels = TRUE
-			)
-		},
-		error = function(e) NULL
-	)
-
+	# phenofit expects a time series with regular x (doy) and y (intensity)
+	# Fill missing days with NA
+	x_grid <- tibble(observation_doy = seq.int(1L, 366L, 1L))
+	y_full <- rep(NA_real_, 366)
+	y_full[df_xy$observation_doy] <- df_xy$y
+	# Fit double logistic using phenofit
+	fit <- tryCatch({
+		phenofit::curvefit(
+			y = df_xy$y, #y_full,
+			t = df_xy$observation_doy, #1:366,
+			tout=1:365,
+            methods = "Zhang"
+		)
+	}, error = function(e) NULL)
 	if (is.null(fit) || is.null(fit$model)) {
 		return(empty_out)
 	}
-
-	x_grid <- tibble(observation_doy = seq.int(1L, 366L, 1L))
-	yhat <- as.numeric(tryCatch(predict(fit$model, newdata = x_grid), error = function(e) rep(NA_real_, nrow(x_grid))))
-
+	yhat <- as.numeric(predict(fit,yout)
 	tibble(
 		observation_doy = x_grid$observation_doy,
 		intensity_fitted = yhat
