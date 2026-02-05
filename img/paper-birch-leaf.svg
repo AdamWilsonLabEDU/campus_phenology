@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Paper Birch - triangular with fine serrations -->
+  <path d="M 50,115 L 50,42 Q 48,38 45,34 L 42,30 Q 38,26 34,24 L 30,22 Q 25,21 20,22 Q 16,24 13,28 Q 11,32 11,36 Q 11,41 13,45 L 16,50 Q 19,54 22,57 L 26,61 Q 30,64 34,67 L 38,71 Q 42,75 45,80 L 48,86 Q 50,91 50,96 L 50,42 Q 52,38 55,34 L 58,30 Q 62,26 66,24 L 70,22 Q 75,21 80,22 Q 84,24 87,28 Q 89,32 89,36 Q 89,41 87,45 L 84,50 Q 81,54 78,57 L 74,61 Q 70,64 66,67 L 62,71 Q 58,75 55,80 L 52,86 Q 50,91 50,96 Z" 
+        fill="#ADFF2F" stroke="#6B8E23" stroke-width="1.5"/>
+  <!-- Fine serrations -->
+  <path d="M 20,22 L 22,24 L 21,25 L 24,27 L 23,28 L 26,30 L 25,31 L 28,33" 
+        fill="none" stroke="#6B8E23" stroke-width="0.8"/>
+  <path d="M 80,22 L 78,24 L 79,25 L 76,27 L 77,28 L 74,30 L 75,31 L 72,33" 
+        fill="none" stroke="#6B8E23" stroke-width="0.8"/>
+  <line x1="50" y1="42" x2="50" y2="115" stroke="#6B8E23" stroke-width="2"/>
+  <line x1="50" y1="52" x2="25" y2="38" stroke="#6B8E23" stroke-width="1"/>
+  <line x1="50" y1="52" x2="75" y2="38" stroke="#6B8E23" stroke-width="1"/>
+</svg>

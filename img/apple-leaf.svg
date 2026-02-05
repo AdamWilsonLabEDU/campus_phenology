@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Apple simple ovate leaf with fine serrations -->
+  <path d="M 50,115 L 50,50 Q 48,45 45,41 L 42,37 Q 38,33 34,31 L 30,29 Q 25,28 20,29 Q 16,31 13,35 Q 11,39 11,44 Q 11,49 13,53 L 16,58 Q 19,62 22,65 L 26,69 Q 30,72 34,75 L 38,79 Q 42,83 45,88 L 48,94 Q 50,99 50,104 L 50,50 Q 52,45 55,41 L 58,37 Q 62,33 66,31 L 70,29 Q 75,28 80,29 Q 84,31 87,35 Q 89,39 89,44 Q 89,49 87,53 L 84,58 Q 81,62 78,65 L 74,69 Q 70,72 66,75 L 62,79 Q 58,83 55,88 L 52,94 Q 50,99 50,104 Z" 
+        fill="#90EE90" stroke="#228B22" stroke-width="1.5"/>
+  <!-- Fine serrations -->
+  <path d="M 20,29 L 22,31 L 21,32 L 24,34 L 23,35 L 26,37 L 25,38 L 28,40 L 27,41 L 30,43 L 29,44" 
+        fill="none" stroke="#228B22" stroke-width="0.8"/>
+  <path d="M 80,29 L 78,31 L 79,32 L 76,34 L 77,35 L 74,37 L 75,38 L 72,40 L 73,41 L 70,43 L 71,44" 
+        fill="none" stroke="#228B22" stroke-width="0.8"/>
+  <!-- Main vein -->
+  <line x1="50" y1="50" x2="50" y2="115" stroke="#228B22" stroke-width="2"/>
+  <!-- Side veins -->
+  <line x1="50" y1="60" x2="25" y2="45" stroke="#228B22" stroke-width="1"/>
+  <line x1="50" y1="60" x2="75" y2="45" stroke="#228B22" stroke-width="1"/>
+  <line x1="50" y1="75" x2="30" y2="62" stroke="#228B22" stroke-width="1"/>
+  <line x1="50" y1="75" x2="70" y2="62" stroke="#228B22" stroke-width="1"/>
+  <line x1="50" y1="90" x2="35" y2="80" stroke="#228B22" stroke-width="1"/>
+  <line x1="50" y1="90" x2="65" y2="80" stroke="#228B22" stroke-width="1"/>
+</svg>

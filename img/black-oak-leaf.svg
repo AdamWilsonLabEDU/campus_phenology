@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Black Oak leaf with very deep bristle-tipped lobes -->
+  <path d="M 50,115 L 50,90 Q 48,88 45,85 L 42,80 Q 38,75 35,72 L 30,65 Q 25,58 20,52 L 15,45 Q 12,38 10,32 L 8,25 Q 8,20 10,16 Q 13,12 17,11 Q 22,11 26,14 L 30,18 Q 33,22 36,28 L 38,34 Q 40,40 42,44 L 45,50 Q 47,54 50,56 Q 53,54 55,50 L 58,44 Q 60,40 62,34 L 64,28 Q 67,22 70,18 L 74,14 Q 78,11 83,11 Q 87,12 90,16 Q 92,20 92,25 L 90,32 Q 88,38 85,45 L 80,52 Q 75,58 70,65 L 65,72 Q 62,75 58,80 L 55,85 Q 52,88 50,90 Z" 
+        fill="#5D3A1A" stroke="#3D2610" stroke-width="1.5"/>
+  <!-- Bristle tips -->
+  <line x1="15" y1="45" x2="11" y2="41" stroke="#3D2610" stroke-width="1.2"/>
+  <line x1="10" y1="32" x2="6" y2="28" stroke="#3D2610" stroke-width="1.2"/>
+  <line x1="20" y1="52" x2="16" y2="48" stroke="#3D2610" stroke-width="1.2"/>
+  <line x1="85" y1="45" x2="89" y2="41" stroke="#3D2610" stroke-width="1.2"/>
+  <line x1="90" y1="32" x2="94" y2="28" stroke="#3D2610" stroke-width="1.2"/>
+  <line x1="80" y1="52" x2="84" y2="48" stroke="#3D2610" stroke-width="1.2"/>
+</svg>

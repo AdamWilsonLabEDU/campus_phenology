@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Cottonwood triangular leaf with flat base -->
+  <path d="M 50,115 L 50,45 Q 50,40 52,35 L 55,30 Q 58,25 62,22 L 68,18 Q 73,16 78,16 L 82,18 Q 85,20 87,24 Q 88,28 88,32 Q 87,36 85,40 L 82,44 Q 78,48 74,50 L 68,54 Q 62,57 58,62 L 54,68 Q 52,72 50,76 Q 48,72 46,68 L 42,62 Q 38,57 32,54 L 26,50 Q 22,48 18,44 L 15,40 Q 13,36 12,32 Q 12,28 13,24 Q 15,20 18,18 L 22,16 Q 27,16 32,18 L 38,22 Q 42,25 45,30 L 48,35 Q 50,40 50,45 Z" 
+        fill="#98FB98" stroke="#2E8B57" stroke-width="1.5"/>
+  <!-- Veins -->
+  <line x1="50" y1="45" x2="50" y2="115" stroke="#2E8B57" stroke-width="2"/>
+  <line x1="50" y1="50" x2="32" y2="40" stroke="#2E8B57" stroke-width="1"/>
+  <line x1="50" y1="50" x2="68" y2="40" stroke="#2E8B57" stroke-width="1"/>
+</svg>

@@ -66,7 +66,7 @@ trees_with_stats <- trees %>%
     last_obs_date = replace_na(last_obs_date, as.Date(NA))
   )
 
-# Create popups with HTML formatting
+# Create popups with HTML formatting and assign leaf icon
 trees_with_stats <- trees_with_stats %>%
   mutate(
     popup_html = paste0(
@@ -76,28 +76,66 @@ trees_with_stats <- trees_with_stats %>%
       "<b>Observations:</b> ", n_obs, "<br>",
       "<b>Last Observation:</b> ", format(last_obs_date, "%Y-%m-%d"), "<br>",
       "<a href='generated/tree_", individual_id, ".html'>View tree details</a>"
+    ),
+    # Map each individual species to its own unique leaf icon using scientific names
+    leaf_icon = case_when(
+      species == "Quercus rubra" ~ "img/red-oak-leaf.svg",
+      species == "Quercus velutina" ~ "img/black-oak-leaf.svg",
+      species == "Acer saccharinum" ~ "img/silver-maple-leaf.svg",
+      species == "Acer Rubrum" ~ "img/red-maple-leaf.svg",
+      species == "Acer saccharum" ~ "img/sugar-maple-leaf.svg",
+      species == "Robinia pseudoacacia" ~ "img/locust-leaf.svg",
+      species == "Rhus typhina" ~ "img/sumac-leaf.svg",
+      species == "Populus deltoides" ~ "img/cottonwood-leaf.svg",
+      species == "Malus sp." ~ "img/apple-leaf.svg",
+      species == "Tilia americana" ~ "img/basswood-leaf.svg",
+      species == "Betula nigra" ~ "img/river-birch-leaf.svg",
+      species == "Betula papyrifera" ~ "img/paper-birch-leaf.svg",
+      species == "Ginkgo biloba" ~ "img/ginkgo-leaf.svg",
+      TRUE ~ "img/red-oak-leaf.svg"  # default
     )
   )
 
-icons <- awesomeIcons(
-  icon = "ios-close",
-  iconColor = "white",
-  library = "ion",
-  markerColor = trees_with_stats$color
+# Create custom leaf icons
+leaf_icons <- icons(
+  iconUrl = trees_with_stats$leaf_icon,
+  iconWidth = 32, iconHeight = 32,
+  iconAnchorX = 16, iconAnchorY = 16
 )
 
 leaflet(trees_with_stats) %>%
   addTiles() %>%
-  addAwesomeMarkers(
+  addMarkers(
     ~lon, ~lat,
-    icon = icons,
+    icon = leaf_icons,
     popup = ~popup_html,
     label = paste(
       "Tag:", trees_with_stats$tag, "|",
       "Species:", trees_with_stats$common_name
     )
+  ) %>%
+  addLegend(
+    position = "bottomright",
+    colors = c("#A0522D", "#5D3A1A", "#C0C0C0", "#CD5C5C", "#FFA500",
+               "#7CFC00", "#FF6347", "#98FB98", "#90EE90", "#9ACD32", 
+               "#8FBC8F", "#ADFF2F", "#FFD700"),
+    labels = c("northern red oak (Quercus rubra)", 
+               "black oak (Quercus velutina)", 
+               "silver maple (Acer saccharinum)", 
+               "red maple (Acer rubrum)", 
+               "sugar maple (Acer saccharum)",
+               "black locust (Robinia pseudoacacia)", 
+               "staghorn sumac (Rhus typhina)", 
+               "eastern cottonwood (Populus deltoides)", 
+               "apple (Malus sp.)", 
+               "American basswood (Tilia americana)", 
+               "river birch (Betula nigra)", 
+               "paper birch (Betula papyrifera)", 
+               "maidenhair tree (Ginkgo biloba)"),
+    title = "Tree Species"
   )
 ```
+
 
 # Current Observation Status
 
@@ -209,7 +247,7 @@ theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 # Seasonal Phenology Patterns
 
-The plot below summarizes fall canopy senescence using all “Leaves” observations collected after mid-year (day-of-year > 180). Each panel shows a single species (rows) in a single year (columns), with day-of-year on the x-axis and estimated percent green leaves on the y-axis. The black points are individual student observations, the faint blue curves show logistic curves for each monitored tree, and the red curve is a single logistic fit that summarizes the overall seasonal decline in leaf greenness for that species-year.
+The plot below summarizes fall canopy senescence using all “Leaves” observations collected after mid-year (day-of-year \> 180). Each panel shows a single species (rows) in a single year (columns), with day-of-year on the x-axis and estimated percent green leaves on the y-axis. The black points are individual student observations, the faint blue curves show logistic curves for each monitored tree, and the red curve is a single logistic fit that summarizes the overall seasonal decline in leaf greenness for that species-year.
 
 ```{r echo=F, fig.height=30}
 

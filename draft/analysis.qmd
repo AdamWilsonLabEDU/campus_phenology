@@ -28,42 +28,97 @@ d <- d |>
 
 
 # Example: estimate phenology for each species
-species_list <- unique(d$species)
+species_list <- unique(d$species)#[9]
+
+
 results <- map(species_list, function(sp) {
-    # sp="nigra"
-	d_sp <- d[d$species == sp, ]
+	# sp=species_list[4]#"nigra"
+	d_sp <- d[d$species == sp & !is.nan(d$intensity), ]
 	d_sp$y <- d_sp$intensity
 	d_sp$t <- as.Date(d_sp$observation_date)
-	d_sp$w <- 1 # or use qc_summary if you have QA/QC
-	d_sp$QC_flag <- 0
+	d_sp$w <- 1
 
 	# Add head/tail for robust smoothing
-#	dnew <- add_HeadTail(d_sp, south=FALSE, nptperyear=23)
-	INPUT <- check_input(d_sp$t, d_sp$y, d_sp$w, d_sp$QC_flag,
-											 nptperyear=365, south=FALSE, maxgap=6, alpha=0.02, wmin=0.2)
+#   dnew <- add_HeadTail(d_sp, south=FALSE, nptperyear=23)
+	INPUT <- tryCatch({
+		check_input(d_sp$t, d_sp$y, d_sp$w, QC_flag=NULL,
+					nptperyear=365, south=FALSE, maxgap=6, alpha=0.02, wmin=0.2)
+	}, error = function(e) NULL)
+	if (is.null(INPUT) || is.null(INPUT$t) || length(INPUT$t) < 10) {
+		return(list(species = sp, pheno = NULL, gof = NULL, fit = NULL, brks = NULL))
+	}
 
 	# Segment growing seasons
-	brks <- season_mov(INPUT, list(rFUN = "smooth_wWHIT", wFUN = "wBisquare", maxExtendMonth = 6, r_min = 0.1))
+	brks <- tryCatch({
+		season_mov(INPUT,options=list(rFUN = "smooth_wWHIT", iters=30, wFUN = "wBisquare", maxExtendMonth = 6, r_min = 0.1))
+	}, error = function(e) NULL)
+	if (is.null(brks) || !is.list(brks) || length(brks) == 0) {
+		return(list(species = sp, pheno = NULL, gof = NULL, fit = NULL, brks = NULL))
+	}
 
 	# Fit multiple curve types
-	fit <- curvefits(INPUT, brks,
-		options = list(
-			methods = c("AG", "Zhang", "Beck", "Elmore"),
-			wFUN = wBisquare,
-			nextend = 2, maxExtendMonth = 3, minExtendMonth = 1, minPercValid = 0.2
-		))
+	fit <- tryCatch({
+		curvefits(INPUT, brks,
+			options = list(
+				iters=30,
+				methods = c("Gu", "Klos","AG", "Zhang", "Beck", "Elmore"),
+				wFUN = wTSM,
+				nextend = 2, maxExtendMonth = 3, minExtendMonth = 1, minPercValid = 0.2
+			))
+	}, error = function(e) NULL)
+	if (is.null(fit)) {
+		return(list(species = sp, pheno = NULL, gof = NULL, fit = NULL, brks = brks))
+	}
 
 	# Extract phenology metrics
-	l_pheno <- get_pheno(fit, IsPlot = FALSE)
-	d_gof <- get_GOF(fit)
-	d_fit <- get_fitting(fit)
+	l_pheno <- tryCatch({ get_pheno(fit, IsPlot = FALSE) }, error = function(e) NULL)
+	d_gof <- tryCatch({ get_GOF(fit) }, error = function(e) NULL)
+	d_fit <- tryCatch({
+		fit0 <- get_fitting(fit)
+		# Rescale fitted values to 0-100 for each year
+		if (!is.null(fit0) && "yhat" %in% names(fit0)) {
+			yhat <- fit0$yhat
+			rng <- range(yhat, na.rm = TRUE)
+			if (diff(rng) > 0) {
+				fit0$yhat <- 100 * (yhat - rng[1]) / (rng[2] - rng[1])
+			} else {
+				fit0$yhat <- 0
+			}
+		}
+		fit0
+	}, error = function(e) NULL)
 	list(species = sp, pheno = l_pheno, gof = d_gof, fit = d_fit, brks = brks)
 })
+```
+
+
+```{r}
+d_fit=results[[1]]
+
 
 # Example: visualize for first species
-first <- results[[2]]
-g <- plot_curvefits(first$fit, first$brks, NULL, ylab = "Intensity", xlab = "Time")
-print(g)
+    last_iter_rough <- colnames(d_fit$fit) %>% last()
+    iters_name_fine <- colnames(d_fit$fit) %>% .[grep("ziter", .)] %>% 
+        sort()
+ 
+    ggplot(d_fit$fit, aes_string("t", "y", color = "iters")) + 
+        geom_vline(data = d_fit$brks$dt, aes(xintercept = beg), 
+            size = 0.4, linetype = 2, color = "blue") + 
+		geom_vline(data = d_fit$brks$dt, aes(xintercept = end), size = 0.4, linetype = 2, color = "red") + 
+#        facet_grid(meth ~ .) + geom_point(data = d_fit$fit, aes_string("t", "y"), 
+#                size = .5, alpha = 0.6, color = "grey60")+ 
+    	geom_point(aes_string("t", "y"), 
+                size = 0.8, alpha = 0.8, color = "grey60")+
+#		geom_line(data = d_fit$brks$fit, aes_string("t", last_iter_rough), color = "black", size = 0.8) + 
+		geom_line(data = d_fit$fit, aes_string("t", last_iter_rough,group="meth",color="meth"), size = 0.8) #+ 
+#		geom_line(aes_string(y = last_iter_rough), size = 0.8,  alpha = 0.7)
+    
+
+#r_param <- do.call(rbind, lapply(results, function(x) x$pheno))
+#r_pheno <- do.call(rbind, lapply(results, function(x) x$pheno))
+#r_gof <- do.call(rbind, lapply(results, function(x) x$gof))
+#d_fit <- do.call(rbind, lapply(results, function(x) x$fit))
+
 ```
 
 
@@ -79,6 +134,8 @@ library(phenofit)
 ```
 
 ```{r load-and-filter}
+
+
 ds_leaves <- d %>%
 	filter(
 		kingdom == "Plantae",
@@ -108,28 +165,31 @@ fit_doublelogis_species_year <- function(df, year) {
 	df_xy <- df %>%
 		group_by(observation_doy) %>%
 		summarize(y = mean(intensity, na.rm = TRUE), .groups = "drop") %>%
-		filter(is.finite(y))
+		filter(is.finite(y), !is.na(observation_doy))
 	if (nrow(df_xy) < 12) {
 		return(empty_out)
 	}
 	# phenofit expects a time series with regular x (doy) and y (intensity)
 	# Fill missing days with NA
-	x_grid <- tibble(observation_doy = seq.int(1L, 366L, 1L))
-	y_full <- rep(NA_real_, 366)
-	y_full[df_xy$observation_doy] <- df_xy$y
+	x_grid <- tibble(observation_doy = seq.int(1L, 365L, 1L))
+	y_full <- rep(NA_real_, 365)
+	valid_idx <- df_xy$observation_doy[df_xy$observation_doy >= 1 & df_xy$observation_doy <= 365]
+	y_full[valid_idx] <- df_xy$y[df_xy$observation_doy >= 1 & df_xy$observation_doy <= 365]
 	# Fit double logistic using phenofit
 	fit <- tryCatch({
 		phenofit::curvefit(
-			y = df_xy$y, #y_full,
-			t = df_xy$observation_doy, #1:366,
-			tout=1:365,
-            methods = "Zhang"
+			y = y_full,
+			t = 1:365,
+			tout = 1:365,
+			methods = "Zhang"
 		)
 	}, error = function(e) NULL)
 	if (is.null(fit) || is.null(fit$model)) {
 		return(empty_out)
 	}
-	yhat <- as.numeric(predict(fit,yout))
+	yhat <- tryCatch({
+		as.numeric(predict(fit, newdata = list(t = 1:365)))
+	}, error = function(e) rep(NA_real_, 365))
 	tibble(
 		observation_doy = x_grid$observation_doy,
 		intensity_fitted = yhat

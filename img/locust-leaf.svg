@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Black Locust pinnately compound leaf -->
+  <g fill="#7CFC00" stroke="#228B22" stroke-width="1">
+    <!-- Central rachis -->
+    <line x1="50" y1="10" x2="50" y2="110" stroke="#228B22" stroke-width="2"/>
+    <!-- Paired leaflets along rachis -->
+    <ellipse cx="30" cy="20" rx="8" ry="4" transform="rotate(-30 30 20)"/>
+    <ellipse cx="70" cy="20" rx="8" ry="4" transform="rotate(30 70 20)"/>
+    <ellipse cx="28" cy="35" rx="8" ry="4" transform="rotate(-25 28 35)"/>
+    <ellipse cx="72" cy="35" rx="8" ry="4" transform="rotate(25 72 35)"/>
+    <ellipse cx="26" cy="50" rx="8" ry="4" transform="rotate(-20 26 50)"/>
+    <ellipse cx="74" cy="50" rx="8" ry="4" transform="rotate(20 74 50)"/>
+    <ellipse cx="25" cy="65" rx="8" ry="4" transform="rotate(-15 25 65)"/>
+    <ellipse cx="75" cy="65" rx="8" ry="4" transform="rotate(15 75 65)"/>
+    <ellipse cx="24" cy="80" rx="8" ry="4" transform="rotate(-10 24 80)"/>
+    <ellipse cx="76" cy="80" rx="8" ry="4" transform="rotate(10 76 80)"/>
+    <!-- Terminal leaflet -->
+    <ellipse cx="50" cy="95" rx="8" ry="5"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Basswood/Linden asymmetric heart-shaped leaf with serrated edges -->
+  <path d="M 50,115 L 50,55 Q 48,50 45,46 L 40,40 Q 35,36 30,34 L 25,33 Q 20,33 16,35 Q 12,38 10,42 Q 8,47 8,52 Q 9,57 11,61 L 14,66 Q 17,70 20,73 L 24,77 Q 28,80 32,82 L 36,85 Q 40,87 44,90 L 48,95 Q 50,100 50,105 L 50,55 Q 52,50 55,46 L 60,40 Q 65,36 70,34 L 75,33 Q 80,33 84,35 Q 88,38 90,42 Q 92,47 92,52 Q 91,57 89,61 L 86,66 Q 83,70 80,73 L 76,77 Q 72,80 68,82 L 64,85 Q 60,87 56,90 L 52,95 Q 50,100 50,105 Z" 
+        fill="#9ACD32" stroke="#556B2F" stroke-width="1.5"/>
+  <!-- Serrated edge detail -->
+  <path d="M 30,34 L 32,36 L 30,38 L 33,40 L 31,42 L 34,44 L 32,46 L 35,48 L 33,50" 
+        fill="none" stroke="#556B2F" stroke-width="1"/>
+  <path d="M 70,34 L 68,36 L 70,38 L 67,40 L 69,42 L 66,44 L 68,46 L 65,48 L 67,50" 
+        fill="none" stroke="#556B2F" stroke-width="1"/>
+  <!-- Main vein -->
+  <line x1="50" y1="55" x2="50" y2="115" stroke="#556B2F" stroke-width="2"/>
+</svg>

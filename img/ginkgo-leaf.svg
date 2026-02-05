@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="32" height="38">
+  <!-- Ginkgo fan-shaped leaf with radiating veins and notch -->
+  <path d="M 50,115 L 50,60 Q 45,58 40,55 L 35,50 Q 30,45 25,38 L 20,30 Q 16,22 13,15 L 10,10 Q 10,8 12,7 Q 15,6 18,8 L 23,12 Q 28,17 32,23 L 36,30 Q 40,37 43,43 L 46,50 Q 48,55 48,58 L 48,50 Q 48,45 48,40 L 48,30 Q 49,25 50,20 L 50,15 Q 50,10 50,5 L 52,20 Q 52,25 52,30 L 52,40 Q 52,45 52,50 L 52,58 Q 52,55 54,50 L 57,43 Q 60,37 64,30 L 68,23 Q 72,17 77,12 L 82,8 Q 85,6 88,7 Q 90,8 90,10 L 87,15 Q 84,22 80,30 L 75,38 Q 70,45 65,50 L 60,55 Q 55,58 50,60 Z" 
+        fill="#FFD700" stroke="#DAA520" stroke-width="1.5"/>
+  <!-- Central notch -->
+  <path d="M 48,58 Q 48,62 47,65 L 46,70 M 52,58 Q 52,62 53,65 L 54,70" 
+        fill="none" stroke="#DAA520" stroke-width="2"/>
+  <!-- Radiating veins -->
+  <line x1="50" y1="60" x2="20" y2="25" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="30" y2="20" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="38" y2="18" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="45" y2="15" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="50" y2="5" stroke="#DAA520" stroke-width="1.5"/>
+  <line x1="50" y1="60" x2="55" y2="15" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="62" y2="18" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="70" y2="20" stroke="#DAA520" stroke-width="1"/>
+  <line x1="50" y1="60" x2="80" y2="25" stroke="#DAA520" stroke-width="1"/>
+  <!-- Petiole -->
+  <line x1="50" y1="60" x2="50" y2="115" stroke="#DAA520" stroke-width="2"/>
+</svg>
