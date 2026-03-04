@@ -15,6 +15,19 @@ cp_config <- function() {
   )
 }
 
+cp_normalize_semester_id <- function(x) {
+  x <- as.character(x)
+  m <- stringr::str_match(x, "^(\\d{4})\\.(\\d{1,2})$")
+
+  out <- ifelse(
+    !is.na(m[, 1]),
+    paste0(m[, 2], ".", as.integer(m[, 3])),
+    x
+  )
+
+  as.character(out)
+}
+
 cp_ensure_dirs <- function(paths) {
   purrr::walk(paths, ~ dir.create(.x, recursive = TRUE, showWarnings = FALSE))
   invisible(TRUE)
@@ -81,7 +94,7 @@ cp_ensure_release <- function(tag, repo) {
 }
 
 cp_current_semester <- function(date = Sys.Date()) {
-  lubridate::semester(date, with_year = TRUE)
+  cp_normalize_semester_id(lubridate::semester(date, with_year = TRUE))
 }
 
 cp_read_trees <- function(trees_csv) {
@@ -139,9 +152,10 @@ cp_expected_semesters <- function(year_start, year_stop) {
 
 cp_available_semesters_from_assets <- function(release_assets) {
   release_assets$file_name %>%
-    stringr::str_extract("semester-[0-9]{4}\\.[12]") %>%
+    stringr::str_extract("semester-[0-9]{4}\\.[0-9]{1,2}") %>%
     stringr::str_remove("semester-") %>%
     stats::na.omit() %>%
+    cp_normalize_semester_id() %>%
     as.character()
 }
 
@@ -238,9 +252,10 @@ cp_write_semester_parquets_and_upload <- function(raw_new, missing_semesters, ca
   raw_new <- raw_new %>%
     dplyr::mutate(
       observation_date = lubridate::ymd(observation_date),
-      semester = sprintf("%d.%d", lubridate::year(observation_date), lubridate::semester(observation_date))
+      semester = sprintf("%d.%d", lubridate::year(observation_date), lubridate::semester(observation_date)),
+      semester = cp_normalize_semester_id(semester)
     ) %>%
-    dplyr::filter(semester %in% missing_semesters)
+    dplyr::filter(semester %in% cp_normalize_semester_id(missing_semesters))
 
   if (nrow(raw_new) == 0) {
     return(character())
@@ -281,7 +296,7 @@ cp_build_full_dataset <- function(parquet_files, trees) {
       observation_week = lubridate::isoweek(observation_date),
       observation_doy = lubridate::yday(observation_date),
       observation_year = lubridate::year(observation_date),
-      semester = as.character(semester),
+      semester = cp_normalize_semester_id(as.character(semester)),
       observation_datey = lubridate::make_date(2020, lubridate::month(observation_date), lubridate::day(observation_date)),
       observedby_person_id = factor(observedby_person_id)
     ) %>%
@@ -424,17 +439,34 @@ cp_semester_index <- function(d, current_semester, repo, release_tag, network_id
       semester_start = min(observation_date, na.rm = TRUE),
       semester_stop = max(observation_date, na.rm = TRUE),
       .groups = "drop"
-    ) %>%
+    )
+
+  current_semester <- cp_normalize_semester_id(current_semester)
+
+  if (!(current_semester %in% semester_stats$semester)) {
+    semester_stats <- dplyr::bind_rows(
+      semester_stats,
+      tibble::tibble(
+        semester = current_semester,
+        n_observers = 0L,
+        n_observations = 0L,
+        semester_start = as.Date(NA),
+        semester_stop = as.Date(NA)
+      )
+    )
+  }
+
+  semester_stats <- semester_stats %>%
     dplyr::arrange(dplyr::desc(semester)) %>%
     dplyr::mutate(is_current = semester == current_semester)
-
+    
   semester_stats %>%
     dplyr::mutate(
       year = substr(semester, 1, 4),
-      term = substr(semester, 6, 6),
+      term = as.integer(stringr::str_extract(semester, "(?<=\\.)\\d+$")),
       label = dplyr::case_when(
-        term == "1" ~ paste("Spring", year),
-        term == "2" ~ paste("Fall", year),
+        term == 1 ~ paste("Spring", year),
+        term == 2 ~ paste("Fall", year),
         TRUE ~ semester
       ),
       status = dplyr::if_else(is_current, "In progress", "Complete"),
@@ -507,7 +539,10 @@ cp_generate_from_template_yaml_replace <- function(template_path, replacements, 
   out_path
 }
 
-cp_generate_semester_qmds <- function(semesters, required_weeks, require_obs_per_week, generated_dir) {
+cp_generate_semester_qmds <- function(semesters, required_weeks, require_obs_per_week, generated_dir, current_semester = NULL) {
+  semesters <- cp_normalize_semester_id(unique(c(semesters, current_semester)))
+  semesters <- semesters[!is.na(semesters) & nzchar(semesters)]
+
   if (length(semesters) == 0) return(character())
 
   purrr::map_chr(semesters, function(sem) {

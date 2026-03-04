@@ -188,7 +188,8 @@ list(
       semesters = sort(unique(d$semester)),
       required_weeks = config$required_weeks,
       require_obs_per_week = config$require_obs_per_week,
-      generated_dir = config$generated_dir
+      generated_dir = config$generated_dir,
+      current_semester = current_semester
     ),
     format = "file"
   ),
