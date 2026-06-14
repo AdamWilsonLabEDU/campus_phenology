@@ -37,8 +37,20 @@ jobs:
       - name: Install Linux Library Dependencies
         run: |-
           sudo apt-get update
-          sudo apt install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev
-
+          sudo apt install -y \
+            libudunits2-dev \
+            libgdal-dev \
+            libgeos-dev \
+            libproj-dev \
+            libfontconfig1-dev \
+            libharfbuzz-dev \
+            libfribidi-dev \
+            cmake \
+            gdal-bin \
+            libgit2-dev \
+            libglpk-dev \
+            libx11-dev \
+            pandoc
       - name: Install R
         uses: r-lib/actions/setup-r@v2
 
