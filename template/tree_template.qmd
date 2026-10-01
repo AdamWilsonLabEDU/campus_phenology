@@ -36,20 +36,18 @@ library(arrow)
 library(targets)
 
 tar_load(d)
-tar_load(d_obs_weekly)
-tar_load(d_obs)
 tar_load(trees)
 
 # Add plant nicknames to trees (use tag + common_name as fallback)
-trees_with_nicknames <- d %>%
-  group_by(individual_id) %>%
-  summarize(plant_nickname = first(plant_nickname), .groups = "drop") %>%
-  right_join(trees, by = "individual_id") %>%
+trees_with_nicknames <- d |>
+  group_by(individual_id) |>
+  summarize(plant_nickname = first(plant_nickname), .groups = "drop") |>
+  right_join(trees, by = "individual_id") |>
   mutate(plant_nickname = coalesce(plant_nickname, common_name_tag))
 
 # Filter for this tree and species
-ds <- d %>% filter(individual_id == params$tree_id)
-ds_species <- d %>% filter(common_name == params$common_name)
+ds <- d |> filter(individual_id == params$tree_id)
+ds_species <- d |> filter(common_name == params$common_name)
 ```
 
 # Tree Overview
@@ -67,12 +65,12 @@ This map shows the location of this tree (red marker) and other trees of the sam
 
 ```{r location-map, echo=F}
 # Filter for this tree and same species
-tree_data <- trees_with_nicknames %>% filter(individual_id == params$tree_id)
-species_trees <- trees_with_nicknames %>% filter(common_name == params$common_name)
+tree_data <- trees_with_nicknames |> filter(individual_id == params$tree_id)
+species_trees <- trees_with_nicknames |> filter(common_name == params$common_name)
 
 if(nrow(tree_data) > 0) {
-  leaflet(species_trees) %>%
-    addTiles() %>%
+  leaflet(species_trees) |>
+    addTiles() |>
     addCircleMarkers(
       lng = ~lon,
       lat = ~lat,
@@ -82,7 +80,7 @@ if(nrow(tree_data) > 0) {
       color = ~ifelse(individual_id == params$tree_id, "red", "blue"),
       fillOpacity = ~ifelse(individual_id == params$tree_id, 1, 0.5),
       radius = ~ifelse(individual_id == params$tree_id, 8, 5)
-    ) %>%
+    ) |>
     addLegend(
       position = "bottomright",
       colors = c("red", "blue"),
@@ -103,12 +101,12 @@ if(nrow(ds) > 0) {
   # Filter for leaf phenophases only
   leaf_keywords <- c("Colored leaves", "Increasing leaf size", "Leaves")
   
-  species_leaf <- ds_species %>% 
-    filter(common_name == params$common_name) %>%
+  species_leaf <- ds_species |> 
+    filter(common_name == params$common_name) |>
     filter(str_detect(phenophase_description, paste(leaf_keywords, collapse = "|")))
   
-  tree_leaf <- ds %>% 
-    filter(individual_id == params$tree_id) %>%
+  tree_leaf <- ds |> 
+    filter(individual_id == params$tree_id) |>
     filter(str_detect(phenophase_description, paste(leaf_keywords, collapse = "|")))
   
   if(nrow(tree_leaf) > 0) {
@@ -146,15 +144,15 @@ if(nrow(ds) > 0) {
 
 ```{r observation-summary, echo=F}
 if(nrow(ds) > 0) {
-  ds %>%
-    group_by(phenophase_description) %>%
+  ds |>
+    group_by(phenophase_description) |>
     summarize(
       n_observations = n(),
       first_date = min(observation_date),
       last_date = max(observation_date),
       .groups = "drop"
-    ) %>%
-    arrange(desc(n_observations)) %>%
+    ) |>
+    arrange(desc(n_observations)) |>
     knitr::kable()
 }
 ```

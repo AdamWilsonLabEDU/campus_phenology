@@ -97,8 +97,9 @@ d_fit=results[[1]]
 
 
 # Example: visualize for first species
-    last_iter_rough <- colnames(d_fit$fit) %>% last()
-    iters_name_fine <- colnames(d_fit$fit) %>% .[grep("ziter", .)] %>% 
+    last_iter_rough <- colnames(d_fit$fit) |> last()
+    fit_names <- colnames(d_fit$fit)
+    iters_name_fine <- fit_names[grep("ziter", fit_names)] |>
         sort()
  
     ggplot(d_fit$fit, aes_string("t", "y", color = "iters")) + 
@@ -136,7 +137,7 @@ library(phenofit)
 ```{r load-and-filter}
 
 
-ds_leaves <- d %>%
+ds_leaves <- d |>
 	filter(
 		kingdom == "Plantae",
 		phenophase_description == "Leaves",
@@ -144,7 +145,7 @@ ds_leaves <- d %>%
 		between(intensity, 0, 100),
 		!is.na(observation_doy),
 		!is.na(observation_year)
-	) %>%
+	) |>
 	mutate(
 		observation_year = as.integer(observation_year),
 		observation_doy = as.integer(observation_doy),
@@ -162,9 +163,9 @@ fit_doublelogis_species_year <- function(df, year) {
 		intensity_fitted = double(),
 		observation_date = as.Date(character())
 	)
-	df_xy <- df %>%
-		group_by(observation_doy) %>%
-		summarize(y = mean(intensity, na.rm = TRUE), .groups = "drop") %>%
+	df_xy <- df |>
+		group_by(observation_doy) |>
+		summarize(y = mean(intensity, na.rm = TRUE), .groups = "drop") |>
 		filter(is.finite(y), !is.na(observation_doy))
 	if (nrow(df_xy) < 12) {
 		return(empty_out)
@@ -193,16 +194,16 @@ fit_doublelogis_species_year <- function(df, year) {
 	tibble(
 		observation_doy = x_grid$observation_doy,
 		intensity_fitted = yhat
-	) %>%
-		filter(is.finite(intensity_fitted)) %>%
+	) |>
+		filter(is.finite(intensity_fitted)) |>
 		mutate(
 			observation_date = as.Date(sprintf("%d-01-01", year)) + (observation_doy - 1L)
 		)
 }
 
-ds_fits <- ds_leaves %>%
-	group_by(common_name, observation_year) %>%
-	group_modify(~fit_doublelogis_species_year(.x, year = .y$observation_year)) %>%
+ds_fits <- ds_leaves |>
+	group_by(common_name, observation_year) |>
+	group_modify(~fit_doublelogis_species_year(.x, year = .y$observation_year)) |>
 	ungroup()
 ```
 

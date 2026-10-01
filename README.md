@@ -3,9 +3,7 @@
 Quarto website that ingests USA–NPN status observations for a campus phenology project, caches semester-partitioned datasets in a GitHub Release, and renders overview pages plus per-semester and per-student summaries.
 
 ## How it works
-- Quarto pre-render hook runs an R pipeline before every render (see [_quarto.yml](_quarto.yml)).
-
-- The pipeline is implemented as a [{targets}](https://docs.ropensci.org/targets/) workflow (see [_targets.R](_targets.R)) and executed via [scripts/run_targets.R](scripts/run_targets.R).
+- Run the [{targets}](https://docs.ropensci.org/targets/) pipeline in [_targets.R](_targets.R) via [scripts/run_targets.R](scripts/run_targets.R) before rendering.
 	- Downloads USA–NPN status observations via `rnpn`.
 	- Downloads existing semester-partitioned release assets (GitHub Release tag `npn-data`) via `piggyback` and refreshes the current semester.
 	- Writes core Parquet files to [data/processed](data/processed).
@@ -13,14 +11,14 @@ Quarto website that ingests USA–NPN status observations for a campus phenology
 	- Regenerates [semesters.qmd](semesters.qmd) and generates per-semester/per-student/per-tree `.qmd` files under [generated/](generated/) from templates.
 	- Attempts to upload new/updated assets to the GitHub Release; if auth/permissions are missing, uploads are skipped and the pipeline continues.
 
-- The old script [scripts/npn_download_prep.R](scripts/npn_download_prep.R) is kept as a compatibility wrapper and now delegates to `targets::tar_make('site_ready')`.
-- Frontend pages (e.g., [index.qmd](index.qmd)) read the Parquet files (Arrow) at render time; Quarto renders `.qmd` to HTML under [_site](_site/). Do not edit `_site/` directly.
+- [scripts/npn_download_prep.R](scripts/npn_download_prep.R) is a thin wrapper around that same script.
+- Frontend pages (for example [index.qmd](index.qmd)) load targets objects at render time. Quarto writes HTML under [_site](_site/). Do not edit `_site/` directly.
 
 Key files/directories:
 - Config: [_quarto.yml](_quarto.yml), [.github/workflows/publish_github_actions.yml](.github/workflows/publish_github_actions.yml)
 - Pipeline: [_targets.R](_targets.R), [R/targets_pipeline.R](R/targets_pipeline.R), [scripts/run_targets.R](scripts/run_targets.R)
 - Templates: [template/semester_template.qmd](template/semester_template.qmd), [template/student_template.qmd](template/student_template.qmd)
-- Data outputs: [data/processed/full_data.parquet](data/processed/full_data.parquet), [data/processed/trees.parquet](data/processed/trees.parquet), [data/processed/weekly_observer_stats.parquet](data/processed/weekly_observer_stats.parquet), [data/processed/semester_observer_stats.parquet](data/processed/semester_observer_stats.parquet)
+- Data outputs: [data/processed/full_data.parquet](data/processed/full_data.parquet), [data/processed/trees.parquet](data/processed/trees.parquet), [data/processed/semester_observer_stats.parquet](data/processed/semester_observer_stats.parquet)
 - Per-semester CSV exports (written locally to `data/cache/csv/` and expected as Release assets):
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
@@ -106,7 +104,7 @@ GitHub Actions workflow [publish_github_actions.yml](.github/workflows/publish_g
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
 - Pages are generated under [generated/](generated/) and linked from [semesters.qmd](semesters.qmd); do not hand-edit generated files.
-- The student “grade” shown on student pages is `obs_week_percent`: mean weekly percent-of-requirement, capped at 100.
+- The student grade is `percent`: 100 times the number of filled week slots divided by 10. A slot is one `Leaves` visit in that week of the 10-week grading period. Visits fewer than 6 days apart count once. A second visit on the day next to an empty week can fill that week.
 
 ## Troubleshooting
 - Missing Parquet on render: ensure the pre-render finished and files are in [data/processed](data/processed).

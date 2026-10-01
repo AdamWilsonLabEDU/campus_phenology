@@ -18,22 +18,13 @@ editor_options:
 ```{r setup-data, echo=F, warning=FALSE, message=FALSE}
 # Global options and libraries
 library(tidyverse)
-library(lubridate)
-library(zoo)
-library(sf)
 library(leaflet)
 library(DT)
-library(arrow)
 library(cowplot)
 library(targets)
 
-# Load datasets from targets
-# This will load: trees, d, d_obs_weekly, d_obs
-
 tar_load(trees)
 tar_load(d)
-tar_load(d_obs_weekly)
-tar_load(d_obs)
 ```
 
 # Overview
@@ -50,24 +41,24 @@ The map below shows the locations of monitored trees on UB's North Campus.
 
 ```{r tree-map, echo=F}
 # Prepare tree data with observation stats
-tree_obs_stats <- d %>%
-  filter(!is.na(individual_id)) %>%
-  group_by(individual_id) %>%
+tree_obs_stats <- d |>
+  filter(!is.na(individual_id)) |>
+  group_by(individual_id) |>
   summarize(
     n_obs = n(),
     last_obs_date = max(observation_date),
     .groups = "drop"
   )
 
-trees_with_stats <- trees %>%
-  left_join(tree_obs_stats, by = "individual_id") %>%
+trees_with_stats <- trees |>
+  left_join(tree_obs_stats, by = "individual_id") |>
   mutate(
     n_obs = replace_na(n_obs, 0),
     last_obs_date = replace_na(last_obs_date, as.Date(NA))
   )
 
 # Create popups with HTML formatting and assign leaf icon
-trees_with_stats <- trees_with_stats %>%
+trees_with_stats <- trees_with_stats |>
   mutate(
     popup_html = paste0(
       "<b>Tag:</b> ", tag, "<br>",
@@ -103,8 +94,8 @@ leaf_icons <- icons(
   iconAnchorX = 16, iconAnchorY = 16
 )
 
-leaflet(trees_with_stats) %>%
-  addTiles() %>%
+leaflet(trees_with_stats) |>
+  addTiles() |>
   addMarkers(
     ~lon, ~lat,
     icon = leaf_icons,
@@ -113,7 +104,7 @@ leaflet(trees_with_stats) %>%
       "Tag:", trees_with_stats$tag, "|",
       "Species:", trees_with_stats$common_name
     )
-  ) %>%
+  ) |>
   addLegend(
     position = "bottomright",
     colors = c("#A0522D", "#5D3A1A", "#C0C0C0", "#CD5C5C", "#FFA500",
@@ -183,7 +174,7 @@ labs(
 x = "Date",
 y = "Daily Observations")
 
-plot_grid(p1,p2, ncol=1, align="hv",rel_heights = c(0.7,0.3))
+plot_grid(p1, p2, ncol = 1, align = "hv", rel_heights = c(0.7, 0.3))
 
 ```
 
@@ -252,10 +243,10 @@ The plot below summarizes fall canopy senescence using all “Leaves” observat
 ```{r echo=F, fig.height=30}
 
 
-d %>%
+d |>
   collect() |>
   filter(phenophase_description == "Leaves",
-         day_of_year > 180) %>% # Fall
+         day_of_year > 180) |> # Fall
   ggplot(aes(x = day_of_year, y = intensity)) +
   # Raw observations (all students)
   geom_jitter(#aes(color = as.factor(observedby_person_id)), 

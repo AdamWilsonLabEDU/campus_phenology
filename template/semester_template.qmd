@@ -6,8 +6,8 @@ format:
     number-sections: true
 params:
   semester: null
-  required_weeks: 9
-  require_obs_per_week: 4
+  semester_start: null
+  required_weeks: 10
 editor_options: 
   chunk_output_type: console
 ---
@@ -17,8 +17,8 @@ editor_options:
 if (FALSE) {
   params <- list(
     semester = "2025.2",
-    required_weeks = 9,
-    require_obs_per_week = 4
+    semester_start = "2025-08-25",
+    required_weeks = 10
   )
 }
 ```
@@ -33,16 +33,16 @@ library(arrow)
 ```{r load-data, echo=F}
 library(targets)
 tar_load(d)
-tar_load(d_obs_weekly)
 tar_load(d_obs)
 
 # Filter for this semester
-ds <- d %>% filter(semester == params$semester)
-ds_obs_weekly <- d_obs_weekly %>% filter(semester == params$semester)
-ds_obs <- d_obs %>% filter(semester == params$semester)
+ds <- d |> filter(semester == params$semester)
+ds_obs <- d_obs |> filter(semester == params$semester)
 ```
 
 ## Semester: `r params$semester`
+
+**Estimated semester start date:** `r params$semester_start`
 
 There are `r nrow(ds)` total observations this semester.
 
@@ -58,11 +58,20 @@ The NNID in the table and figures below is an anonymized individual observer ID.
 ## Observer Overview
 
 ```{r observer-overview, echo=F}
-ds %>%
-  group_by(observedby_person_id) %>%
-  summarize(total_obs = n()) %>%
-  mutate(link = paste0("<a href='student_", params$semester, "_", observedby_person_id, ".html'>See details</a>")) %>%
-  select(NNID = observedby_person_id, total_obs, link) %>%
+grade <- ds_obs |>
+  mutate(observedby_person_id = as.character(observedby_person_id)) |>
+  select(observedby_person_id, week_credits, percent)
+
+ds |>
+  mutate(observedby_person_id = as.character(observedby_person_id)) |>
+  group_by(observedby_person_id) |>
+  summarize(total_obs = n(), .groups = "drop") |>
+  left_join(grade, by = "observedby_person_id") |>
+  mutate(
+    grade = ifelse(is.na(percent), "0%", sprintf("%.0f%%", percent)),
+    link = paste0("<a href='student_", params$semester, "_", observedby_person_id, ".html'>See details</a>")
+  ) |>
+  select(NNID = observedby_person_id, total_obs, `Weeks credited` = week_credits, Grade = grade, link) |>
   datatable(escape = FALSE)
 ```
 
@@ -73,11 +82,12 @@ ds %>%
 The figure below visualizes the number of observations made by each observer during each week of the semester. 
 
 ```{r weekly-heatmap, echo=F, fig.height=12 }
-if(nrow(ds) > 0) {
-  ds %>%
-    group_by(observedby_person_id, observation_week) %>%
-    summarize(total_obs = n(), .groups = "drop") %>%
-    ggplot(aes(x = observation_week, y = as.factor(observedby_person_id), fill = total_obs)) +
+if (nrow(ds) > 0) {
+  ds |>
+    filter(semester_week >= 1, semester_week <= params$required_weeks) |>
+    group_by(observedby_person_id, semester_week) |>
+    summarize(total_obs = n(), .groups = "drop") |>
+    ggplot(aes(x = semester_week, y = as.factor(observedby_person_id), fill = total_obs)) +
     geom_tile() +
     scale_fill_viridis_c(trans = "log1p") +
     xlab("Week of Semester") +
@@ -91,10 +101,10 @@ if(nrow(ds) > 0) {
 ## Phenology Observations by Species
 
 ```{r species-observations, echo=F}
-if(nrow(ds) > 0) {
-  ds %>%
-    group_by(common_name) %>%
-    summarize(n_obs = n()) %>%
+if (nrow(ds) > 0) {
+  ds |>
+    group_by(common_name) |>
+    summarize(n_obs = n()) |>
     ggplot(aes(x = reorder(common_name, n_obs), y = n_obs)) +
     geom_col() +
     coord_flip() +
@@ -102,5 +112,25 @@ if(nrow(ds) > 0) {
     xlab("Species")
 }
 ```
+
+## How observation grades are calculated
+
+```{r grading-dates, echo=FALSE}
+semester_start <- as.Date(params$semester_start)
+semester_end <- semester_start + params$required_weeks * 7 - 1
+```
+
+The estimated start of this semester is `r if (is.na(semester_start)) "not set" else format(semester_start, "%B %d, %Y")`. The grading period is the `r params$required_weeks` weeks that follow, through `r if (is.na(semester_end)) "the end of week 10" else format(semester_end, "%B %d, %Y")`.
+
+Fall starts on the first Monday on or after August 23. Spring starts on the Monday of the week that contains January 25. Each week of the grading period is one of 10 slots beginning on that Monday.
+
+A student's grade uses only **Leaves** observations inside that window:
+
+- One visit fills one week. The grade is 100 times the number of filled weeks, divided by `r params$required_weeks`. Ten filled weeks is 100%.
+- Two visits fewer than 6 days apart count as one visit. A Monday and the next Tuesday are one week. A Sunday and the following Monday are one week.
+- If a week already has a visit, a second visit on the day next to an empty week fills that empty week. A Monday and the following Sunday therefore count as two weeks.
+- Visits after week `r params$required_weeks` do not add points. Extra records on a day that is already counted do not add another week.
+
+The weekly heatmap shows every observation in those 10 calendar weeks. The grade can differ from that chart when a Sunday visit is moved into the next empty week, or when visits a few days apart are counted once.
 
 

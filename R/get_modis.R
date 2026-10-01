@@ -62,25 +62,29 @@ download_modis_ndvi <- function(start_date, end_date) {
     progress = TRUE
   )
 
-  if (nrow(ndvi_raw) == 0) return(NULL)
+  if (nrow(ndvi_raw) == 0) {
+    return(NULL)
+  }
 
-  ndvi_clean <- ndvi_raw %>%
-    mutate(date = ymd(paste0(year, "-", doy)),
-           ndvi = value / 10000) %>%
+  ndvi_clean <- ndvi_raw |>
+    mutate(
+      date = ymd(paste0(year, "-", doy)),
+      ndvi = value / 10000
+    ) |>
     select(date, ndvi, quality, lon, lat)
 
   if (quality_filter) {
-    ndvi_clean <- ndvi_clean %>% filter(quality %in% c(0,1))
+    ndvi_clean <- ndvi_clean |> filter(quality %in% c(0, 1))
   }
 
-  ndvi_agg <- ndvi_clean %>%
-    group_by(date) %>%
+  ndvi_agg <- ndvi_clean |>
+    group_by(date) |>
     summarize(
       ndvi_mean = mean(ndvi, na.rm = TRUE),
       ndvi_sd = sd(ndvi, na.rm = TRUE),
       n_pixels = n(),
       .groups = "drop"
-    ) %>%
+    ) |>
     arrange(date)
 
   return(ndvi_agg)
@@ -119,8 +123,8 @@ process_semester <- function(name, start_date, end_date) {
   # Merge with existing data for current semester
   if (file_exists(file_path) && name == current_semester_tag) {
     existing <- arrow::read_parquet(file_path)
-    ndvi_sem <- bind_rows(existing, ndvi_sem) %>%
-      distinct(date, .keep_all = TRUE) %>%
+    ndvi_sem <- bind_rows(existing, ndvi_sem) |>
+      distinct(date, .keep_all = TRUE) |>
       arrange(date)
   }
 
@@ -145,7 +149,7 @@ for (yr in 2000:year(Sys.Date())) {
   for (sem in names(semesters)) {
     sem_name <- glue("{sem}_{yr}")
     sem_start <- semesters[[sem]]$start
-    sem_end   <- semesters[[sem]]$end
+    sem_end <- semesters[[sem]]$end
 
     # Only download past semesters if missing, always update current semester
     process_semester(sem_name, sem_start, sem_end)

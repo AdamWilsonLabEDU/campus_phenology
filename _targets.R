@@ -1,18 +1,13 @@
 library(targets)
-library(tarchetypes)
 
 tar_option_set(
   packages = c(
     "tidyverse",
     "rnpn",
     "lubridate",
-    "zoo",
     "arrow",
     "piggyback",
-    "glue",
-    "rmarkdown",
-    "tarchetypes",
-    "quarto"
+    "glue"
   )
 )
 
@@ -114,22 +109,21 @@ list(
     cue = tar_cue(mode = "always")
   ),
   tar_target(
-      semester_parquets,
-      unique(c(cp_list_semester_parquets(config$cache_dir), written_semester_parquets)),
-      format = "file",
-      cue = tar_cue(mode = "always")
-    ),
+    semester_parquets,
+    unique(c(
+      cp_list_semester_parquets(config$cache_dir),
+      written_semester_parquets
+    )),
+    format = "file",
+    cue = tar_cue(mode = "always")
+  ),
   tar_target(
     d,
     cp_build_full_dataset(semester_parquets, trees)
   ),
   tar_target(
-    d_obs_weekly,
-    cp_weekly_observer_stats(d, require_obs_per_week = config$require_obs_per_week)
-  ),
-  tar_target(
     d_obs,
-    cp_semester_observer_stats(d_obs_weekly, required_weeks = config$required_weeks)
+    cp_semester_observer_stats(d, required_weeks = config$required_weeks)
   ),
   tar_target(
     full_data_parquet,
@@ -139,11 +133,6 @@ list(
   tar_target(
     trees_parquet,
     cp_write_parquet_file(trees, file.path(config$processed_dir, "trees.parquet")),
-    format = "file"
-  ),
-  tar_target(
-    weekly_observer_stats_parquet,
-    cp_write_parquet_file(d_obs_weekly, file.path(config$processed_dir, "weekly_observer_stats.parquet")),
     format = "file"
   ),
   tar_target(
@@ -187,7 +176,6 @@ list(
     cp_generate_semester_qmds(
       semesters = sort(unique(d$semester)),
       required_weeks = config$required_weeks,
-      require_obs_per_week = config$require_obs_per_week,
       generated_dir = config$generated_dir,
       current_semester = current_semester
     ),
@@ -203,7 +191,6 @@ list(
       d = d,
       semester_for_students = semester_for_students,
       required_weeks = config$required_weeks,
-      require_obs_per_week = config$require_obs_per_week,
       generated_dir = config$generated_dir
     ),
     format = "file"
@@ -212,7 +199,21 @@ list(
     tree_qmds,
     cp_generate_tree_qmds(d = d, trees = trees, generated_dir = config$generated_dir),
     format = "file"
-  )#,
-  # Quarto rendering target
-  #tar_quarto(website)
+  ),
+  tar_target(
+    site_ready,
+    {
+      list(
+        full_data_parquet,
+        trees_parquet,
+        semester_observer_stats_parquet,
+        exported_csv_files,
+        semesters_qmd,
+        semester_qmds,
+        student_qmds,
+        tree_qmds
+      )
+      TRUE
+    }
+  )
 )

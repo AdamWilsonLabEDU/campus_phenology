@@ -6,9 +6,9 @@ format:
     number-sections: true
 params:
   semester: null
+  semester_start: null
   nnid: null
-  required_weeks: 9
-  require_obs_per_week: 4
+  required_weeks: 10
 ---
 
 ```{r example-params, include=FALSE}
@@ -16,9 +16,9 @@ params:
 if (FALSE) {
   params <- list(
     semester = "2025.2",
+    semester_start = "2025-08-25",
     nnid = 60171,
-    required_weeks = 9,
-    require_obs_per_week = 4
+    required_weeks = 10
   )
 }
 ```
@@ -33,25 +33,25 @@ library(arrow)
 library(targets)
 
 tar_load(d)
-tar_load(d_obs_weekly)
 tar_load(d_obs)
 
 nnid_chr <- as.character(params$nnid)
 
 # Filter for this student and semester
-ds <- d %>%
+ds <- d |>
   filter(
     semester == params$semester,
     as.character(observedby_person_id) == nnid_chr
   )
 
-ds_obs <- d_obs %>%
+ds_obs <- d_obs |>
   filter(
     semester == params$semester,
     as.character(observedby_person_id) == nnid_chr
   )
 
-obs_week_percent <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$obs_week_percent[[1]]
+week_credits <- if (nrow(ds_obs) == 0) 0L else ds_obs$week_credits[[1]]
+grade_percent <- if (nrow(ds_obs) == 0) 0 else ds_obs$percent[[1]]
 median_date_dif <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$median_date_dif[[1]]
 ```
 
@@ -60,10 +60,11 @@ median_date_dif <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$median_date_dif[[
 ## **NNID:** `r params$nnid`  
 
 **Semester:** `r params$semester`  
+**Estimated semester start date:** `r params$semester_start`  
 **Total observations:** `r nrow(ds)`  
-**Weeks with observations:** `r sum(tapply(ds$site_id, ds$observation_week, length) > 0)`
+**Weeks credited:** `r week_credits` of `r params$required_weeks`
 
-**Current Observation grade (avg weekly %):** `r if (is.na(obs_week_percent)) "NA" else sprintf("%.1f%%", obs_week_percent)`  
+**Observation grade:** `r sprintf("%.0f%%", grade_percent)`  
 **Median submission delay (days):** `r if (is.na(median_date_dif)) "NA" else sprintf("%.1f", median_date_dif)`
 
 ---
@@ -71,10 +72,11 @@ median_date_dif <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$median_date_dif[[
 ## Weekly Observations
 
 ```{r echo=F}
-ds %>%
-  group_by(observation_week) %>%
-  summarize(n_obs = n()) %>%
-  ggplot(aes(x = observation_week, y = n_obs)) +
+ds |>
+  filter(semester_week >= 1, semester_week <= params$required_weeks) |>
+  group_by(semester_week) |>
+  summarize(n_obs = n(), .groups = "drop") |>
+  ggplot(aes(x = semester_week, y = n_obs)) +
   geom_col(fill = "steelblue") +
   xlab("Week") +
   ylab("Number of Observations")
@@ -87,9 +89,9 @@ ds %>%
 The number of observations per individual plant monitored by this student.
 
 ```{r observations-by-plant, echo=F}
-ds %>%
-  group_by(plant_nickname) %>%
-  summarize(n_obs = n()) %>%
+ds |>
+  group_by(plant_nickname) |>
+  summarize(n_obs = n()) |>
   ggplot(aes(x = reorder(plant_nickname, n_obs), y = n_obs)) +
   geom_col(fill = "darkgreen") +
   coord_flip() +
