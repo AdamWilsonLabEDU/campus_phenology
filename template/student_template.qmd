@@ -9,6 +9,7 @@ params:
   semester_start: null
   nnid: null
   required_weeks: 10
+  display_weeks: 14
 ---
 
 ```{r example-params, include=FALSE}
@@ -18,7 +19,8 @@ if (FALSE) {
     semester = "2025.2",
     semester_start = "2025-08-25",
     nnid = 60171,
-    required_weeks = 10
+    required_weeks = 10,
+    display_weeks = 14
   )
 }
 ```
@@ -72,12 +74,19 @@ median_date_dif <- if (nrow(ds_obs) == 0) NA_real_ else ds_obs$median_date_dif[[
 ## Weekly Observations
 
 ```{r echo=F}
+week_breaks <- seq_len(params$display_weeks)
+
 ds |>
-  filter(semester_week >= 1, semester_week <= params$required_weeks) |>
+  filter(semester_week >= 1, semester_week <= params$display_weeks) |>
   group_by(semester_week) |>
   summarize(n_obs = n(), .groups = "drop") |>
   ggplot(aes(x = semester_week, y = n_obs)) +
   geom_col(fill = "steelblue") +
+  scale_x_continuous(
+    breaks = week_breaks,
+    limits = c(0.5, params$display_weeks + 0.5),
+    expand = c(0, 0)
+  ) +
   xlab("Week") +
   ylab("Number of Observations")
 ```

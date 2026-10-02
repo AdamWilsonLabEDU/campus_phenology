@@ -8,6 +8,7 @@ params:
   semester: null
   semester_start: null
   required_weeks: 10
+  display_weeks: 14
 editor_options: 
   chunk_output_type: console
 ---
@@ -18,7 +19,8 @@ if (FALSE) {
   params <- list(
     semester = "2025.2",
     semester_start = "2025-08-25",
-    required_weeks = 10
+    required_weeks = 10,
+    display_weeks = 14
   )
 }
 ```
@@ -83,12 +85,19 @@ The figure below visualizes the number of observations made by each observer dur
 
 ```{r weekly-heatmap, echo=F, fig.height=12 }
 if (nrow(ds) > 0) {
+  week_breaks <- seq_len(params$display_weeks)
+
   ds |>
-    filter(semester_week >= 1, semester_week <= params$required_weeks) |>
+    filter(semester_week >= 1, semester_week <= params$display_weeks) |>
     group_by(observedby_person_id, semester_week) |>
     summarize(total_obs = n(), .groups = "drop") |>
     ggplot(aes(x = semester_week, y = as.factor(observedby_person_id), fill = total_obs)) +
     geom_tile() +
+    scale_x_continuous(
+      breaks = week_breaks,
+      limits = c(0.5, params$display_weeks + 0.5),
+      expand = c(0, 0)
+    ) +
     scale_fill_viridis_c(trans = "log1p") +
     xlab("Week of Semester") +
     ylab("Observer") +
@@ -122,15 +131,14 @@ semester_end <- semester_start + params$required_weeks * 7 - 1
 
 The estimated start of this semester is `r if (is.na(semester_start)) "not set" else format(semester_start, "%B %d, %Y")`. The grading period is the `r params$required_weeks` weeks that follow, through `r if (is.na(semester_end)) "the end of week 10" else format(semester_end, "%B %d, %Y")`.
 
-Fall starts on the first Monday on or after August 23. Spring starts on the Monday of the week that contains January 25. Each week of the grading period is one of 10 slots beginning on that Monday.
+Fall starts on the first Monday on or after August 23. Spring starts on the Monday of the week that contains January 25. Each grading week is a standard Monday–Sunday ISO week beginning on that Monday.
 
 A student's grade uses only **Leaves** observations inside that window:
 
-- One visit fills one week. The grade is the number of filled weeks, divided by `r params$required_weeks`. Ten filled weeks is 100%.
-- Two visits fewer than 6 days apart count as one visit. If a student observes on a Monday and the next day (Tuesday), this only counts as one week. A Sunday and the next day (Monday) are one week.
-- If a week already has a visit, the next visit must be at least six days after the previous visit. A Monday and the following Sunday therefore count as two weeks.
-- Visits after week `r params$required_weeks` do not add points. Extra records on a day that is already counted do not add another week.
+- Any Leaves visit in a Monday–Sunday week fills that week. Extra visits in the same week do not add points.
+- The grade is 100 times the number of filled weeks, divided by `r params$required_weeks`. Ten filled weeks is 100%.
+- Visits after week `r params$required_weeks` do not add points.
 
-The weekly heatmap shows every observation in those 10 calendar weeks. The grade can differ from that chart when a Sunday visit is moved into the next empty week, or when visits a few days apart are counted once.
+The weekly heatmap shows every observation across the full `r params$display_weeks`-week semester calendar. The grade only counts Leaves visits in the first `r params$required_weeks` weeks.
 
 

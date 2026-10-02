@@ -104,7 +104,7 @@ GitHub Actions workflow [publish_github_actions.yml](.github/workflows/publish_g
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
 - Pages are generated under [generated/](generated/) and linked from [semesters.qmd](semesters.qmd); do not hand-edit generated files.
-- The student grade is `percent`: 100 times the number of filled week slots divided by 10. A slot is one `Leaves` visit in that week of the 10-week grading period. Visits fewer than 6 days apart count once. A second visit on the day next to an empty week can fill that week.
+- The student grade is `percent`: 100 times the number of filled Monday–Sunday weeks divided by 10. A week is filled by any `Leaves` visit in that ISO week of the 10-week grading period. Extra visits in the same week do not add points.
 
 ## Troubleshooting
 - Missing Parquet on render: ensure the pre-render finished and files are in [data/processed](data/processed).

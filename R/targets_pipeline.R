@@ -6,6 +6,7 @@ cp_config <- function() {
     repo = "AdamWilsonLabEDU/campus_phenology",
     release_tag = "npn-data",
     required_weeks = 10,
+    display_weeks = 14,
     request_source = "campus_phenology",
     cache_dir = "data/cache",
     processed_dir = "data/processed",
@@ -45,58 +46,18 @@ cp_estimated_semester_start <- function(semester) {
   )
 }
 
-# Keep visits at least min_gap days apart, then give each visit one of the
-# n_weeks slots. A second visit on the day beside an empty neighbor fills
-# that neighbor (Monday stays, the following Sunday can fill the next week).
-cp_filled_week_slots <- function(dates, start, n_weeks = 10L, min_gap = 6) {
+# Map observation dates to ISO Monday-Sunday weeks relative to semester
+# start (itself a Monday). One Leaves visit anywhere in a week fills that week.
+cp_filled_week_slots <- function(dates, start, n_weeks = 10L) {
   dates <- sort(unique(as.Date(dates)))
   dates <- dates[!is.na(dates)]
-  if (length(dates) == 0 || length(start) == 0 || is.na(start)) {
+  if (length(dates) == 0 || length(start) == 0 || is.na(start[[1]])) {
     return(integer(0))
   }
   start <- as.Date(start)[[1]]
 
-  kept <- dates[1]
-  if (length(dates) > 1) {
-    for (i in seq_along(dates)[-1]) {
-      d <- dates[i]
-      if (as.numeric(d - kept[length(kept)]) >= min_gap) kept <- c(kept, d)
-    }
-  }
-
-  week_of <- as.integer(floor(as.numeric(kept - start) / 7)) + 1L
-  ok <- !is.na(week_of) & week_of >= 1L & week_of <= n_weeks
-  kept <- kept[ok]
-  week_of <- week_of[ok]
-  if (length(kept) == 0) {
-    return(integer(0))
-  }
-
-  week_start <- function(w) start + (w - 1L) * 7L
-  filled <- integer(0)
-
-  for (w in seq_len(n_weeks)) {
-    ds <- sort(kept[week_of == w])
-    if (length(ds) == 0) next
-
-    can_forward <- ds == (week_start(w + 1L) - 1L) & w < n_weeks
-    can_back <- ds == week_start(w) & w > 1L
-    stay <- which(!can_forward & !can_back)
-    stay_i <- if (length(stay)) stay[[1]] else 1L
-
-    home_was_filled <- w %in% filled
-    if (!home_was_filled) filled <- c(filled, w)
-
-    for (i in seq_along(ds)) {
-      if (!home_was_filled && i == stay_i) next
-      dest <- NA_integer_
-      if (isTRUE(can_forward[i]) && !((w + 1L) %in% filled)) dest <- w + 1L
-      if (is.na(dest) && isTRUE(can_back[i]) && !((w - 1L) %in% filled)) dest <- w - 1L
-      if (!is.na(dest)) filled <- c(filled, dest)
-    }
-  }
-
-  sort(unique(filled))
+  week_of <- as.integer(floor(as.numeric(dates - start) / 7)) + 1L
+  sort(unique(week_of[!is.na(week_of) & week_of >= 1L & week_of <= as.integer(n_weeks)]))
 }
 
 cp_ensure_dirs <- function(paths) {
@@ -234,31 +195,15 @@ cp_available_semesters_from_assets <- function(release_assets) {
     as.character()
 }
 
-cp_missing_semesters <- function(expected_semesters, available_semesters, current_semester, cache_dir, network_id) {
+cp_missing_semesters <- function(expected_semesters, available_semesters, current_semester, ...) {
   closed_semesters <- setdiff(expected_semesters, current_semester)
 
-  missing_semesters <- union(
+  # Always refresh the current semester so new observations appear on the
+  # next pipeline run. Closed semesters are downloaded only when missing.
+  union(
     setdiff(closed_semesters, available_semesters),
     current_semester
   )
-
-  current_sem_file <- list.files(
-    cache_dir,
-    pattern = glue::glue("npn_obs_network-{network_id}_semester-{current_semester}\\.parquet"),
-    full.names = TRUE
-  )
-
-  if (length(current_sem_file) > 0 && file.exists(current_sem_file)) {
-    file_mtime <- file.mtime(current_sem_file)
-    time_since_download <- as.numeric(difftime(Sys.time(), file_mtime, units = "days"))
-
-    if (time_since_download < 1) {
-      message("Current semester data is fresh (<1 day old); skipping download.")
-      missing_semesters <- setdiff(missing_semesters, current_semester)
-    }
-  }
-
-  missing_semesters
 }
 
 cp_pb_download_missing_assets <- function(release_assets, tag, repo, dest) {
@@ -402,7 +347,7 @@ cp_build_full_dataset <- function(parquet_files, trees) {
     dplyr::left_join(trees |> dplyr::select(-common_name, -species), by = "individual_id")
 }
 
-cp_semester_observer_stats <- function(d, required_weeks = 10L, min_gap = 6) {
+cp_semester_observer_stats <- function(d, required_weeks = 10L) {
   leaves <- d |>
     dplyr::filter(.data$phenophase_description == "Leaves") |>
     dplyr::distinct(semester, observedby_person_id, observation_date, semester_start)
@@ -413,8 +358,7 @@ cp_semester_observer_stats <- function(d, required_weeks = 10L, min_gap = 6) {
       week_credits = length(cp_filled_week_slots(
         observation_date,
         dplyr::first(semester_start),
-        n_weeks = required_weeks,
-        min_gap = min_gap
+        n_weeks = required_weeks
       )),
       .groups = "drop"
     )
@@ -633,6 +577,7 @@ cp_generate_semester_qmds <- function(
     required_weeks,
     generated_dir,
     current_semester = NULL,
+    display_weeks = 14L,
     template_path = "template/semester_template.qmd") {
   semesters <- cp_normalize_semester_id(unique(c(semesters, current_semester)))
   semesters <- semesters[!is.na(semesters) & nzchar(semesters)]
@@ -652,7 +597,8 @@ cp_generate_semester_qmds <- function(
             as.character(cp_estimated_semester_start(sem)),
             "\""
           ),
-          "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks)
+          "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks),
+          "^  display_weeks: 14$" = paste0("  display_weeks: ", display_weeks)
         ),
         out_path = out_path
       )
@@ -702,6 +648,7 @@ cp_generate_student_qmds <- function(
     semester_for_students,
     required_weeks,
     generated_dir,
+    display_weeks = 14L,
     template_path = "template/student_template.qmd") {
   # Only the active semester is discovered from the observations. Older
   # student_YYYY.S_NNID.qmd files are rewritten in place so a restored
@@ -736,7 +683,8 @@ cp_generate_student_qmds <- function(
             "\""
           ),
           "^  nnid: null$" = paste0("  nnid: ", nnid),
-          "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks)
+          "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks),
+          "^  display_weeks: 14$" = paste0("  display_weeks: ", display_weeks)
         ),
         out_path = out_path
       )

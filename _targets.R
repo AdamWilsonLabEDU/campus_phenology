@@ -94,7 +94,8 @@ list(
       years = years_to_download,
       request_source = config$request_source,
       network_id = config$network_id
-    )
+    ),
+    cue = tar_cue(mode = "always")
   ),
   tar_target(
     written_semester_parquets,
@@ -191,6 +192,7 @@ list(
     cp_generate_semester_qmds(
       semesters = sort(unique(d$semester)),
       required_weeks = config$required_weeks,
+      display_weeks = config$display_weeks,
       generated_dir = config$generated_dir,
       current_semester = current_semester,
       template_path = semester_template
@@ -207,6 +209,7 @@ list(
       d = d,
       semester_for_students = semester_for_students,
       required_weeks = config$required_weeks,
+      display_weeks = config$display_weeks,
       generated_dir = config$generated_dir,
       template_path = student_template
     ),
