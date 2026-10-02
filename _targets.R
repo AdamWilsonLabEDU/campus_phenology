@@ -172,12 +172,28 @@ list(
     format = "file"
   ),
   tar_target(
+    semester_template,
+    "template/semester_template.qmd",
+    format = "file"
+  ),
+  tar_target(
+    student_template,
+    "template/student_template.qmd",
+    format = "file"
+  ),
+  tar_target(
+    tree_template,
+    "template/tree_template.qmd",
+    format = "file"
+  ),
+  tar_target(
     semester_qmds,
     cp_generate_semester_qmds(
       semesters = sort(unique(d$semester)),
       required_weeks = config$required_weeks,
       generated_dir = config$generated_dir,
-      current_semester = current_semester
+      current_semester = current_semester,
+      template_path = semester_template
     ),
     format = "file"
   ),
@@ -191,13 +207,19 @@ list(
       d = d,
       semester_for_students = semester_for_students,
       required_weeks = config$required_weeks,
-      generated_dir = config$generated_dir
+      generated_dir = config$generated_dir,
+      template_path = student_template
     ),
     format = "file"
   ),
   tar_target(
     tree_qmds,
-    cp_generate_tree_qmds(d = d, trees = trees, generated_dir = config$generated_dir),
+    cp_generate_tree_qmds(
+      d = d,
+      trees = trees,
+      generated_dir = config$generated_dir,
+      template_path = tree_template
+    ),
     format = "file"
   ),
   tar_target(

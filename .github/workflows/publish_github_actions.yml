@@ -27,7 +27,7 @@ jobs:
             data/cache
             data/processed
             generated
-          key: ${{ runner.os }}-targets-${{ hashFiles('_targets.R', 'R/**', 'scripts/**', 'renv.lock') }}
+          key: ${{ runner.os }}-targets-${{ hashFiles('_targets.R', 'R/**', 'scripts/**', 'template/**', 'renv.lock') }}
           restore-keys: |
             ${{ runner.os }}-targets-
 

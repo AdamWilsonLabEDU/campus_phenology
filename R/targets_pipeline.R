@@ -607,31 +607,60 @@ cp_generate_from_template_yaml_replace <- function(template_path, replacements, 
   out_path
 }
 
-cp_generate_semester_qmds <- function(semesters, required_weeks, generated_dir, current_semester = NULL) {
+cp_prune_unwritten <- function(generated_dir, pattern, written) {
+  existing <- list.files(generated_dir, pattern = pattern, full.names = TRUE)
+  if (length(existing) == 0) {
+    return(invisible(character()))
+  }
+
+  existing_norm <- normalizePath(existing, winslash = "/", mustWork = TRUE)
+  written_norm <- if (length(written) == 0) {
+    character()
+  } else {
+    normalizePath(written, winslash = "/", mustWork = TRUE)
+  }
+  stale_norm <- setdiff(existing_norm, written_norm)
+  stale <- existing[match(stale_norm, existing_norm)]
+  stale <- stale[!is.na(stale)]
+  if (length(stale) > 0) {
+    unlink(stale)
+  }
+  invisible(stale)
+}
+
+cp_generate_semester_qmds <- function(
+    semesters,
+    required_weeks,
+    generated_dir,
+    current_semester = NULL,
+    template_path = "template/semester_template.qmd") {
   semesters <- cp_normalize_semester_id(unique(c(semesters, current_semester)))
   semesters <- semesters[!is.na(semesters) & nzchar(semesters)]
 
-  if (length(semesters) == 0) {
-    return(character())
+  written <- if (length(semesters) == 0) {
+    character()
+  } else {
+    purrr::map_chr(semesters, function(sem) {
+      out_path <- file.path(generated_dir, glue::glue("semester_{sem}.qmd"))
+
+      cp_generate_from_template_yaml_replace(
+        template_path = template_path,
+        replacements = list(
+          "^  semester: null$" = paste0("  semester: ", sem),
+          "^  semester_start: null$" = paste0(
+            "  semester_start: \"",
+            as.character(cp_estimated_semester_start(sem)),
+            "\""
+          ),
+          "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks)
+        ),
+        out_path = out_path
+      )
+    })
   }
 
-  purrr::map_chr(semesters, function(sem) {
-    out_path <- file.path(generated_dir, glue::glue("semester_{sem}.qmd"))
-
-    cp_generate_from_template_yaml_replace(
-      template_path = "template/semester_template.qmd",
-      replacements = list(
-        "^  semester: null$" = paste0("  semester: ", sem),
-        "^  semester_start: null$" = paste0(
-          "  semester_start: \"",
-          as.character(cp_estimated_semester_start(sem)),
-          "\""
-        ),
-        "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks)
-      ),
-      out_path = out_path
-    )
-  })
+  cp_prune_unwritten(generated_dir, "^semester_.*\\.qmd$", written)
+  written
 }
 
 cp_semester_for_students <- function(d, current_semester) {
@@ -654,35 +683,75 @@ cp_semester_for_students <- function(d, current_semester) {
   }
 }
 
-cp_generate_student_qmds <- function(d, semester_for_students, required_weeks, generated_dir) {
-  ds_sem <- d |> dplyr::filter(semester == semester_for_students)
-  if (nrow(ds_sem) == 0) {
-    return(character())
+cp_existing_student_pages <- function(generated_dir) {
+  files <- list.files(generated_dir, pattern = "^student_.*\\.qmd$", full.names = FALSE)
+  if (length(files) == 0) {
+    return(tibble::tibble(semester = character(), nnid = character()))
   }
 
-  nnids <- unique(ds_sem$observedby_person_id)
-
-  purrr::map_chr(nnids, function(nnid) {
-    out_path <- file.path(generated_dir, glue::glue("student_{semester_for_students}_{nnid}.qmd"))
-
-    cp_generate_from_template_yaml_replace(
-      template_path = "template/student_template.qmd",
-      replacements = list(
-        "^  semester: null$" = paste0("  semester: ", semester_for_students),
-        "^  semester_start: null$" = paste0(
-          "  semester_start: \"",
-          as.character(cp_estimated_semester_start(semester_for_students)),
-          "\""
-        ),
-        "^  nnid: null$" = paste0("  nnid: ", nnid),
-        "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks)
-      ),
-      out_path = out_path
-    )
-  })
+  parsed <- stringr::str_match(files, "^student_(\\d{4}\\.\\d+)_(.+)\\.qmd$")
+  tibble::tibble(
+    semester = parsed[, 2],
+    nnid = parsed[, 3]
+  ) |>
+    dplyr::filter(!is.na(semester), !is.na(nnid), nzchar(nnid))
 }
 
-cp_generate_tree_qmds <- function(d, trees, generated_dir) {
+cp_generate_student_qmds <- function(
+    d,
+    semester_for_students,
+    required_weeks,
+    generated_dir,
+    template_path = "template/student_template.qmd") {
+  # Only the active semester is discovered from the observations. Older
+  # student_YYYY.S_NNID.qmd files are rewritten in place so a restored
+  # generated/ cache cannot keep rendering a stale template.
+  current_pages <- d |>
+    dplyr::filter(semester == semester_for_students) |>
+    dplyr::distinct(observedby_person_id) |>
+    dplyr::transmute(
+      semester = semester_for_students,
+      nnid = as.character(observedby_person_id)
+    )
+
+  historical_pages <- cp_existing_student_pages(generated_dir) |>
+    dplyr::filter(semester != semester_for_students)
+
+  pages <- dplyr::bind_rows(current_pages, historical_pages) |>
+    dplyr::distinct(semester, nnid)
+
+  written <- if (nrow(pages) == 0) {
+    character()
+  } else {
+    purrr::pmap_chr(pages, function(semester, nnid) {
+      out_path <- file.path(generated_dir, glue::glue("student_{semester}_{nnid}.qmd"))
+
+      cp_generate_from_template_yaml_replace(
+        template_path = template_path,
+        replacements = list(
+          "^  semester: null$" = paste0("  semester: ", semester),
+          "^  semester_start: null$" = paste0(
+            "  semester_start: \"",
+            as.character(cp_estimated_semester_start(semester)),
+            "\""
+          ),
+          "^  nnid: null$" = paste0("  nnid: ", nnid),
+          "^  required_weeks: 10$" = paste0("  required_weeks: ", required_weeks)
+        ),
+        out_path = out_path
+      )
+    })
+  }
+
+  cp_prune_unwritten(generated_dir, "^student_.*\\.qmd$", written)
+  written
+}
+
+cp_generate_tree_qmds <- function(
+    d,
+    trees,
+    generated_dir,
+    template_path = "template/tree_template.qmd") {
   tree_list <- d |>
     dplyr::filter(!is.na(individual_id)) |>
     dplyr::group_by(individual_id) |>
@@ -694,25 +763,28 @@ cp_generate_tree_qmds <- function(d, trees, generated_dir) {
     dplyr::left_join(trees |> dplyr::select(individual_id, tag, lat, lon), by = "individual_id") |>
     dplyr::filter(!is.na(tag))
 
-  if (nrow(tree_list) == 0) {
-    return(character())
+  written <- if (nrow(tree_list) == 0) {
+    character()
+  } else {
+    purrr::map_chr(seq_len(nrow(tree_list)), function(i) {
+      tree_info <- tree_list[i, ]
+      tree_id <- tree_info$individual_id
+
+      out_path <- file.path(generated_dir, glue::glue("tree_{tree_id}.qmd"))
+
+      cp_generate_from_template_yaml_replace(
+        template_path = template_path,
+        replacements = list(
+          "^  tree_id: null$" = paste0("  tree_id: ", tree_id),
+          "^  common_name: null$" = paste0("  common_name: '", tree_info$common_name, "'"),
+          "^  plant_nickname: null$" = paste0("  plant_nickname: '", tree_info$plant_nickname, "'"),
+          "^  tag: null$" = paste0("  tag: '", tree_info$tag, "'")
+        ),
+        out_path = out_path
+      )
+    })
   }
 
-  purrr::map_chr(seq_len(nrow(tree_list)), function(i) {
-    tree_info <- tree_list[i, ]
-    tree_id <- tree_info$individual_id
-
-    out_path <- file.path(generated_dir, glue::glue("tree_{tree_id}.qmd"))
-
-    cp_generate_from_template_yaml_replace(
-      template_path = "template/tree_template.qmd",
-      replacements = list(
-        "^  tree_id: null$" = paste0("  tree_id: ", tree_id),
-        "^  common_name: null$" = paste0("  common_name: '", tree_info$common_name, "'"),
-        "^  plant_nickname: null$" = paste0("  plant_nickname: '", tree_info$plant_nickname, "'"),
-        "^  tag: null$" = paste0("  tag: '", tree_info$tag, "'")
-      ),
-      out_path = out_path
-    )
-  })
+  cp_prune_unwritten(generated_dir, "^tree_.*\\.qmd$", written)
+  written
 }
