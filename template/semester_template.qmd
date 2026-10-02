@@ -126,9 +126,9 @@ Fall starts on the first Monday on or after August 23. Spring starts on the Mond
 
 A student's grade uses only **Leaves** observations inside that window:
 
-- One visit fills one week. The grade is 100 times the number of filled weeks, divided by `r params$required_weeks`. Ten filled weeks is 100%.
-- Two visits fewer than 6 days apart count as one visit. A Monday and the next Tuesday are one week. A Sunday and the following Monday are one week.
-- If a week already has a visit, a second visit on the day next to an empty week fills that empty week. A Monday and the following Sunday therefore count as two weeks.
+- One visit fills one week. The grade is the number of filled weeks, divided by `r params$required_weeks`. Ten filled weeks is 100%.
+- Two visits fewer than 6 days apart count as one visit. If a student observes on a Monday and the next day (Tuesday), this only counts as one week. A Sunday and the next day (Monday) are one week.
+- If a week already has a visit, the next visit must be at least six days after the previous visit. A Monday and the following Sunday therefore count as two weeks.
 - Visits after week `r params$required_weeks` do not add points. Extra records on a day that is already counted do not add another week.
 
 The weekly heatmap shows every observation in those 10 calendar weeks. The grade can differ from that chart when a Sunday visit is moved into the next empty week, or when visits a few days apart are counted once.
