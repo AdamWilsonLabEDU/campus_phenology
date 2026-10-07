@@ -4,7 +4,7 @@
     "href": "semesters.html",
     "title": "Semester Data",
     "section": "",
-    "text": "This page lists all semesters with available observation data.\n\n\n\nSemester\nStatus\nObservers\nObservations\nPage\nData\nObserverData\n\n\n\n\nFall 2026\nIn progress\n78\n6500\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2026\nComplete\n95\n7943\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2025\nComplete\n105\n27683\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2025\nComplete\n116\n35688\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2024\nComplete\n148\n39713\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2024\nComplete\n159\n46727\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2023\nComplete\n162\n36549\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2023\nComplete\n165\n50443\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2022\nComplete\n175\n55879\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2022\nComplete\n171\n51689\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2021\nComplete\n169\n49446\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2021\nComplete\n73\n19362\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2020\nComplete\n82\n24272\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2020\nComplete\n165\n19776\nView\nObservations CSV\nObserver summary CSV"
+    "text": "This page lists all semesters with available observation data.\n\n\n\nSemester\nStatus\nObservers\nObservations\nPage\nData\nObserverData\n\n\n\n\nFall 2026\nIn progress\n78\n6626\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2026\nComplete\n95\n7943\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2025\nComplete\n105\n27683\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2025\nComplete\n116\n35688\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2024\nComplete\n148\n39713\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2024\nComplete\n159\n46727\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2023\nComplete\n162\n36549\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2023\nComplete\n165\n50443\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2022\nComplete\n175\n55879\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2022\nComplete\n171\n51689\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2021\nComplete\n169\n49446\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2021\nComplete\n73\n19362\nView\nObservations CSV\nObserver summary CSV\n\n\nFall 2020\nComplete\n82\n24272\nView\nObservations CSV\nObserver summary CSV\n\n\nSpring 2020\nComplete\n165\n19776\nView\nObservations CSV\nObserver summary CSV"
   },
   {
     "objectID": "generated/tree_205575.html",
@@ -543,7 +543,7 @@
     "href": "generated/tree_205537.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205537\nCommon Name: black locust\nPlant Nickname: 149 black locust\nTag: 149\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1030 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n508\n2020-02-17\n2026-10-01\n\n\nColored leaves\n490\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n490\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n490\n2020-02-17\n2026-10-01\n\n\nBreaking leaf buds\n472\n2020-02-17\n2026-09-25\n\n\nOpen flowers\n469\n2020-02-17\n2026-09-25\n\n\nFlowers or flower buds\n468\n2020-02-17\n2026-09-25\n\n\nRipe fruits\n453\n2020-02-17\n2026-09-25\n\n\nFruits\n452\n2020-02-17\n2026-09-25\n\n\nIncreasing leaf size\n452\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n19\n2026-02-17\n2026-09-25"
+    "text": "Tree ID: 205537\nCommon Name: black locust\nPlant Nickname: 149 black locust\nTag: 149\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1030 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n508\n2020-02-17\n2026-10-01\n\n\nColored leaves\n490\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n490\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n490\n2020-02-17\n2026-10-01\n\n\nBreaking leaf buds\n472\n2020-02-17\n2026-09-25\n\n\nOpen flowers\n469\n2020-02-17\n2026-09-25\n\n\nFlowers or flower buds\n468\n2020-02-17\n2026-09-25\n\n\nRipe fruits\n453\n2020-02-17\n2026-09-25\n\n\nFruits\n452\n2020-02-17\n2026-09-25\n\n\nIncreasing leaf size\n452\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n19\n2026-02-17\n2026-09-25"
   },
   {
     "objectID": "generated/tree_205537.html#location-map",
@@ -557,7 +557,7 @@
     "href": "generated/tree_205537.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1030 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1030 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205537.html#observation-summary",
@@ -571,7 +571,7 @@
     "href": "generated/tree_205535.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205535\nCommon Name: black locust\nPlant Nickname: 128 black locust\nTag: 128\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1089 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n569\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n564\n2020-02-17\n2026-09-29\n\n\nColored leaves\n563\n2020-02-17\n2026-09-29\n\n\nRecent fruit or seed drop\n545\n2020-02-17\n2026-09-29\n\n\nFruits\n518\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n512\n2020-02-17\n2026-09-29\n\n\nFlowers or flower buds\n511\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n510\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n508\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n495\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n23\n2026-02-19\n2026-09-29"
+    "text": "Tree ID: 205535\nCommon Name: black locust\nPlant Nickname: 128 black locust\nTag: 128\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1089 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n570\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n565\n2020-02-17\n2026-10-05\n\n\nColored leaves\n564\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n546\n2020-02-17\n2026-10-05\n\n\nFruits\n519\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n513\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n512\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n511\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n509\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n495\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n24\n2026-02-19\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205535.html#location-map",
@@ -585,21 +585,21 @@
     "href": "generated/tree_205535.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1089 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1089 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205535.html#observation-summary",
     "href": "generated/tree_205535.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n569\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n564\n2020-02-17\n2026-09-29\n\n\nColored leaves\n563\n2020-02-17\n2026-09-29\n\n\nRecent fruit or seed drop\n545\n2020-02-17\n2026-09-29\n\n\nFruits\n518\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n512\n2020-02-17\n2026-09-29\n\n\nFlowers or flower buds\n511\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n510\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n508\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n495\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n23\n2026-02-19\n2026-09-29"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n570\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n565\n2020-02-17\n2026-10-05\n\n\nColored leaves\n564\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n546\n2020-02-17\n2026-10-05\n\n\nFruits\n519\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n513\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n512\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n511\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n509\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n495\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n24\n2026-02-19\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205533.html",
     "href": "generated/tree_205533.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205533\nCommon Name: black locust\nPlant Nickname: 126 black locust\nTag: 126\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 944 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n495\n2020-02-17\n2026-10-01\n\n\nColored leaves\n467\n2020-02-17\n2026-10-01\n\n\nBreaking leaf buds\n461\n2020-02-17\n2026-09-20\n\n\nRecent fruit or seed drop\n460\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n456\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n456\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n455\n2020-02-17\n2026-09-29\n\n\nFruits\n454\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n452\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n444\n2020-02-17\n2025-12-08\n\n\nEarly season leaf expansion\n12\n2026-02-16\n2026-09-20"
+    "text": "Tree ID: 205533\nCommon Name: black locust\nPlant Nickname: 126 black locust\nTag: 126\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 944 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n495\n2020-02-17\n2026-10-01\n\n\nColored leaves\n467\n2020-02-17\n2026-10-01\n\n\nBreaking leaf buds\n461\n2020-02-17\n2026-09-20\n\n\nRecent fruit or seed drop\n460\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n456\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n456\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n455\n2020-02-17\n2026-09-29\n\n\nFruits\n454\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n452\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n444\n2020-02-17\n2025-12-08\n\n\nEarly season leaf expansion\n12\n2026-02-16\n2026-09-20"
   },
   {
     "objectID": "generated/tree_205533.html#location-map",
@@ -613,7 +613,7 @@
     "href": "generated/tree_205533.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 944 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 944 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205533.html#observation-summary",
@@ -627,7 +627,7 @@
     "href": "generated/tree_205531.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205531\nCommon Name: black locust\nPlant Nickname: 124 black locust\nTag: 124\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1037 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n496\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n488\n2020-02-17\n2026-10-01\n\n\nColored leaves\n478\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n476\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n443\n2020-02-17\n2026-09-28\n\n\nOpen flowers\n443\n2020-02-17\n2026-09-28\n\n\nBreaking leaf buds\n435\n2020-02-17\n2026-09-28\n\n\nFruits\n422\n2020-02-17\n2026-09-28\n\n\nRipe fruits\n422\n2020-02-17\n2026-09-28\n\n\nIncreasing leaf size\n415\n2020-02-17\n2025-10-19\n\n\nEarly season leaf expansion\n17\n2026-02-16\n2026-09-28"
+    "text": "Tree ID: 205531\nCommon Name: black locust\nPlant Nickname: 124 black locust\nTag: 124\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1037 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n496\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n488\n2020-02-17\n2026-10-01\n\n\nColored leaves\n478\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n476\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n443\n2020-02-17\n2026-09-28\n\n\nOpen flowers\n443\n2020-02-17\n2026-09-28\n\n\nBreaking leaf buds\n435\n2020-02-17\n2026-09-28\n\n\nFruits\n422\n2020-02-17\n2026-09-28\n\n\nRipe fruits\n422\n2020-02-17\n2026-09-28\n\n\nIncreasing leaf size\n415\n2020-02-17\n2025-10-19\n\n\nEarly season leaf expansion\n17\n2026-02-16\n2026-09-28"
   },
   {
     "objectID": "generated/tree_205531.html#location-map",
@@ -641,7 +641,7 @@
     "href": "generated/tree_205531.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1037 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1037 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205531.html#observation-summary",
@@ -655,7 +655,7 @@
     "href": "generated/tree_205529.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205529\nCommon Name: black locust\nPlant Nickname: 122 black locust\nTag: 122\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 987 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n496\n2020-02-17\n2026-10-03\n\n\nFalling leaves\n481\n2020-02-17\n2026-10-03\n\n\nColored leaves\n478\n2020-02-17\n2026-10-03\n\n\nFlowers or flower buds\n468\n2020-02-17\n2026-10-03\n\n\nBreaking leaf buds\n466\n2020-02-17\n2026-10-03\n\n\nOpen flowers\n458\n2020-02-17\n2026-10-03\n\n\nRecent fruit or seed drop\n458\n2020-02-17\n2026-10-03\n\n\nFruits\n450\n2020-02-17\n2026-10-03\n\n\nRipe fruits\n446\n2020-02-17\n2026-10-03\n\n\nIncreasing leaf size\n438\n2020-02-17\n2025-11-20\n\n\nEarly season leaf expansion\n22\n2026-02-16\n2026-10-03"
+    "text": "Tree ID: 205529\nCommon Name: black locust\nPlant Nickname: 122 black locust\nTag: 122\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 987 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n496\n2020-02-17\n2026-10-03\n\n\nFalling leaves\n481\n2020-02-17\n2026-10-03\n\n\nColored leaves\n478\n2020-02-17\n2026-10-03\n\n\nFlowers or flower buds\n468\n2020-02-17\n2026-10-03\n\n\nBreaking leaf buds\n466\n2020-02-17\n2026-10-03\n\n\nOpen flowers\n458\n2020-02-17\n2026-10-03\n\n\nRecent fruit or seed drop\n458\n2020-02-17\n2026-10-03\n\n\nFruits\n450\n2020-02-17\n2026-10-03\n\n\nRipe fruits\n446\n2020-02-17\n2026-10-03\n\n\nIncreasing leaf size\n438\n2020-02-17\n2025-11-20\n\n\nEarly season leaf expansion\n22\n2026-02-16\n2026-10-03"
   },
   {
     "objectID": "generated/tree_205529.html#location-map",
@@ -669,7 +669,7 @@
     "href": "generated/tree_205529.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 987 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 987 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205529.html#observation-summary",
@@ -935,7 +935,7 @@
     "href": "generated/tree_205371.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205371\nCommon Name: staghorn sumac\nPlant Nickname: 140 staghorn sumac\nTag: 140\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 6898 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 837 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n460\n2020-02-17\n2026-10-04\n\n\nColored leaves\n450\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n449\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n428\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n418\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n412\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n411\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n408\n2020-02-17\n2025-12-02\n\n\nFruits\n406\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n406\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "Tree ID: 205371\nCommon Name: staghorn sumac\nPlant Nickname: 140 staghorn sumac\nTag: 140\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 6898 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 837 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n462\n2020-02-17\n2026-10-04\n\n\nColored leaves\n452\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n451\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n430\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n420\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n414\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n413\n2020-02-17\n2026-10-04\n\n\nFruits\n408\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n408\n2020-02-17\n2025-12-02\n\n\nRipe fruits\n408\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205371.html#location-map",
@@ -956,7 +956,7 @@
     "href": "generated/tree_205371.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n460\n2020-02-17\n2026-10-04\n\n\nColored leaves\n450\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n449\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n428\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n418\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n412\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n411\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n408\n2020-02-17\n2025-12-02\n\n\nFruits\n406\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n406\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n462\n2020-02-17\n2026-10-04\n\n\nColored leaves\n452\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n451\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n430\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n420\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n414\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n413\n2020-02-17\n2026-10-04\n\n\nFruits\n408\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n408\n2020-02-17\n2025-12-02\n\n\nRipe fruits\n408\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205369.html",
@@ -991,7 +991,7 @@
     "href": "generated/tree_205367.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205367\nCommon Name: sugar maple\nPlant Nickname: 136 sugar maple\nTag: 136\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 758 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n439\n2020-02-17\n2026-10-04\n\n\nColored leaves\n427\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n426\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n401\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n398\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n389\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n388\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n386\n2020-02-17\n2025-12-02\n\n\nFruits\n382\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n381\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n377\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "Tree ID: 205367\nCommon Name: sugar maple\nPlant Nickname: 136 sugar maple\nTag: 136\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 758 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n441\n2020-02-17\n2026-10-04\n\n\nColored leaves\n429\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n428\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n403\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n400\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n391\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n390\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n386\n2020-02-17\n2025-12-02\n\n\nFruits\n384\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n383\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n379\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205367.html#location-map",
@@ -1012,7 +1012,7 @@
     "href": "generated/tree_205367.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n439\n2020-02-17\n2026-10-04\n\n\nColored leaves\n427\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n426\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n401\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n398\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n389\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n388\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n386\n2020-02-17\n2025-12-02\n\n\nFruits\n382\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n381\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n377\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n441\n2020-02-17\n2026-10-04\n\n\nColored leaves\n429\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n428\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n403\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n400\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n391\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n390\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n386\n2020-02-17\n2025-12-02\n\n\nFruits\n384\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n383\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n379\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205365.html",
@@ -1047,7 +1047,7 @@
     "href": "generated/tree_205362.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205362\nCommon Name: sugar maple\nPlant Nickname: 132 sugar maple\nTag: 132\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1806 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n1040\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n1009\n2020-02-17\n2026-10-01\n\n\nColored leaves\n1008\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n996\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n951\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n951\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n945\n2020-02-17\n2026-09-29\n\n\nFruits\n934\n2020-02-17\n2026-09-29\n\n\nPollen release (flowers)\n929\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n927\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n925\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n33\n2026-02-17\n2026-09-29"
+    "text": "Tree ID: 205362\nCommon Name: sugar maple\nPlant Nickname: 132 sugar maple\nTag: 132\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1806 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n1041\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n1010\n2020-02-17\n2026-10-05\n\n\nColored leaves\n1009\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n997\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n952\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n952\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n946\n2020-02-17\n2026-10-05\n\n\nFruits\n935\n2020-02-17\n2026-10-05\n\n\nPollen release (flowers)\n930\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n928\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n925\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n34\n2026-02-17\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205362.html#location-map",
@@ -1068,7 +1068,7 @@
     "href": "generated/tree_205362.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n1040\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n1009\n2020-02-17\n2026-10-01\n\n\nColored leaves\n1008\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n996\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n951\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n951\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n945\n2020-02-17\n2026-09-29\n\n\nFruits\n934\n2020-02-17\n2026-09-29\n\n\nPollen release (flowers)\n929\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n927\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n925\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n33\n2026-02-17\n2026-09-29"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n1041\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n1010\n2020-02-17\n2026-10-05\n\n\nColored leaves\n1009\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n997\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n952\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n952\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n946\n2020-02-17\n2026-10-05\n\n\nFruits\n935\n2020-02-17\n2026-10-05\n\n\nPollen release (flowers)\n930\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n928\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n925\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n34\n2026-02-17\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205360.html",
@@ -1488,14 +1488,14 @@
     "href": "generated/student_2026.2_86409.html",
     "title": "Student Observations",
     "section": "",
-    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 84\nWeeks credited: 2 of 10\nObservation grade: 20%\nMedian submission delay (days): 0.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 126\nWeeks credited: 3 of 10\nObservation grade: 30%\nMedian submission delay (days): 0.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
   },
   {
     "objectID": "generated/student_2026.2_86409.html#nnid-86409",
     "href": "generated/student_2026.2_86409.html#nnid-86409",
     "title": "Student Observations",
     "section": "",
-    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 84\nWeeks credited: 2 of 10\nObservation grade: 20%\nMedian submission delay (days): 0.0"
+    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 126\nWeeks credited: 3 of 10\nObservation grade: 30%\nMedian submission delay (days): 0.0"
   },
   {
     "objectID": "generated/student_2026.2_86409.html#observations-by-plant",
@@ -4309,14 +4309,14 @@
     "href": "generated/semester_2026.2.html",
     "title": "Semester Overview",
     "section": "",
-    "text": "Estimated semester start date: 2026-08-24\nThere are 6500 total observations this semester.\nNumber of observers: 78\nTotal observations: 6500\nDownload all observations from this semester (CSV)\nDownload observer summary CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
+    "text": "Estimated semester start date: 2026-08-24\nThere are 6626 total observations this semester.\nNumber of observers: 78\nTotal observations: 6626\nDownload all observations from this semester (CSV)\nDownload observer summary CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
     "objectID": "generated/semester_2026.2.html#semester-2026.2",
     "href": "generated/semester_2026.2.html#semester-2026.2",
     "title": "Semester Overview",
     "section": "",
-    "text": "Estimated semester start date: 2026-08-24\nThere are 6500 total observations this semester.\nNumber of observers: 78\nTotal observations: 6500\nDownload all observations from this semester (CSV)\nDownload observer summary CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
+    "text": "Estimated semester start date: 2026-08-24\nThere are 6626 total observations this semester.\nNumber of observers: 78\nTotal observations: 6626\nDownload all observations from this semester (CSV)\nDownload observer summary CSV\nThe NNID in the table and figures below is an anonymized individual observer ID."
   },
   {
     "objectID": "generated/semester_2026.2.html#observer-overview",
@@ -4603,7 +4603,7 @@
     "href": "index.html",
     "title": "Phenology Observations at the University at Buffalo",
     "section": "",
-    "text": "Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.\nThroughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.\nThese data were last updated on 2026-10-06 00:06:25.860426."
+    "text": "Phenology is the study of the timing of ecological events such as leaf-out in spring, flowering in summer, and senescence in fall. These events are sensitive indicators of climate variability and change.\nThroughout the semester, students in the Earth, Environment, and Climate Lab (GEO105) at the University at Buffalo monitor trees on North Campus and upload observations to Nature’s Notebook and the USA National Phenology Network. This site summarizes those observations.\nThese data were last updated on 2026-10-07 00:07:04.237928."
   },
   {
     "objectID": "index.html#observations-by-species",
@@ -7375,14 +7375,14 @@
     "href": "generated/student_2026.2_86319.html",
     "title": "Student Observations",
     "section": "",
-    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 84\nWeeks credited: 2 of 10\nObservation grade: 20%\nMedian submission delay (days): 1.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
+    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 168\nWeeks credited: 4 of 10\nObservation grade: 40%\nMedian submission delay (days): 3.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe number of observations per individual plant monitored by this student."
   },
   {
     "objectID": "generated/student_2026.2_86319.html#nnid-86319",
     "href": "generated/student_2026.2_86319.html#nnid-86319",
     "title": "Student Observations",
     "section": "",
-    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 84\nWeeks credited: 2 of 10\nObservation grade: 20%\nMedian submission delay (days): 1.0"
+    "text": "Semester: 2026.2\nEstimated semester start date: 2026-08-24\nTotal observations: 168\nWeeks credited: 4 of 10\nObservation grade: 40%\nMedian submission delay (days): 3.0"
   },
   {
     "objectID": "generated/student_2026.2_86319.html#observations-by-plant",
@@ -8145,7 +8145,7 @@
     "href": "generated/tree_205361.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205361\nCommon Name: sugar maple\nPlant Nickname: 131 sugar maple\nTag: 131\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 987 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n580\n2020-02-17\n2026-09-29\n\n\nColored leaves\n563\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n560\n2020-02-17\n2026-09-29\n\n\nRecent fruit or seed drop\n549\n2020-02-17\n2026-09-29\n\n\nFlowers or flower buds\n519\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n519\n2020-02-17\n2026-09-29\n\n\nFruits\n518\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n513\n2020-02-17\n2026-09-29\n\n\nPollen release (flowers)\n509\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n509\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n506\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n19\n2026-02-19\n2026-09-29"
+    "text": "Tree ID: 205361\nCommon Name: sugar maple\nPlant Nickname: 131 sugar maple\nTag: 131\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 987 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n581\n2020-02-17\n2026-10-05\n\n\nColored leaves\n564\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n561\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n550\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n520\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n520\n2020-02-17\n2026-10-05\n\n\nFruits\n519\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n514\n2020-02-17\n2026-10-05\n\n\nPollen release (flowers)\n510\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n510\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n506\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n20\n2026-02-19\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205361.html#location-map",
@@ -8166,7 +8166,7 @@
     "href": "generated/tree_205361.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n580\n2020-02-17\n2026-09-29\n\n\nColored leaves\n563\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n560\n2020-02-17\n2026-09-29\n\n\nRecent fruit or seed drop\n549\n2020-02-17\n2026-09-29\n\n\nFlowers or flower buds\n519\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n519\n2020-02-17\n2026-09-29\n\n\nFruits\n518\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n513\n2020-02-17\n2026-09-29\n\n\nPollen release (flowers)\n509\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n509\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n506\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n19\n2026-02-19\n2026-09-29"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n581\n2020-02-17\n2026-10-05\n\n\nColored leaves\n564\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n561\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n550\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n520\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n520\n2020-02-17\n2026-10-05\n\n\nFruits\n519\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n514\n2020-02-17\n2026-10-05\n\n\nPollen release (flowers)\n510\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n510\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n506\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n20\n2026-02-19\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205364.html",
@@ -8201,7 +8201,7 @@
     "href": "generated/tree_205366.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205366\nCommon Name: sugar maple\nPlant Nickname: 135 sugar maple\nTag: 135\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 742 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n458\n2020-02-17\n2026-10-04\n\n\nColored leaves\n444\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n437\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n416\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n414\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n403\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n403\n2020-02-17\n2025-12-02\n\n\nOpen flowers\n403\n2020-02-17\n2026-10-04\n\n\nFruits\n392\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n392\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n389\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "Tree ID: 205366\nCommon Name: sugar maple\nPlant Nickname: 135 sugar maple\nTag: 135\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9044 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 742 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n460\n2020-02-17\n2026-10-04\n\n\nColored leaves\n446\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n439\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n418\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n416\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n405\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n405\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n403\n2020-02-17\n2025-12-02\n\n\nFruits\n394\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n394\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n391\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205366.html#location-map",
@@ -8222,7 +8222,7 @@
     "href": "generated/tree_205366.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n458\n2020-02-17\n2026-10-04\n\n\nColored leaves\n444\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n437\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n416\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n414\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n403\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n403\n2020-02-17\n2025-12-02\n\n\nOpen flowers\n403\n2020-02-17\n2026-10-04\n\n\nFruits\n392\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n392\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n389\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n460\n2020-02-17\n2026-10-04\n\n\nColored leaves\n446\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n439\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n418\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n416\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n405\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n405\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n403\n2020-02-17\n2025-12-02\n\n\nFruits\n394\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n394\n2020-02-17\n2026-10-04\n\n\nPollen release (flowers)\n391\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205368.html",
@@ -8257,7 +8257,7 @@
     "href": "generated/tree_205370.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205370\nCommon Name: staghorn sumac\nPlant Nickname: 139 staghorn sumac\nTag: 139\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 6898 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 806 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n448\n2020-02-17\n2026-10-04\n\n\nColored leaves\n439\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n437\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n417\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n401\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n398\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n398\n2020-02-17\n2026-10-04\n\n\nFruits\n396\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n395\n2020-02-17\n2025-12-02\n\n\nRipe fruits\n394\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "Tree ID: 205370\nCommon Name: staghorn sumac\nPlant Nickname: 139 staghorn sumac\nTag: 139\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 6898 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 806 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n450\n2020-02-17\n2026-10-04\n\n\nColored leaves\n441\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n439\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n419\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n403\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n400\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n400\n2020-02-17\n2026-10-04\n\n\nFruits\n398\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n396\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n395\n2020-02-17\n2025-12-02\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205370.html#location-map",
@@ -8278,7 +8278,7 @@
     "href": "generated/tree_205370.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n448\n2020-02-17\n2026-10-04\n\n\nColored leaves\n439\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n437\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n417\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n401\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n398\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n398\n2020-02-17\n2026-10-04\n\n\nFruits\n396\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n395\n2020-02-17\n2025-12-02\n\n\nRipe fruits\n394\n2020-02-17\n2026-10-04\n\n\nEarly season leaf expansion\n12\n2026-02-21\n2026-10-04"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n450\n2020-02-17\n2026-10-04\n\n\nColored leaves\n441\n2020-02-17\n2026-10-04\n\n\nFalling leaves\n439\n2020-02-17\n2026-10-04\n\n\nRecent fruit or seed drop\n419\n2020-02-17\n2026-10-04\n\n\nBreaking leaf buds\n403\n2020-02-17\n2026-10-04\n\n\nFlowers or flower buds\n400\n2020-02-17\n2026-10-04\n\n\nOpen flowers\n400\n2020-02-17\n2026-10-04\n\n\nFruits\n398\n2020-02-17\n2026-10-04\n\n\nRipe fruits\n396\n2020-02-17\n2026-10-04\n\n\nIncreasing leaf size\n395\n2020-02-17\n2025-12-02\n\n\nEarly season leaf expansion\n14\n2026-02-21\n2026-10-04"
   },
   {
     "objectID": "generated/tree_205372.html",
@@ -8565,7 +8565,7 @@
     "href": "generated/tree_205530.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205530\nCommon Name: black locust\nPlant Nickname: 123 black locust\nTag: 123\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1016 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n505\n2020-02-17\n2026-10-03\n\n\nFalling leaves\n488\n2020-02-17\n2026-10-03\n\n\nColored leaves\n486\n2020-02-17\n2026-10-03\n\n\nBreaking leaf buds\n476\n2020-02-17\n2026-10-03\n\n\nFlowers or flower buds\n476\n2020-02-17\n2026-10-03\n\n\nOpen flowers\n468\n2020-02-17\n2026-10-03\n\n\nRecent fruit or seed drop\n465\n2020-02-17\n2026-10-03\n\n\nFruits\n461\n2020-02-17\n2026-10-03\n\n\nRipe fruits\n456\n2020-02-17\n2026-10-03\n\n\nIncreasing leaf size\n453\n2020-02-17\n2025-11-19\n\n\nEarly season leaf expansion\n21\n2026-02-16\n2026-10-03"
+    "text": "Tree ID: 205530\nCommon Name: black locust\nPlant Nickname: 123 black locust\nTag: 123\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1016 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n505\n2020-02-17\n2026-10-03\n\n\nFalling leaves\n488\n2020-02-17\n2026-10-03\n\n\nColored leaves\n486\n2020-02-17\n2026-10-03\n\n\nBreaking leaf buds\n476\n2020-02-17\n2026-10-03\n\n\nFlowers or flower buds\n476\n2020-02-17\n2026-10-03\n\n\nOpen flowers\n468\n2020-02-17\n2026-10-03\n\n\nRecent fruit or seed drop\n465\n2020-02-17\n2026-10-03\n\n\nFruits\n461\n2020-02-17\n2026-10-03\n\n\nRipe fruits\n456\n2020-02-17\n2026-10-03\n\n\nIncreasing leaf size\n453\n2020-02-17\n2025-11-19\n\n\nEarly season leaf expansion\n21\n2026-02-16\n2026-10-03"
   },
   {
     "objectID": "generated/tree_205530.html#location-map",
@@ -8579,7 +8579,7 @@
     "href": "generated/tree_205530.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1016 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1016 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205530.html#observation-summary",
@@ -8593,7 +8593,7 @@
     "href": "generated/tree_205532.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205532\nCommon Name: black locust\nPlant Nickname: 125 black locust\nTag: 125\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 974 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n477\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n471\n2020-02-17\n2026-10-01\n\n\nColored leaves\n458\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n456\n2020-02-17\n2026-10-01\n\n\nOpen flowers\n419\n2020-02-17\n2026-09-27\n\n\nFlowers or flower buds\n418\n2020-02-17\n2026-09-27\n\n\nBreaking leaf buds\n406\n2020-02-17\n2026-09-27\n\n\nFruits\n399\n2020-02-17\n2026-09-27\n\n\nRipe fruits\n397\n2020-02-17\n2026-09-27\n\n\nIncreasing leaf size\n393\n2020-02-17\n2025-11-28\n\n\nEarly season leaf expansion\n16\n2026-02-16\n2026-09-27"
+    "text": "Tree ID: 205532\nCommon Name: black locust\nPlant Nickname: 125 black locust\nTag: 125\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 974 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n477\n2020-02-17\n2026-10-01\n\n\nFalling leaves\n471\n2020-02-17\n2026-10-01\n\n\nColored leaves\n458\n2020-02-17\n2026-10-01\n\n\nRecent fruit or seed drop\n456\n2020-02-17\n2026-10-01\n\n\nOpen flowers\n419\n2020-02-17\n2026-09-27\n\n\nFlowers or flower buds\n418\n2020-02-17\n2026-09-27\n\n\nBreaking leaf buds\n406\n2020-02-17\n2026-09-27\n\n\nFruits\n399\n2020-02-17\n2026-09-27\n\n\nRipe fruits\n397\n2020-02-17\n2026-09-27\n\n\nIncreasing leaf size\n393\n2020-02-17\n2025-11-28\n\n\nEarly season leaf expansion\n16\n2026-02-16\n2026-09-27"
   },
   {
     "objectID": "generated/tree_205532.html#location-map",
@@ -8607,7 +8607,7 @@
     "href": "generated/tree_205532.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 974 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 974 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205532.html#observation-summary",
@@ -8621,7 +8621,7 @@
     "href": "generated/tree_205534.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205534\nCommon Name: black locust\nPlant Nickname: 127 black locust\nTag: 127\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 973 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n486\n2020-02-17\n2026-10-01\n\n\nColored leaves\n459\n2020-02-17\n2026-10-01\n\n\nBreaking leaf buds\n458\n2020-02-17\n2026-09-20\n\n\nRecent fruit or seed drop\n457\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n454\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n454\n2020-02-17\n2026-09-29\n\n\nFruits\n452\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n450\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n449\n2020-02-17\n2026-10-01\n\n\nIncreasing leaf size\n444\n2020-02-17\n2025-12-08\n\n\nEarly season leaf expansion\n9\n2026-02-16\n2026-09-20"
+    "text": "Tree ID: 205534\nCommon Name: black locust\nPlant Nickname: 127 black locust\nTag: 127\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 973 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n486\n2020-02-17\n2026-10-01\n\n\nColored leaves\n459\n2020-02-17\n2026-10-01\n\n\nBreaking leaf buds\n458\n2020-02-17\n2026-09-20\n\n\nRecent fruit or seed drop\n457\n2020-02-17\n2026-10-01\n\n\nFlowers or flower buds\n454\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n454\n2020-02-17\n2026-09-29\n\n\nFruits\n452\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n450\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n449\n2020-02-17\n2026-10-01\n\n\nIncreasing leaf size\n444\n2020-02-17\n2025-12-08\n\n\nEarly season leaf expansion\n9\n2026-02-16\n2026-09-20"
   },
   {
     "objectID": "generated/tree_205534.html#location-map",
@@ -8635,7 +8635,7 @@
     "href": "generated/tree_205534.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 973 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 973 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205534.html#observation-summary",
@@ -8649,7 +8649,7 @@
     "href": "generated/tree_205536.html",
     "title": "Tree Observations",
     "section": "",
-    "text": "Tree ID: 205536\nCommon Name: black locust\nPlant Nickname: 129 black locust\nTag: 129\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1055 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n553\n2020-02-17\n2026-09-29\n\n\nColored leaves\n547\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n546\n2020-02-17\n2026-09-29\n\n\nRecent fruit or seed drop\n531\n2020-02-17\n2026-09-29\n\n\nFruits\n501\n2020-02-17\n2026-09-29\n\n\nFlowers or flower buds\n496\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n496\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n495\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n490\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n482\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n20\n2026-02-19\n2026-09-29"
+    "text": "Tree ID: 205536\nCommon Name: black locust\nPlant Nickname: 129 black locust\nTag: 129\n\n\n\nThis map shows the location of this tree (red marker) and other trees of the same species (blue markers).\n\n\n\n\n\n\n\n\n\n\nFocusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1056 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nphenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n554\n2020-02-17\n2026-10-05\n\n\nColored leaves\n548\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n547\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n532\n2020-02-17\n2026-10-05\n\n\nFruits\n502\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n497\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n497\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n496\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n491\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n482\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n21\n2026-02-19\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205536.html#location-map",
@@ -8663,14 +8663,14 @@
     "href": "generated/tree_205536.html#leaf-phenology-details",
     "title": "Tree Observations",
     "section": "",
-    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9105 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1055 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Focusing on leaf-related phenophases for this tree compared to the species.\n\n\nWarning: Removed 9106 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 1056 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "generated/tree_205536.html#observation-summary",
     "href": "generated/tree_205536.html#observation-summary",
     "title": "Tree Observations",
     "section": "",
-    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n553\n2020-02-17\n2026-09-29\n\n\nColored leaves\n547\n2020-02-17\n2026-09-29\n\n\nFalling leaves\n546\n2020-02-17\n2026-09-29\n\n\nRecent fruit or seed drop\n531\n2020-02-17\n2026-09-29\n\n\nFruits\n501\n2020-02-17\n2026-09-29\n\n\nFlowers or flower buds\n496\n2020-02-17\n2026-09-29\n\n\nOpen flowers\n496\n2020-02-17\n2026-09-29\n\n\nRipe fruits\n495\n2020-02-17\n2026-09-29\n\n\nBreaking leaf buds\n490\n2020-02-17\n2026-09-29\n\n\nIncreasing leaf size\n482\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n20\n2026-02-19\n2026-09-29"
+    "text": "phenophase_description\nn_observations\nfirst_date\nlast_date\n\n\n\n\nLeaves\n554\n2020-02-17\n2026-10-05\n\n\nColored leaves\n548\n2020-02-17\n2026-10-05\n\n\nFalling leaves\n547\n2020-02-17\n2026-10-05\n\n\nRecent fruit or seed drop\n532\n2020-02-17\n2026-10-05\n\n\nFruits\n502\n2020-02-17\n2026-10-05\n\n\nFlowers or flower buds\n497\n2020-02-17\n2026-10-05\n\n\nOpen flowers\n497\n2020-02-17\n2026-10-05\n\n\nRipe fruits\n496\n2020-02-17\n2026-10-05\n\n\nBreaking leaf buds\n491\n2020-02-17\n2026-10-05\n\n\nIncreasing leaf size\n482\n2020-02-17\n2025-12-05\n\n\nEarly season leaf expansion\n21\n2026-02-19\n2026-10-05"
   },
   {
     "objectID": "generated/tree_205538.html",
