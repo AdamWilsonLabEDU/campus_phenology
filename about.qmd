@@ -4,6 +4,4 @@ title: "About"
 
 About this site
 
-```{r}
-1 + 1
-```
+Campus phenology pages summarize USA–NPN / Nature’s Notebook observations from the University at Buffalo GEO105 lab. The home-page canopy contrast chart uses NASA Harmonized Landsat Sentinel-2 (HLS) Vegetation Indices **EVI** (HLSL30_VI and HLSS30_VI, 30 m), extracted at tree locations with [AppEEARS](https://appeears.earthdatacloud.nasa.gov/) when Earthdata credentials are configured, otherwise from the cached GitHub Release tag `hls-evi`.

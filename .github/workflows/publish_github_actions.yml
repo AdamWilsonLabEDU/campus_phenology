@@ -26,6 +26,7 @@ jobs:
             _targets
             data/cache
             data/processed
+            data/hls_evi
             generated
           key: ${{ runner.os }}-targets-${{ hashFiles('_targets.R', 'R/**', 'scripts/**', 'template/**', 'renv.lock') }}
           restore-keys: |
@@ -63,6 +64,10 @@ jobs:
         run: Rscript -e "targets::tar_make()"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional AppEEARS / Earthdata lab credentials (soft-fail if unset)
+          EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
+          EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+          APPEEARS_TOKEN: ${{ secrets.APPEEARS_TOKEN }}
 
       - name: Publish
         uses: quarto-dev/quarto-actions/publish@v2

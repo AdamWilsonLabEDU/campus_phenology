@@ -54,6 +54,9 @@ _targets/
 data/
 generated/
 !data/trees.csv
+# Committed seed for offline HLS EVI contrast (runtime cache stays under data/hls_evi/)
+!fixtures/
+!fixtures/**
 
 # Quarto/HTML outputs (should not be committed)
 /*.html
