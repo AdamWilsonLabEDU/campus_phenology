@@ -22,7 +22,8 @@ Key files/directories:
 - Per-semester CSV exports (written locally to `data/cache/csv/` and expected as Release assets):
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
-- Optional NDVI task: [R/get_modis.R](R/get_modis.R) writes to [data/modis_semesters](data/modis_semesters)
+- Optional NDVI task: [R/get_modis.R](R/get_modis.R) writes to [data/modis_semesters](data/modis_semesters) (not used on the site)
+- HLS EVI contrast: [R/get_hls_evi.R](R/get_hls_evi.R) samples HLSL30_VI + HLSS30_VI EVI at all trees via AppEEARS, caches Parquet on Release tag `hls-evi` (and locally under `data/hls_evi/`), and powers the dual-axis section on [index.qmd](index.qmd). Soft-fails without Earthdata secrets to Release cache or [fixtures/hls_evi](fixtures/hls_evi).
 
 ## Run locally
 Prerequisites: Quarto CLI (https://quarto.org/docs/get-started/), R (pinned via `renv.lock`, R 4.5.2). Optionally set `GITHUB_TOKEN` if you want to upload release assets when running the pipeline locally.
@@ -96,6 +97,10 @@ quarto render                         # builds the site to _site/
 
 ## Continuous deployment
 GitHub Actions workflow [publish_github_actions.yml](.github/workflows/publish_github_actions.yml) sets up Quarto, R + `renv`, installs needed Linux libs (e.g., for `sf`/`arrow`), runs the pre-render pipeline, and publishes to `gh-pages`. It uses the repository `GITHUB_TOKEN` secret automatically.
+
+Optional Earthdata secrets for automated HLS EVI refresh (pipeline soft-fails without them):
+- `EARTHDATA_USERNAME` + `EARTHDATA_PASSWORD` (AppEEARS login), or
+- `APPEEARS_TOKEN` (pre-minted AppEEARS bearer token)
 
 ## Notes and conventions
 - Semester identifiers follow `YYYY.1` (Spring) and `YYYY.2` (Fall).

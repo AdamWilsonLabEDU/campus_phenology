@@ -25,6 +25,34 @@ library(targets)
 
 tar_load(trees)
 tar_load(d)
+
+# HLS EVI campus-mean series (Release `hls-evi` / AppEEARS / seed fixture)
+hls_evi <- tryCatch(
+  tar_read(hls_evi_campus_mean),
+  error = function(e) {
+    if (file.exists("data/hls_evi/hls_evi_campus_mean.parquet")) {
+      arrow::read_parquet("data/hls_evi/hls_evi_campus_mean.parquet")
+    } else if (file.exists("fixtures/hls_evi/hls_evi_campus_mean.parquet")) {
+      arrow::read_parquet("fixtures/hls_evi/hls_evi_campus_mean.parquet")
+    } else {
+      tibble::tibble(
+        date = as.Date(character()),
+        doy = integer(),
+        year = integer(),
+        evi_mean = numeric(),
+        n_trees = integer(),
+        n_clear = integer(),
+        source = character()
+      )
+    }
+  }
+) |>
+  mutate(
+    date = as.Date(date),
+    doy = as.integer(doy),
+    year = as.integer(year),
+    evi_mean = as.numeric(evi_mean)
+  )
 ```
 
 # Overview
@@ -279,4 +307,97 @@ d |>
   theme_minimal()+
   coord_cartesian(ylim = c(0, 100), xlim = c(240, 335))
 
+```
+
+
+# Campus canopy: student Leaves vs HLS EVI
+
+Student “Leaves” scores (percent green canopy, left axis) are plotted against campus-mean **HLS EVI** from stacked Landsat (HLSL30_VI) and Sentinel-2 (HLSS30_VI) vegetation-index products at 30 m (right axis). EVI is sampled at every monitored tree location via AppEEARS, then averaged across trees for each clear date. Axes keep native units — EVI is not rescaled to 0–100. Non-clear satellite samples (fill / invalid EVI after the product’s Fmask-based masking) are dropped, so clouds appear as gaps. This comparison is educational: timing and shape can be compared, but leaf-cover categories and EVI are different quantities.
+
+```{r hls-evi-npn-contrast, echo=FALSE, fig.height=8}
+has_evi <- nrow(hls_evi) > 0 && any(!is.na(hls_evi$evi_mean))
+
+npn_leaves <- d |>
+  collect() |>
+  filter(phenophase_description == "Leaves", !is.na(intensity)) |>
+  mutate(year = lubridate::year(observation_date))
+
+if ("day_of_year" %in% names(npn_leaves)) {
+  npn_leaves <- npn_leaves |>
+    mutate(doy = as.integer(dplyr::coalesce(day_of_year, lubridate::yday(observation_date))))
+} else if ("observation_doy" %in% names(npn_leaves)) {
+  npn_leaves <- npn_leaves |>
+    mutate(doy = as.integer(dplyr::coalesce(observation_doy, lubridate::yday(observation_date))))
+} else {
+  npn_leaves <- npn_leaves |>
+    mutate(doy = as.integer(lubridate::yday(observation_date)))
+}
+
+if (!has_evi) {
+  cat(
+    "HLS EVI cache is empty. When Earthdata credentials are available, ",
+    "the pipeline fetches HLSL30_VI + HLSS30_VI EVI via AppEEARS and stores ",
+    "Parquet on Release tag `hls-evi`. Until then, a seed fixture under ",
+    "`fixtures/hls_evi/` is used when present.\n"
+  )
+} else {
+  evi_years <- sort(unique(hls_evi$year))
+  npn_plot <- npn_leaves |>
+    filter(year %in% evi_years)
+
+  evi_source <- paste(unique(hls_evi$source), collapse = ", ")
+  # Dual axis: plot EVI on a 0–100 visual scale; right axis labels show 0–1 EVI.
+  evi_to_left <- 100
+
+  ggplot() +
+    geom_point(
+      data = npn_plot,
+      aes(x = doy, y = intensity),
+      color = "grey20",
+      alpha = 0.15,
+      size = 0.4
+    ) +
+    geom_line(
+      data = hls_evi,
+      aes(x = doy, y = evi_mean * evi_to_left),
+      color = "#2E8B57",
+      linewidth = 0.6,
+      alpha = 0.9
+    ) +
+    geom_point(
+      data = hls_evi,
+      aes(x = doy, y = evi_mean * evi_to_left),
+      color = "#2E8B57",
+      size = 0.7,
+      alpha = 0.7
+    ) +
+    facet_wrap(~year, ncol = 2) +
+    scale_x_continuous(
+      breaks = c(1, 91, 182, 274, 365),
+      labels = c("Jan", "Apr", "Jul", "Oct", "Dec"),
+      limits = c(1, 366)
+    ) +
+    scale_y_continuous(
+      name = "NPN Leaves (percent green)",
+      limits = c(0, 100),
+      sec.axis = sec_axis(
+        ~ . / evi_to_left,
+        name = "Campus-mean HLS EVI (0–1)"
+      )
+    ) +
+    labs(
+      x = "Day of year",
+      caption = paste0(
+        "Grey points: USA–NPN Leaves intensity midpoints. Green: mean clear HLS EVI ",
+        "across all campus tree locations (L30+S30 stacked; mean of tree samples, not ",
+        "unique 30 m pixels). Source: ", evi_source, "."
+      )
+    ) +
+    theme_minimal() +
+    theme(
+      axis.title.y.right = element_text(color = "#2E8B57"),
+      axis.text.y.right = element_text(color = "#2E8B57"),
+      plot.caption = element_text(hjust = 0, size = 8)
+    )
+}
 ```

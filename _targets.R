@@ -7,11 +7,15 @@ tar_option_set(
     "lubridate",
     "arrow",
     "piggyback",
-    "glue"
+    "glue",
+    "httr",
+    "jsonlite",
+    "readr"
   )
 )
 
 source("R/targets_pipeline.R")
+source("R/get_hls_evi.R")
 
 quarto_main_files <- c(
   "index.qmd",
@@ -27,7 +31,13 @@ list(
   ),
   tar_target(
     dirs,
-    cp_ensure_dirs(c(config$cache_dir, config$processed_dir, config$csv_dir, config$generated_dir)),
+    cp_ensure_dirs(c(
+      config$cache_dir,
+      config$processed_dir,
+      config$csv_dir,
+      config$generated_dir,
+      "data/hls_evi"
+    )),
     cue = tar_cue(mode = "always")
   ),
   tar_target(
@@ -226,6 +236,29 @@ list(
     format = "file"
   ),
   tar_target(
+    hls_evi_files,
+    {
+      # Soft-fail path: AppEEARS when credentials exist, else Release `hls-evi`,
+      # else fixtures/hls_evi seed, else empty schema Parquet.
+      result <- cp_ensure_hls_evi(
+        trees = trees,
+        repo = config$repo,
+        dest_dir = "data/hls_evi",
+        year_start = max(2019L, config$year_start - 1L),
+        year_stop = config$year_stop,
+        refresh_current_year = TRUE,
+        upload = TRUE
+      )
+      c(result$campus_mean, stats::na.omit(result$per_tree))
+    },
+    format = "file",
+    cue = tar_cue(mode = "always")
+  ),
+  tar_target(
+    hls_evi_campus_mean,
+    cp_read_hls_evi_campus_mean(hls_evi_files[[1]])
+  ),
+  tar_target(
     site_ready,
     {
       list(
@@ -236,7 +269,9 @@ list(
         semesters_qmd,
         semester_qmds,
         student_qmds,
-        tree_qmds
+        tree_qmds,
+        hls_evi_files,
+        hls_evi_campus_mean
       )
       TRUE
     }
