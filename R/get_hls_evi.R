@@ -584,37 +584,89 @@ hls_evi_try_download_release <- function(dest_dir, repo, tag = hls_evi_release_t
   )
 }
 
+hls_evi_release_body <- paste(
+  "Cached HLS EVI (HLSL30_VI + HLSS30_VI) extracts for campus trees.",
+  "Campus-mean Parquet is the site chart input.",
+  "Created/refreshed by R/get_hls_evi.R in CI or locally.",
+  sep = "\n"
+)
+
+#' True when Release tag is missing or lacks the campus-mean Parquet asset.
+hls_evi_release_needs_upload <- function(repo, tag = hls_evi_release_tag) {
+  assets <- tryCatch(
+    piggyback::pb_list(tag = tag, repo = repo),
+    error = function(e) NULL
+  )
+  if (is.null(assets)) {
+    return(TRUE)
+  }
+  if (!is.data.frame(assets) || nrow(assets) == 0) {
+    return(TRUE)
+  }
+  !(hls_evi_mean_basename %in% unique(assets$file_name))
+}
+
 hls_evi_try_upload_release <- function(paths, repo, tag = hls_evi_release_tag) {
-  # Reuse safe helpers when sourced from the targets pipeline.
-  ensure_fn <- if (exists("cp_ensure_release", mode = "function")) {
-    cp_ensure_release
+  paths <- paths[file.exists(paths)]
+  if (length(paths) == 0) {
+    message("No local HLS EVI files to upload to Release '", tag, "'.")
+    return(invisible(FALSE))
+  }
+
+  # Ensure release exists, then wait for GitHub/piggyback visibility (create race).
+  if (exists("cp_ensure_release", mode = "function")) {
+    cp_ensure_release(tag = tag, repo = repo, body = hls_evi_release_body)
   } else {
-    function(tag, repo) {
+    exists_ok <- tryCatch(
+      {
+        piggyback::pb_list(tag = tag, repo = repo)
+        TRUE
+      },
+      error = function(e) FALSE
+    )
+    if (!isTRUE(exists_ok)) {
       tryCatch(
-        piggyback::pb_list(tag = tag, repo = repo),
+        piggyback::pb_release_create(
+          tag = tag,
+          repo = repo,
+          name = tag,
+          body = hls_evi_release_body
+        ),
         error = function(e) {
-          piggyback::pb_release_create(
-            tag = tag,
-            repo = repo,
-            name = tag,
-            body = paste(
-              "Cached HLS EVI (HLSL30_VI + HLSS30_VI) extracts for campus trees.",
-              "Campus-mean Parquet is the site chart input.",
-              sep = "\n"
-            )
-          )
+          message("Could not create Release '", tag, "': ", conditionMessage(e))
         }
       )
-      invisible(TRUE)
     }
   }
+
+  if (exists("cp_wait_for_release", mode = "function")) {
+    cp_wait_for_release(tag = tag, repo = repo, attempts = 12L, sleep_sec = 5)
+  } else {
+    for (i in 1:12) {
+      ok <- tryCatch(
+        {
+          piggyback::pb_list(tag = tag, repo = repo)
+          TRUE
+        },
+        error = function(e) FALSE
+      )
+      if (isTRUE(ok)) break
+      Sys.sleep(5)
+    }
+  }
+
   upload_fn <- if (exists("safe_pb_upload", mode = "function")) {
     safe_pb_upload
   } else {
-    function(file, tag, repo, overwrite = TRUE) {
+    function(file, tag, repo, overwrite = TRUE, ...) {
       tryCatch(
         {
-          piggyback::pb_upload(file = file, tag = tag, repo = repo, overwrite = overwrite)
+          piggyback::pb_upload(
+            file = file,
+            tag = tag,
+            repo = repo,
+            overwrite = overwrite
+          )
           TRUE
         },
         error = function(e) {
@@ -625,13 +677,21 @@ hls_evi_try_upload_release <- function(paths, repo, tag = hls_evi_release_tag) {
     }
   }
 
-  ensure_fn(tag = tag, repo = repo)
+  ok_all <- TRUE
   for (p in paths) {
-    if (file.exists(p)) {
-      upload_fn(file = p, tag = tag, repo = repo, overwrite = TRUE)
-    }
+    ok <- upload_fn(file = p, tag = tag, repo = repo, overwrite = TRUE)
+    ok_all <- ok_all && isTRUE(ok)
   }
-  invisible(TRUE)
+  if (isTRUE(ok_all)) {
+    message("Uploaded HLS EVI assets to Release '", tag, "': ",
+            paste(basename(paths), collapse = ", "))
+  } else {
+    message(
+      "One or more HLS EVI uploads to '", tag, "' failed after retries. ",
+      "Re-run CI once local Parquet exists under data/hls_evi/ to populate assets."
+    )
+  }
+  invisible(ok_all)
 }
 
 #' Ensure local HLS EVI Parquet exists for the site.
@@ -688,9 +748,6 @@ cp_ensure_hls_evi <- function(trees,
           hls_evi_write_parquet(per_tree, tree_path)
           hls_evi_write_parquet(mean_df, mean_path)
           fetched <- TRUE
-          if (isTRUE(upload)) {
-            hls_evi_try_upload_release(c(mean_path, tree_path), repo = repo)
-          }
         }
       },
       error = function(e) {
@@ -726,6 +783,35 @@ cp_ensure_hls_evi <- function(trees,
   if (!file.exists(mean_path)) {
     message("Writing empty HLS EVI campus-mean Parquet so the site can build.")
     hls_evi_write_parquet(hls_evi_empty_campus_mean(), mean_path)
+  }
+
+  # Upload after local files exist. Also covers the race where a prior run
+  # created Release `hls-evi` but failed to attach assets — re-run CI with
+  # cached data/hls_evi/*.parquet can populate the Release without a full
+  # multi-year AppEEARS pull (may still refresh the current year).
+  if (isTRUE(upload) && file.exists(mean_path)) {
+    mean_df_chk <- tryCatch(
+      arrow::read_parquet(mean_path),
+      error = function(e) NULL
+    )
+    is_real <- !is.null(mean_df_chk) &&
+      nrow(mean_df_chk) > 0 &&
+      !all(mean_df_chk$source %in% c("seed", NA_character_))
+    needs <- tryCatch(
+      hls_evi_release_needs_upload(repo = repo),
+      error = function(e) TRUE
+    )
+    if (isTRUE(fetched) || (isTRUE(is_real) && isTRUE(needs))) {
+      message(
+        "Uploading HLS EVI Parquet to Release '", hls_evi_release_tag, "'",
+        if (isTRUE(fetched)) " (after AppEEARS fetch)" else " (backfill empty Release)",
+        " ..."
+      )
+      hls_evi_try_upload_release(
+        c(mean_path, if (file.exists(tree_path)) tree_path),
+        repo = repo
+      )
+    }
   }
 
   list(

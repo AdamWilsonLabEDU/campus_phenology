@@ -126,3 +126,4 @@ Each run calls AppEEARS `POST /api/login` with those credentials and uses the re
 - Release upload failures locally: set `GITHUB_TOKEN` with permission to create/upload Release assets in this repo; otherwise uploads are skipped.
 - Slow first run: backfills all missing semesters; subsequent runs reuse the release cache.
 - AppEEARS HTTP 403 on task submit: usually a bad/expired `APPEEARS_TOKEN` or an Earthdata Login profile token. Set `EARTHDATA_USERNAME` + `EARTHDATA_PASSWORD` and clear or ignore `APPEEARS_TOKEN`.
+- Release `hls-evi` exists but has no assets: usually a create→upload race (GitHub API not yet visible to piggyback). Current pipeline waits and retries uploads. Re-run the workflow once after a successful AppEEARS fetch; if Actions cache still has `data/hls_evi/*.parquet`, it can backfill the Release without a full multi-year re-pull (current year may still refresh).

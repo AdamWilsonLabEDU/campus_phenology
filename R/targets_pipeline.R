@@ -65,20 +65,88 @@ cp_ensure_dirs <- function(paths) {
   invisible(TRUE)
 }
 
-safe_pb_upload <- function(file, tag, repo, overwrite = TRUE) {
-  tryCatch(
-    {
-      piggyback::pb_upload(file = file, tag = tag, repo = repo, overwrite = overwrite)
-      TRUE
-    },
-    error = function(e) {
-      message(
-        "Skipping GitHub upload for ", basename(file),
-        ". Error: ", conditionMessage(e)
-      )
-      FALSE
+cp_pb_release_not_found <- function(msg) {
+  grepl("not found|404|does not exist", msg, ignore.case = TRUE)
+}
+
+#' Poll until a GitHub Release tag is visible to piggyback (API eventual consistency).
+cp_wait_for_release <- function(tag,
+                                repo,
+                                attempts = 12L,
+                                sleep_sec = 5) {
+  for (i in seq_len(attempts)) {
+    ok <- tryCatch(
+      {
+        piggyback::pb_list(tag = tag, repo = repo)
+        TRUE
+      },
+      error = function(e) FALSE
+    )
+    if (isTRUE(ok)) {
+      if (i > 1L) {
+        message("Release '", tag, "' visible after ", i, " poll(s).")
+      }
+      return(invisible(TRUE))
     }
+    message(
+      "Waiting for Release '", tag, "' to become visible (",
+      i, "/", attempts, ") ..."
+    )
+    Sys.sleep(sleep_sec)
+  }
+  FALSE
+}
+
+safe_pb_upload <- function(file,
+                           tag,
+                           repo,
+                           overwrite = TRUE,
+                           attempts = 8L,
+                           sleep_sec = 5) {
+  last_err <- NULL
+  for (i in seq_len(attempts)) {
+    result <- tryCatch(
+      {
+        piggyback::pb_upload(
+          file = file,
+          tag = tag,
+          repo = repo,
+          overwrite = overwrite
+        )
+        TRUE
+      },
+      error = function(e) {
+        last_err <<- conditionMessage(e)
+        FALSE
+      }
+    )
+    if (isTRUE(result)) {
+      if (i > 1L) {
+        message("Uploaded ", basename(file), " to '", tag, "' on attempt ", i, ".")
+      }
+      return(TRUE)
+    }
+    if (!cp_pb_release_not_found(last_err) && i == 1L) {
+      # Non-race errors: still retry a couple times (transient API), but log clearly
+      message(
+        "Upload attempt ", i, " failed for ", basename(file),
+        ": ", last_err
+      )
+    } else {
+      message(
+        "Upload attempt ", i, "/", attempts, " for ", basename(file),
+        " (release may still be propagating): ", last_err
+      )
+      # Re-probe release visibility between retries
+      cp_wait_for_release(tag = tag, repo = repo, attempts = 2L, sleep_sec = sleep_sec)
+    }
+    Sys.sleep(sleep_sec * i)
+  }
+  message(
+    "Skipping GitHub upload for ", basename(file),
+    ". Error: ", last_err
   )
+  FALSE
 }
 
 safe_pb_release_create <- function(tag, repo, name, body) {
@@ -101,7 +169,14 @@ cp_pb_list_safe <- function(tag, repo) {
   )
 }
 
-cp_ensure_release <- function(tag, repo) {
+cp_ensure_release <- function(tag,
+                              repo,
+                              body = paste(
+                                "Automated data release for USA-NPN observations.",
+                                "Assets are semester-partitioned Parquet and CSV files.",
+                                "Current semester is refreshed on each run.",
+                                sep = "\n"
+                              )) {
   release_exists <- TRUE
   tryCatch(
     {
@@ -113,17 +188,21 @@ cp_ensure_release <- function(tag, repo) {
   )
 
   if (!release_exists) {
-    safe_pb_release_create(
+    created <- safe_pb_release_create(
       tag = tag,
       repo = repo,
       name = tag,
-      body = paste(
-        "Automated data release for USA-NPN observations.",
-        "Assets are semester-partitioned Parquet and CSV files.",
-        "Current semester is refreshed on each run.",
-        sep = "\n"
-      )
+      body = body
     )
+    if (isTRUE(created)) {
+      # GitHub can return 404 from piggyback immediately after create.
+      if (!cp_wait_for_release(tag = tag, repo = repo)) {
+        message(
+          "Release '", tag, "' was created but is not yet visible to piggyback; ",
+          "uploads will retry."
+        )
+      }
+    }
   }
 
   invisible(TRUE)
