@@ -16,7 +16,12 @@ hls_evi_products <- c(
 )
 
 hls_evi_fill_values <- c(-19999, -9999)
+# HLS VI GeoTIFF / native DN scale. AppEEARS *point* CSV extracts already apply
+# this scale (LP DAAC / Earthdata forum); do not multiply point values again.
 hls_evi_scale <- 0.0001
+# Campus-mean |evi| max below this after QC almost certainly means the 0.0001
+# scale was applied twice to already-physical AppEEARS values (~1e-5).
+hls_evi_double_scale_max <- 0.01
 hls_evi_release_tag <- "hls-evi"
 hls_evi_dir_default <- "data/hls_evi"
 hls_evi_fixture_dir <- "fixtures/hls_evi"
@@ -240,19 +245,117 @@ hls_evi_ensure_fixture <- function(fixture_dir = hls_evi_fixture_dir) {
   mean_path
 }
 
+#' Convert AppEEARS point-sample EVI to physical units and drop fill / invalid.
+#'
+#' AppEEARS point CSVs return **already-scaled** values (middleware applies the
+#' product scale via OPeNDAP). Multiplying by [hls_evi_scale] again crushes EVI
+#' (~0.2–0.6) to ~2e-5 and plots as a flat line at 0 on a 0–1 axis.
+#'
+#' If a column still looks like raw DN (median |value| ≫ 1 among non-fill),
+#' apply [hls_evi_scale] once. GeoTIFF / area samples are out of scope for v1.
+hls_evi_scale_point_values <- function(evi_raw) {
+  x <- as.numeric(evi_raw)
+  fill <- is.na(x) | x %in% hls_evi_fill_values
+  vals <- x[!fill]
+  if (length(vals) == 0L) {
+    return(rep(NA_real_, length(x)))
+  }
+  # Physical EVI is in [-1, 1]; raw int16 DN is typically thousands.
+  needs_scale <- isTRUE(stats::median(abs(vals), na.rm = TRUE) > 1.5)
+  out <- ifelse(fill, NA_real_, if (needs_scale) x * hls_evi_scale else x)
+  as.numeric(out)
+}
+
 #' Drop non-clear / fill EVI samples (VI product already Fmask-fills clouds).
 hls_evi_qc_clear <- function(df) {
   df |>
     dplyr::mutate(
-      evi_raw = .data$evi_raw,
-      evi = dplyr::if_else(
-        is.na(.data$evi_raw) | .data$evi_raw %in% hls_evi_fill_values,
-        NA_real_,
-        as.numeric(.data$evi_raw) * hls_evi_scale
-      ),
+      evi_raw = as.numeric(.data$evi_raw),
+      evi = hls_evi_scale_point_values(.data$evi_raw),
       qa_ok = !is.na(.data$evi) & .data$evi >= -1 & .data$evi <= 1
     ) |>
     dplyr::filter(.data$qa_ok)
+}
+
+#' TRUE when a numeric EVI vector looks double-scaled (physical * 0.0001).
+hls_evi_looks_double_scaled <- function(evi) {
+  evi <- as.numeric(evi)
+  evi <- evi[is.finite(evi)]
+  if (length(evi) == 0L) {
+    return(FALSE)
+  }
+  mx <- max(abs(evi), na.rm = TRUE)
+  isTRUE(mx > 0) && isTRUE(mx < hls_evi_double_scale_max)
+}
+
+#' Undo accidental * 0.0001 on AppEEARS point values already in physical units.
+hls_evi_undo_double_scale <- function(evi) {
+  as.numeric(evi) / hls_evi_scale
+}
+
+#' Repair campus-mean / per-tree Parquet written with the double-scale bug.
+#' Returns TRUE if files were rewritten.
+hls_evi_repair_double_scaled_files <- function(mean_path, tree_path = NULL) {
+  repaired <- FALSE
+  if (file.exists(mean_path)) {
+    mean_df <- tryCatch(
+      arrow::read_parquet(mean_path),
+      error = function(e) NULL
+    )
+    if (!is.null(mean_df) &&
+      nrow(mean_df) > 0 &&
+      "evi_mean" %in% names(mean_df) &&
+      hls_evi_looks_double_scaled(mean_df$evi_mean)) {
+      before <- range(mean_df$evi_mean, na.rm = TRUE)
+      mean_df$evi_mean <- hls_evi_undo_double_scale(mean_df$evi_mean)
+      after <- range(mean_df$evi_mean, na.rm = TRUE)
+      message(
+        "Repaired double-scaled campus-mean EVI in ", basename(mean_path),
+        ": before [", paste(signif(before, 4), collapse = ", "),
+        "] → after [", paste(signif(after, 4), collapse = ", "), "]"
+      )
+      hls_evi_write_parquet(mean_df, mean_path)
+      repaired <- TRUE
+    }
+  }
+  if (!is.null(tree_path) && file.exists(tree_path)) {
+    tree_df <- tryCatch(
+      arrow::read_parquet(tree_path),
+      error = function(e) NULL
+    )
+    if (!is.null(tree_df) &&
+      nrow(tree_df) > 0 &&
+      "evi" %in% names(tree_df) &&
+      hls_evi_looks_double_scaled(tree_df$evi)) {
+      before <- range(tree_df$evi, na.rm = TRUE)
+      tree_df$evi <- hls_evi_undo_double_scale(tree_df$evi)
+      after <- range(tree_df$evi, na.rm = TRUE)
+      message(
+        "Repaired double-scaled per-tree EVI in ", basename(tree_path),
+        ": before [", paste(signif(before, 4), collapse = ", "),
+        "] → after [", paste(signif(after, 4), collapse = ", "), "]"
+      )
+      hls_evi_write_parquet(tree_df, tree_path)
+      repaired <- TRUE
+    }
+  }
+  repaired
+}
+
+#' Brief range log for CI diagnosis.
+hls_evi_log_mean_range <- function(mean_df, label = "campus-mean EVI") {
+  if (is.null(mean_df) || nrow(mean_df) == 0 || !("evi_mean" %in% names(mean_df))) {
+    message(label, ": empty")
+    return(invisible(NULL))
+  }
+  rng <- range(mean_df$evi_mean, na.rm = TRUE)
+  message(
+    label, ": n=", nrow(mean_df),
+    " years=", paste(sort(unique(mean_df$year)), collapse = ","),
+    " evi_mean range [", paste(signif(rng, 4), collapse = ", "),
+    "] source=", paste(unique(mean_df$source), collapse = ",")
+  )
+  invisible(NULL)
 }
 
 #' Aggregate clear per-tree EVI to campus mean (mean of tree samples per date).
@@ -710,6 +813,11 @@ cp_ensure_hls_evi <- function(trees,
   tree_path <- file.path(dest_dir, hls_evi_tree_basename)
   years <- hls_evi_years(year_start, year_stop)
 
+  # Fix Actions-cache / prior Parquet that applied 0.0001 twice to AppEEARS
+  # point values (flat ~0 line on the dual-axis chart). Must run before the
+  # year-skip logic so repaired historical years are not treated as missing.
+  repaired_for_upload <- hls_evi_repair_double_scaled_files(mean_path, tree_path)
+
   fetched <- FALSE
   creds <- hls_evi_credentials()
   if (hls_evi_has_credentials(creds)) {
@@ -734,6 +842,8 @@ cp_ensure_hls_evi <- function(trees,
           }
         }
         if (length(years_to_fetch) > 0) {
+          # Re-repair tree cache in case it was written mid-run before this fix
+          hls_evi_repair_double_scaled_files(mean_path, tree_path)
           per_tree_new <- hls_evi_fetch_appeears(trees, years_to_fetch)
           if (file.exists(tree_path)) {
             per_tree <- dplyr::bind_rows(
@@ -745,6 +855,7 @@ cp_ensure_hls_evi <- function(trees,
             per_tree <- per_tree_new
           }
           mean_df <- hls_evi_aggregate_campus_mean(per_tree, source = "appeears")
+          hls_evi_log_mean_range(mean_df, "AppEEARS campus-mean EVI")
           hls_evi_write_parquet(per_tree, tree_path)
           hls_evi_write_parquet(mean_df, mean_path)
           fetched <- TRUE
@@ -785,6 +896,18 @@ cp_ensure_hls_evi <- function(trees,
     hls_evi_write_parquet(hls_evi_empty_campus_mean(), mean_path)
   }
 
+  # Release / cache may still carry the double-scale bug; repair again and
+  # mark for upload so corrected Parquet lands on tag `hls-evi`.
+  if (hls_evi_repair_double_scaled_files(mean_path, tree_path)) {
+    repaired_for_upload <- TRUE
+  }
+  if (file.exists(mean_path)) {
+    hls_evi_log_mean_range(
+      tryCatch(arrow::read_parquet(mean_path), error = function(e) NULL),
+      "Final campus-mean EVI"
+    )
+  }
+
   # Upload after local files exist. Also covers the race where a prior run
   # created Release `hls-evi` but failed to attach assets — re-run CI with
   # cached data/hls_evi/*.parquet can populate the Release without a full
@@ -801,11 +924,19 @@ cp_ensure_hls_evi <- function(trees,
       hls_evi_release_needs_upload(repo = repo),
       error = function(e) TRUE
     )
-    if (isTRUE(fetched) || (isTRUE(is_real) && isTRUE(needs))) {
+    if (isTRUE(fetched) ||
+      isTRUE(repaired_for_upload) ||
+      (isTRUE(is_real) && isTRUE(needs))) {
+      reason <- if (isTRUE(fetched)) {
+        "after AppEEARS fetch"
+      } else if (isTRUE(repaired_for_upload)) {
+        "after double-scale repair"
+      } else {
+        "backfill empty Release"
+      }
       message(
-        "Uploading HLS EVI Parquet to Release '", hls_evi_release_tag, "'",
-        if (isTRUE(fetched)) " (after AppEEARS fetch)" else " (backfill empty Release)",
-        " ..."
+        "Uploading HLS EVI Parquet to Release '", hls_evi_release_tag, "' (",
+        reason, ") ..."
       )
       hls_evi_try_upload_release(
         c(mean_path, if (file.exists(tree_path)) tree_path),
@@ -821,11 +952,13 @@ cp_ensure_hls_evi <- function(trees,
     } else {
       NA_character_
     },
-    fetched = fetched
+    fetched = fetched,
+    repaired = repaired_for_upload
   )
 }
 
 #' Read campus-mean HLS EVI for plotting; empty tibble if missing/unreadable.
+#' Also undoes the double-scale bug in-memory if Parquet was not yet repaired.
 cp_read_hls_evi_campus_mean <- function(path = file.path(
                                           hls_evi_dir_default,
                                           hls_evi_mean_basename
@@ -835,13 +968,21 @@ cp_read_hls_evi_campus_mean <- function(path = file.path(
   }
   tryCatch(
     {
-      arrow::read_parquet(path) |>
+      df <- arrow::read_parquet(path) |>
         dplyr::mutate(
           date = as.Date(.data$date),
           doy = as.integer(.data$doy),
           year = as.integer(.data$year),
           evi_mean = as.numeric(.data$evi_mean)
         )
+      if (hls_evi_looks_double_scaled(df$evi_mean)) {
+        message(
+          "cp_read_hls_evi_campus_mean: undoing double-scaled evi_mean in ",
+          path
+        )
+        df$evi_mean <- hls_evi_undo_double_scale(df$evi_mean)
+      }
+      df
     },
     error = function(e) {
       message("Could not read ", path, ": ", conditionMessage(e))

@@ -23,7 +23,7 @@ Key files/directories:
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S.csv` (raw observations)
 	- `npn_obs_network-<NETWORKID>_semester-YYYY.S_observer_summary.csv` (one row per NNID)
 - Optional NDVI task: [R/get_modis.R](R/get_modis.R) writes to [data/modis_semesters](data/modis_semesters) (not used on the site)
-- HLS EVI contrast: [R/get_hls_evi.R](R/get_hls_evi.R) samples HLSL30_VI + HLSS30_VI EVI at all trees via AppEEARS, caches Parquet on Release tag `hls-evi` (and locally under `data/hls_evi/`), and powers the dual-axis section on [index.qmd](index.qmd). Soft-fails without Earthdata secrets to Release cache or [fixtures/hls_evi](fixtures/hls_evi).
+- HLS EVI contrast: [R/get_hls_evi.R](R/get_hls_evi.R) samples HLSL30_VI + HLSS30_VI EVI at all trees via AppEEARS, caches Parquet on Release tag `hls-evi` (and locally under `data/hls_evi/`), and powers the dual-axis section on [index.qmd](index.qmd). Soft-fails without Earthdata secrets to Release cache or [fixtures/hls_evi](fixtures/hls_evi). AppEEARS **point** CSVs are already in physical EVI units (do not apply the 0.0001 GeoTIFF scale again).
 
 ## Run locally
 Prerequisites: Quarto CLI (https://quarto.org/docs/get-started/), R (pinned via `renv.lock`, R 4.5.2). Optionally set `GITHUB_TOKEN` if you want to upload release assets when running the pipeline locally.
