@@ -98,9 +98,19 @@ quarto render                         # builds the site to _site/
 ## Continuous deployment
 GitHub Actions workflow [publish_github_actions.yml](.github/workflows/publish_github_actions.yml) sets up Quarto, R + `renv`, installs needed Linux libs (e.g., for `sf`/`arrow`), runs the pre-render pipeline, and publishes to `gh-pages`. It uses the repository `GITHUB_TOKEN` secret automatically.
 
-Optional Earthdata secrets for automated HLS EVI refresh (pipeline soft-fails without them):
-- `EARTHDATA_USERNAME` + `EARTHDATA_PASSWORD` (AppEEARS login), or
-- `APPEEARS_TOKEN` (pre-minted AppEEARS bearer token)
+### HLS EVI / AppEEARS secrets (required for live satellite refresh)
+
+Pipeline soft-fails without these and falls back to Release `hls-evi` or `fixtures/hls_evi/`.
+
+**Recommended for CI (set both):**
+- `EARTHDATA_USERNAME` — NASA Earthdata Login **username** (not an API token; prefer username over email if login fails)
+- `EARTHDATA_PASSWORD` — Earthdata Login password
+
+Each run calls AppEEARS `POST /api/login` with those credentials and uses the returned Bearer (~48h) for task submit/download. That is the supported AppEEARS auth path.
+
+**Not recommended for CI:**
+- `APPEEARS_TOKEN` — only valid if minted from AppEEARS `/api/login` (same Bearer as above). Expires in ~48 hours.
+- **Do not** paste an Earthdata Login (EDL) profile / “Generate Token” token here. Those are incompatible with AppEEARS and produce HTTP 403 on task submit (seen when username/password secrets were empty and only `APPEEARS_TOKEN` was set).
 
 ## Notes and conventions
 - Semester identifiers follow `YYYY.1` (Spring) and `YYYY.2` (Fall).
@@ -115,3 +125,4 @@ Optional Earthdata secrets for automated HLS EVI refresh (pipeline soft-fails wi
 - Missing Parquet on render: ensure the pre-render finished and files are in [data/processed](data/processed).
 - Release upload failures locally: set `GITHUB_TOKEN` with permission to create/upload Release assets in this repo; otherwise uploads are skipped.
 - Slow first run: backfills all missing semesters; subsequent runs reuse the release cache.
+- AppEEARS HTTP 403 on task submit: usually a bad/expired `APPEEARS_TOKEN` or an Earthdata Login profile token. Set `EARTHDATA_USERNAME` + `EARTHDATA_PASSWORD` and clear or ignore `APPEEARS_TOKEN`.

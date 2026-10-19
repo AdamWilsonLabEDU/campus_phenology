@@ -24,17 +24,30 @@ hls_evi_mean_basename <- "hls_evi_campus_mean.parquet"
 hls_evi_tree_basename <- "hls_evi_per_tree.parquet"
 
 #' Resolve Earthdata / AppEEARS credentials from the environment.
-#' Accepts EARTHDATA_USERNAME + EARTHDATA_PASSWORD, or APPEEARS_TOKEN.
+#'
+#' Preferred for CI: EARTHDATA_USERNAME + EARTHDATA_PASSWORD (Earthdata Login),
+#' used to mint a short-lived AppEEARS Bearer via POST /api/login.
+#'
+#' Optional: APPEEARS_TOKEN — must be a token returned by AppEEARS /api/login
+#' (expires ~48h). Earthdata Login profile / EDL API tokens are NOT accepted by
+#' AppEEARS and yield HTTP 403 on task submit.
 hls_evi_credentials <- function() {
   token <- Sys.getenv("APPEEARS_TOKEN", unset = "")
+  # Allow "Bearer <token>" paste mistakes in secrets
+  token <- sub("(?i)^Bearer\\s+", "", token, perl = TRUE)
+  token <- trimws(token)
+
   user <- Sys.getenv("EARTHDATA_USERNAME", unset = "")
   if (!nzchar(user)) {
     user <- Sys.getenv("EARTHDATA_USER", unset = "")
   }
+  user <- trimws(user)
+
   pass <- Sys.getenv("EARTHDATA_PASSWORD", unset = "")
   if (!nzchar(pass)) {
     pass <- Sys.getenv("EARTHDATA_PASS", unset = "")
   }
+
   list(
     token = if (nzchar(token)) token else NULL,
     username = if (nzchar(user)) user else NULL,
@@ -43,17 +56,17 @@ hls_evi_credentials <- function() {
 }
 
 hls_evi_has_credentials <- function(creds = hls_evi_credentials()) {
-  !is.null(creds$token) || (!is.null(creds$username) && !is.null(creds$password))
+  (!is.null(creds$username) && !is.null(creds$password)) || !is.null(creds$token)
 }
 
-hls_evi_login <- function(creds = hls_evi_credentials(), api = hls_evi_api_url) {
-  if (!is.null(creds$token)) {
-    return(creds$token)
-  }
-  if (is.null(creds$username) || is.null(creds$password)) {
-    stop("Missing Earthdata credentials for AppEEARS login.")
-  }
-  secret <- jsonlite::base64_enc(paste(creds$username, creds$password, sep = ":"))
+hls_evi_auth_header <- function(token) {
+  httr::add_headers(Authorization = paste("Bearer", token))
+}
+
+#' Mint an AppEEARS Bearer token from Earthdata username/password.
+hls_evi_login_with_password <- function(username, password, api = hls_evi_api_url) {
+  # Match AppEEARS API docs / NASA R tutorial (Basic + grant_type body).
+  secret <- jsonlite::base64_enc(paste(username, password, sep = ":"))
   resp <- httr::POST(
     paste0(api, "login"),
     httr::add_headers(
@@ -62,17 +75,82 @@ hls_evi_login <- function(creds = hls_evi_credentials(), api = hls_evi_api_url) 
     ),
     body = "grant_type=client_credentials"
   )
+  # Fallback: curl --user style used in AppEEARS bulk-download guide
   if (httr::status_code(resp) != 200) {
-    stop(
-      "AppEEARS login failed with HTTP ", httr::status_code(resp), ": ",
-      httr::content(resp, as = "text", encoding = "UTF-8")
+    resp <- httr::POST(
+      paste0(api, "login"),
+      httr::authenticate(username, password, type = "basic"),
+      httr::add_headers(`Content-Length` = "0")
     )
   }
-  httr::content(resp, as = "parsed", encoding = "UTF-8")$token
+  if (httr::status_code(resp) != 200) {
+    stop(
+      "AppEEARS /api/login failed with HTTP ", httr::status_code(resp), ": ",
+      httr::content(resp, as = "text", encoding = "UTF-8"),
+      " Use Earthdata Login username + password (not an EDL profile token)."
+    )
+  }
+  body <- httr::content(resp, as = "parsed", encoding = "UTF-8")
+  token <- body$token
+  if (is.null(token) || !nzchar(token)) {
+    stop("AppEEARS /api/login returned no token field.")
+  }
+  message(
+    "AppEEARS login OK",
+    if (!is.null(body$expiration)) paste0("; token expires ", body$expiration) else "",
+    "."
+  )
+  token
 }
 
-hls_evi_auth_header <- function(token) {
-  httr::add_headers(Authorization = paste("Bearer", token))
+#' Lightweight check that a Bearer token is accepted by AppEEARS.
+hls_evi_token_probe <- function(token, api = hls_evi_api_url) {
+  resp <- httr::GET(paste0(api, "task"), hls_evi_auth_header(token))
+  code <- httr::status_code(resp)
+  list(
+    ok = code < 400,
+    status = code,
+    body = httr::content(resp, as = "text", encoding = "UTF-8")
+  )
+}
+
+#' Obtain a working AppEEARS Bearer token.
+#'
+#' Priority: (1) Earthdata username/password → AppEEARS /api/login,
+#' (2) APPEEARS_TOKEN only if it passes an AppEEARS probe.
+#' Never treat an EDL profile token as sufficient without probing.
+hls_evi_login <- function(creds = hls_evi_credentials(), api = hls_evi_api_url) {
+  has_userpass <- !is.null(creds$username) && !is.null(creds$password)
+
+  if (has_userpass) {
+    message("Minting AppEEARS Bearer via /api/login (EARTHDATA_USERNAME/PASSWORD).")
+    return(hls_evi_login_with_password(creds$username, creds$password, api = api))
+  }
+
+  if (!is.null(creds$token)) {
+    message(
+      "No EARTHDATA_USERNAME/PASSWORD; probing APPEEARS_TOKEN. ",
+      "Note: tokens from the Earthdata Login profile page are NOT valid for ",
+      "AppEEARS — only tokens from POST ", api, "login (~48h lifetime)."
+    )
+    probe <- hls_evi_token_probe(creds$token, api = api)
+    if (isTRUE(probe$ok)) {
+      message("APPEEARS_TOKEN accepted by AppEEARS (HTTP ", probe$status, ").")
+      return(creds$token)
+    }
+    stop(
+      "APPEEARS_TOKEN rejected by AppEEARS (HTTP ", probe$status, "): ",
+      probe$body,
+      "\nSet repo secrets EARTHDATA_USERNAME + EARTHDATA_PASSWORD so CI can ",
+      "mint a fresh AppEEARS Bearer via /api/login. Do not use an Earthdata ",
+      "Login (EDL) profile token as APPEEARS_TOKEN."
+    )
+  }
+
+  stop(
+    "Missing AppEEARS credentials. Set EARTHDATA_USERNAME + EARTHDATA_PASSWORD ",
+    "(recommended for CI) or a short-lived APPEEARS_TOKEN from /api/login."
+  )
 }
 
 #' Calendar years spanning NPN coverage (inclusive).
@@ -573,8 +651,16 @@ cp_ensure_hls_evi <- function(trees,
   years <- hls_evi_years(year_start, year_stop)
 
   fetched <- FALSE
-  if (hls_evi_has_credentials()) {
-    message("Earthdata credentials found; attempting AppEEARS HLS EVI fetch.")
+  creds <- hls_evi_credentials()
+  if (hls_evi_has_credentials(creds)) {
+    auth_mode <- if (!is.null(creds$username) && !is.null(creds$password)) {
+      "username/password → AppEEARS /api/login"
+    } else {
+      "APPEEARS_TOKEN (must be from AppEEARS /api/login, not EDL profile)"
+    }
+    message(
+      "AppEEARS credentials present (", auth_mode, "); attempting HLS EVI fetch."
+    )
     tryCatch(
       {
         years_to_fetch <- years
@@ -613,8 +699,10 @@ cp_ensure_hls_evi <- function(trees,
     )
   } else {
     message(
-      "No Earthdata credentials (EARTHDATA_USERNAME/PASSWORD or APPEEARS_TOKEN); ",
-      "skipping AppEEARS fetch."
+      "No AppEEARS credentials; skipping fetch. ",
+      "Set EARTHDATA_USERNAME + EARTHDATA_PASSWORD (recommended) so CI can ",
+      "mint a Bearer via AppEEARS /api/login. APPEEARS_TOKEN alone is fragile ",
+      "(~48h) and EDL profile tokens will 403."
     )
   }
 
